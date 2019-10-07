@@ -14,6 +14,7 @@ import {
   CharacterDetails,
   StarshipDetails,
 } from './components/presentational';
+
 function App() {
   const styles = {
     container: {
