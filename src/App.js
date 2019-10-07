@@ -1,6 +1,12 @@
 import React from 'react';
 import './App.css';
 import StarWarsList from './components/containers/StarWarsList';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Redirect,
+} from 'react-router-dom';
 
 function App() {
   const styles = {
@@ -11,9 +17,11 @@ function App() {
     },
   };
   return (
-    <div className="App" style={styles.container}>
-      <StarWarsList />
-    </div>
+    <Router>
+      <div className="App" style={styles.container}>
+        <StarWarsList />
+      </div>
+    </Router>
   );
 }
 

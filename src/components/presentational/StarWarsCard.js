@@ -12,7 +12,7 @@ import {
 const useStyles = makeStyles({
   card: {
     maxWidth: '30%',
-    margin: '9%',
+    margin: '1%',
   },
   title: {
     fontSize: 14,
@@ -22,20 +22,20 @@ const useStyles = makeStyles({
   },
 });
 
-export default function StarWarsCard({ movie }) {
+export default function StarWarsCard({ data, styles = {} }) {
   const classes = useStyles();
 
   return (
     <Card className={classes.card}>
-      <CardHeader title={movie.title} />
-      <img src={movie.imageUrl} />
+      <CardHeader title={data.title} />
+      <img src={data.imageUrl} alt="url" />
       <CardContent>
         <Typography
           className={classes.title}
           color="textSecondary"
           gutterBottom
         >
-          {movie.description}
+          {data.description}
         </Typography>
       </CardContent>
       <CardActions>
