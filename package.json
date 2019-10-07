@@ -13,7 +13,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "lint": "eslint src",
-    "format": "prettier --write src/**/*.{js,json,css,scss}",
+    "format": "prettier --write src/**/*.{js,json}",
     "ci": "yarn lint && cross-env CI=true yarn test --coverage",
     "storybook": "start-storybook -p 9009 -s public",
     "build-storybook": "build-storybook -s public"
