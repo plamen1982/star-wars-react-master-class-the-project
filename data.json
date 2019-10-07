@@ -1,0 +1,133 @@
+{
+  "allFilms": [{
+    "id": "cj0nxmy3fga5s01148gf8iy3c",
+    "imageUrl": "imageUrl",
+    "title": "A New Hope",
+    "description": "some desription about the episode",
+    "films": [{
+      "id": 5,
+      "description": "some string",
+      "director": "director name",
+      "characters": [{
+          "name": "Luke Skywalker",
+          "imageUrl": "imageUrl",
+          "vehicles": [{
+              "model": "Digger Crawler"
+            },
+            {
+              "model": "T-16 skyhopper"
+            },
+            {
+              "model": "X-34 landspeeder"
+            },
+            {
+              "model": "Twin Ion Engine/Ln Starfighter"
+            }
+          ]
+        },
+        {
+          "name": "C-3PO",
+          "imageUrl": "imageUrl",
+          "vehicles": [{
+              "model": "Digger Crawler"
+            },
+            {
+              "model": "T-16 skyhopper"
+            },
+            {
+              "model": "X-34 landspeeder"
+            },
+            {
+              "model": "Twin Ion Engine/Ln Starfighter"
+            }
+          ]
+        },
+        {
+          "name": "R2-D2",
+          "imageUrl": "imageUrl",
+          "vehicles": [{
+              "model": "Digger Crawler"
+            },
+            {
+              "model": "T-16 skyhopper"
+            },
+            {
+              "model": "X-34 landspeeder"
+            },
+            {
+              "model": "Twin Ion Engine/Ln Starfighter"
+            }
+          ]
+        },
+        {
+          "name": "Darth Vader",
+          "imageUrl": "imageUrl",
+          "vehicles": [{
+              "model": "Digger Crawler"
+            },
+            {
+              "model": "T-16 skyhopper"
+            },
+            {
+              "model": "X-34 landspeeder"
+            },
+            {
+              "model": "Twin Ion Engine/Ln Starfighter"
+            }
+          ]
+        },
+        {
+          "name": "Leia Organa",
+          "imageUrl": "imageUrl",
+          "vehicles": [{
+              "model": "Digger Crawler"
+            },
+            {
+              "model": "T-16 skyhopper"
+            },
+            {
+              "model": "X-34 landspeeder"
+            },
+            {
+              "model": "Twin Ion Engine/Ln Starfighter"
+            }
+          ]
+        },
+        {
+          "name": "Owen Lars",
+          "imageUrl": "imageUrl",
+          "vehicles": [{
+              "model": "Digger Crawler"
+            },
+            {
+              "model": "T-16 skyhopper"
+            },
+            {
+              "model": "X-34 landspeeder"
+            },
+            {
+              "model": "Twin Ion Engine/Ln Starfighter"
+            }
+          ]
+        },
+        {
+          "name": "Beru Whitesun lars",
+          "imageUrl": "imageUrl",
+          "vehicles": [{
+              "model": "Digger Crawler"
+            },
+            {
+              "model": "T-16 skyhopper"
+            },
+            {
+              "model": "X-34 landspeeder"
+            },
+            {
+              "model": "Twin Ion Engine/Ln Starfighter"
+            }
+          ]
+        }
+      ]
+    }]
+  }]
+}
