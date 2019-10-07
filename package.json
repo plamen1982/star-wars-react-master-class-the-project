@@ -61,15 +61,7 @@
       "!src/utils.js",
       "!src/timers/**/*.js",
       "!src/basic-mock/**/*.js"
-    ],
-    "coverageThreshold": {
-      "global": {
-        "branches": 100,
-        "functions": 100,
-        "lines": 100,
-        "statements": 100
-      }
-    }
+    ]
   },
   "devDependencies": {
     "@storybook/addon-actions": "^5.2.1",

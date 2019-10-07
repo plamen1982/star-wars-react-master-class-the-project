@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import StarWarsCard from '../src/components/presentational/StarWarsCard';
+import StarWarsList from './components/containers/StarWarsList';
 
 function App() {
   const styles = {
@@ -12,9 +12,7 @@ function App() {
   };
   return (
     <div className="App" style={styles.container}>
-      <StarWarsCard />
-      <StarWarsCard />
-      <StarWarsCard />
+      <StarWarsList />
     </div>
   );
 }
