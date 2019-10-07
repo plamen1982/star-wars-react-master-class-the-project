@@ -1,0 +1,9 @@
+[build]
+base = "/"
+publish = "/build/"
+command = "yarn ci && yarn build"
+
+#[build]
+#base = "/"
+#publish = "/storybook-static/"
+#command = "yarn ci && yarn build-storybook"
