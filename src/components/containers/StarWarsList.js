@@ -4,13 +4,12 @@ import { makeStyles } from '@material-ui/core/styles';
 import StarWarsCard from '../presentational/StarWarsCard';
 import * as data from '../../allFilms.json';
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles(() => ({
   root: {
     display: 'flex',
     flexWrap: 'wrap',
-    justifyContent: 'center',
+    justifyContent: 'space-around',
     alignContent: 'center',
-    width: 1000,
   },
 }));
 

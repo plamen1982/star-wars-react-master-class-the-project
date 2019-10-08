@@ -4,14 +4,14 @@ import {
   Card,
   CardActions,
   CardContent,
-  CardHeader,
   Button,
   Typography,
 } from '@material-ui/core';
+import { Link } from 'react-router-dom';
 
 const useStyles = makeStyles({
   card: {
-    maxWidth: '30%',
+    maxWidth: '25%',
     margin: '1%',
   },
   title: {
@@ -22,13 +22,15 @@ const useStyles = makeStyles({
   },
 });
 
-export default function StarWarsCard({ data, styles = {} }) {
+export default function StarWarsCard({ data }) {
   const classes = useStyles();
 
   return (
     <Card className={classes.card}>
-      <CardHeader title={data.title} />
       <img src={data.imageUrl} alt="url" />
+      <div>
+        <Link to={`/episodes/${data.id}`}>{data.title}</Link>
+      </div>
       <CardContent>
         <Typography
           className={classes.title}
