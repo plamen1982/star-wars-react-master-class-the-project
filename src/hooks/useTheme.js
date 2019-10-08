@@ -1,6 +1,6 @@
-import React, { useState, useEffect, useContext } from 'react';
+import { useState, useEffect, useContext } from 'react';
 import ThemeContext from '../contexts/ThemeContext';
-import { darkTheme, lightTheme, commonColors } from '../styles';
+import { darkTheme, lightTheme } from '../styles';
 const useTheme = () => {
   const theme = useContext(ThemeContext);
   const [currentTheme, setCurrentTheme] = useState(theme);

@@ -1,9 +1,8 @@
 import { createContext } from 'react';
-import { lightTheme } from '../styles';
 const toggleTheme = () => {};
 
 const ThemeContext = createContext({
-  theme: { name: 'light', colors: {} },
+  theme: { name: '', colors: {} },
   toggleTheme,
 });
 
