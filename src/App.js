@@ -15,7 +15,7 @@ import {
   StarshipDetails,
 } from './components/presentational';
 import ThemeContext from './contexts/ThemeContext';
-
+import { darkTheme, lightTheme, commonColors } from './styles';
 function App() {
   const styles = {
     container: {
@@ -29,9 +29,14 @@ function App() {
   useEffect(props => {}, [theme]);
 
   const toggleTheme = () => {
-    debugger;
     setCurrentTheme(oldTheme =>
-      oldTheme.theme === 'light' ? { theme: 'dark' } : { theme: 'light' },
+      oldTheme.theme.name === 'light'
+        ? {
+            theme: { name: 'dark', colors: { ...darkTheme } },
+          }
+        : {
+            theme: { name: 'light', colors: { ...lightTheme } },
+          },
     );
   };
 

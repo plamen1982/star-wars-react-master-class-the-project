@@ -8,6 +8,8 @@ const Login = props => {
   // const [password, setPassword] = useState('');
   const { currentTheme, toggleTheme } = useContext(ThemeContext);
   const { theme } = currentTheme;
+  const { name, colors } = theme;
+  debugger;
   useEffect(() => {}, [theme]);
   const useStyles = makeStyles({
     inputStyles: {
@@ -19,8 +21,11 @@ const Login = props => {
 
   return (
     <FormControl>
-      <h2>{theme}</h2>
-      <Input className={classes.inputStyles} onChange={toggleTheme} />
+      <h2 style={{ color: colors.color }}>{name}</h2>
+      <Input
+        style={{ backgroundColor: colors.backgroundColor }}
+        onChange={toggleTheme}
+      />
     </FormControl>
   );
 };
