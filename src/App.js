@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from 'react';
+import React from 'react';
 import './App.css';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import {
@@ -15,7 +15,7 @@ import {
   StarshipDetails,
 } from './components/presentational';
 import ThemeContext from './contexts/ThemeContext';
-import { darkTheme, lightTheme, commonColors } from './styles';
+import useTheme from './hooks/useTheme';
 function App() {
   const styles = {
     container: {
@@ -24,21 +24,7 @@ function App() {
       alignItems: 'center',
     },
   };
-  const theme = useContext(ThemeContext);
-  const [currentTheme, setCurrentTheme] = useState(theme);
-  useEffect(props => {}, [theme]);
-
-  const toggleTheme = () => {
-    setCurrentTheme(oldTheme =>
-      oldTheme.theme.name === 'light'
-        ? {
-            theme: { name: 'dark', colors: { ...darkTheme } },
-          }
-        : {
-            theme: { name: 'light', colors: { ...lightTheme } },
-          },
-    );
-  };
+  const { currentTheme, toggleTheme } = useTheme();
 
   return (
     <div className="App" style={styles.container}>
