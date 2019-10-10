@@ -1,14 +1,15 @@
 import React from 'react';
 import { withRouter, NavLink } from 'react-router-dom';
+import { makeStyles } from '@material-ui/core/styles';
 
 const Header = () => {
-  const styles = {
+  const useStyles = makeStyles({
     container: {
       display: 'flex',
       justifyContent: 'space-between',
       width: '100%',
-      paddingTop: 5,
-      paddingBottom: 5,
+      paddingTop: 15,
+      paddingBottom: 15,
       backgroundColor: 'skyblue',
       color: 'white',
     },
@@ -19,24 +20,45 @@ const Header = () => {
       },
     },
     leftHeader: {
-      tabs: {
-        padding: 10,
-      },
+      padding: 10,
+      textDecoration: 'none',
     },
-  };
+    active: {
+      backgroundColor: 'orange',
+      textDecoration: 'none',
+    },
+  });
+  const classes = useStyles();
   return (
-    <div style={styles.container}>
-      <NavLink to="/" style={styles.leftHeader.tabs}>
+    <div className={classes.container}>
+      <NavLink
+        to="/"
+        exact={true}
+        activeClassName={classes.active}
+        className={classes.leftHeader}
+      >
         SWAPP
       </NavLink>
-      <div style={styles.rightHeader}>
-        <NavLink to="/episodes" style={styles.rightHeader.tabs}>
+      <div className={classes.rightHeader}>
+        <NavLink
+          to="/episodes"
+          activeClassName={classes.active}
+          className={classes.leftHeader}
+        >
           Episodes
         </NavLink>
-        <NavLink to="/characters" style={styles.rightHeader.tabs}>
+        <NavLink
+          to="/characters"
+          activeClassName={classes.active}
+          className={classes.leftHeader}
+        >
           Characters
         </NavLink>
-        <NavLink to="/logout" style={styles.rightHeader.tabs}>
+        <NavLink
+          to="/login"
+          activeClassName={classes.active}
+          className={classes.leftHeader}
+        >
           Logout
         </NavLink>
       </div>
