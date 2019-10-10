@@ -37,25 +37,18 @@ function App() {
         <Router>
           <Header classes={classes.header} />
           <Switch>
-            <Route exact path="/" component={Home}></Route>
-            <Route exact path="/login" component={Login}></Route>
-            <Route exact path="/episodes" component={Episodes}></Route>
-            <Route
-              exact
-              path="/episodes/:episodeId"
-              component={EpisodeDetails}
-            ></Route>
-            <Route exact path="/characters" component={Characters}></Route>
+            <Route exact path="/" component={Home} />
+            <Route exact path="/login" component={Login} />
+            <Route exact path="/episodes" component={Episodes} />
+
+            <Route exact path="/characters" component={Characters} />
             <Route
               exact
               path="/characters/:characterId"
               component={CharacterDetails}
-            ></Route>
-            <Route exact path="/starship" component={Starship}></Route>
-            <Route
-              path="/starship/:starshipId"
-              component={StarshipDetails}
-            ></Route>
+            />
+            <Route exact path="/starship" component={Starship} />
+            <Route path="/starship/:starshipId" component={StarshipDetails} />
           </Switch>
         </Router>
       </ThemeContext.Provider>

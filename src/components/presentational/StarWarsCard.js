@@ -11,6 +11,9 @@ import { Link } from 'react-router-dom';
 
 const useStyles = makeStyles({
   card: {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
     maxWidth: '25%',
     margin: '1%',
   },
@@ -20,16 +23,20 @@ const useStyles = makeStyles({
   pos: {
     marginBottom: 12,
   },
+  imageStyles: {
+    width: 300,
+    height: 300,
+  },
 });
 
 export default function StarWarsCard({ data }) {
   const classes = useStyles();
-
+  const { node: movie } = data;
   return (
     <Card className={classes.card}>
-      <img src={data.imageUrl} alt="url" />
+      <img className={classes.imageStyles} src={movie.image} alt="url" />
       <div>
-        <Link to={`/episodes/${data.id}`}>{data.title}</Link>
+        <Link to={`/episodes/${movie.episodeId}`}>{movie.title}</Link>
       </div>
       <CardContent>
         <Typography
@@ -37,7 +44,7 @@ export default function StarWarsCard({ data }) {
           color="textSecondary"
           gutterBottom
         >
-          {data.description}
+          {movie.openingCrawl}
         </Typography>
       </CardContent>
       <CardActions>

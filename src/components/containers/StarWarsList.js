@@ -2,7 +2,7 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 // import GridList from '@material-ui/core/GridList';
 import StarWarsCard from '../presentational/StarWarsCard';
-import * as data from '../../allFilms.json';
+import * as data from '../../allEpisodes.json';
 
 const useStyles = makeStyles(() => ({
   root: {
@@ -14,15 +14,16 @@ const useStyles = makeStyles(() => ({
 }));
 
 export default function ImageGridList() {
-  const { allFilms } = data;
+  const { edges: allEpisodes } = data.data.allEpisodes;
 
   const classes = useStyles();
 
   return (
     <div className={classes.root}>
-      {allFilms.map(movie => {
-        return <StarWarsCard data={movie} />;
-      })}
+      {allEpisodes &&
+        allEpisodes.map(episode => {
+          return <StarWarsCard key={episode.node.episodeId} data={episode} />;
+        })}
     </div>
   );
 }
