@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import {
   Card,
@@ -7,41 +7,34 @@ import {
   Button,
   Typography,
 } from '@material-ui/core';
+import { styles } from './styles';
 import { Link } from 'react-router-dom';
-
-const useStyles = makeStyles({
-  card: {
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    maxWidth: '25%',
-    margin: '1%',
-  },
-  title: {
-    fontSize: 14,
-  },
-  pos: {
-    marginBottom: 12,
-  },
-  imageStyles: {
-    width: 300,
-    height: 300,
-  },
-});
+import { ThemeContext } from '../../../contexts';
 
 export default function StarWarsCard({ data }) {
+  const {
+    currentTheme: {
+      theme: {
+        colors: { cards },
+      },
+    },
+  } = useContext(ThemeContext);
+  const styleWithTheme = { ...styles, cards };
+
+  debugger;
+  const useStyles = makeStyles(styleWithTheme);
   const classes = useStyles();
   const { node: movie } = data;
   return (
-    <Card className={classes.card}>
+    <Card className={classes.container}>
       <img className={classes.imageStyles} src={movie.image} alt="url" />
-      <div>
-        <Link to={`/episodes/${movie.episodeId}`}>{movie.title}</Link>
-      </div>
-      <CardContent>
+      <CardContent className={classes.cards}>
+        <div>
+          <Link to={`/episodes/${movie.episodeId}`}>{movie.title}</Link>
+        </div>
         <Typography
           className={classes.title}
-          color="textSecondary"
+          color={classes.cards.color}
           gutterBottom
         >
           {movie.openingCrawl}
