@@ -8,7 +8,7 @@ import {
   BLACK_COLOR,
 } from './commonColors';
 
-const DEFAULT_BACKGROUND_COLOR_DARK_THEME = '#333';
+const DEFAULT_BACKGROUND_COLOR_DARK_THEME = '#000';
 const DEFAULT_FONT_COLOR_DARK_THEME = '#ABB1BA';
 
 const defaultColorsDarkTheme = {
@@ -18,7 +18,7 @@ const defaultColorsDarkTheme = {
 
 const cardsDarkTheme = {
   backgroundColor: GREY_COLOR,
-  color: BLACK_COLOR,
+  color: WHITE_COLOR,
 };
 
 const solidButtonsDarkTheme = {

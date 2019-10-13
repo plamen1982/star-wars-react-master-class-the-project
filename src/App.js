@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import './App.css';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { makeStyles } from '@material-ui/core/styles';
-
+import { ThemeContext } from './contexts';
 import {
   Home,
   Login,
@@ -17,19 +17,22 @@ import {
   StarshipDetails,
   Header,
 } from './components/presentational';
-import ThemeContext from './contexts/ThemeContext';
 import useTheme from './hooks/useTheme';
-const useStyles = makeStyles(() => ({
-  container: {
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    flexDirection: 'column',
-    alignContent: 'center',
-  },
-}));
+
 function App() {
   const { currentTheme, toggleTheme } = useTheme();
+
+  const appStyles = {
+    container: {
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+      flexDirection: 'column',
+      alignContent: 'center',
+    },
+  };
+
+  const useStyles = makeStyles(appStyles);
   const classes = useStyles();
   return (
     <div className="App" classes={classes.container}>
