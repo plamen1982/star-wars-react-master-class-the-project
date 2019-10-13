@@ -13,7 +13,7 @@ export const styles = {
     marginBottom: 12,
   },
   imageStyles: {
-    width: 300,
-    height: 300,
+    width: 330,
+    height: 330,
   },
 };

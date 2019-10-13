@@ -15,18 +15,18 @@ export default function StarWarsCard({ data }) {
   const {
     currentTheme: {
       theme: {
-        colors: { cards },
+        colors: { cards, defaultColors },
       },
     },
   } = useContext(ThemeContext);
-  const styleWithTheme = { ...styles, cards };
+  const styleWithTheme = { ...styles, cards, defaultColors };
 
   debugger;
   const useStyles = makeStyles(styleWithTheme);
   const classes = useStyles();
   const { node: movie } = data;
   return (
-    <Card className={classes.container}>
+    <Card className={`${classes.container} ${classes.defaultColors}`}>
       <img className={classes.imageStyles} src={movie.image} alt="url" />
       <CardContent className={classes.cards}>
         <div>
@@ -40,9 +40,6 @@ export default function StarWarsCard({ data }) {
           {movie.openingCrawl}
         </Typography>
       </CardContent>
-      <CardActions>
-        <Button size="small">Learn More</Button>
-      </CardActions>
     </Card>
   );
 }
