@@ -1,6 +1,6 @@
 import React from 'react';
-import * as data from '../../allEpisodes.json';
-import StarWarsCard from './StarWarsCard';
+import * as data from '../../../allEpisodes.json';
+import StarWarsCard from './../StarWarsCard';
 
 const EpisodeDetails = props => {
   const {

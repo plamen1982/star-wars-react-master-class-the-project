@@ -5,3 +5,6 @@
 body::-webkit-scrollbar {
   width: 0 !important;
 }
+body a {
+  color: #4bd5ee;
+}
