@@ -1,6 +1,9 @@
 import React from 'react';
+import EpisodesList from '../containers/EpisodesList';
 
-const Episodes = props => {
-  return <h1>Episodes</h1>;
-};
+const Episodes = props => (
+  <>
+    <EpisodesList />
+  </>
+);
 export default Episodes;
