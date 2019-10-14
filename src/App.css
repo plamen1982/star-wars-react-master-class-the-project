@@ -8,3 +8,7 @@ body::-webkit-scrollbar {
 body a {
   color: #4bd5ee;
 }
+
+.theme {
+  background: black;
+}

@@ -4,15 +4,14 @@ const styles = {
   container: {
     display: 'flex',
     justifyContent: 'space-between',
+    alignItems: 'center',
     width: '100%',
     paddingTop: 5,
     paddingBottom: 5,
   },
   rightHeader: {
     display: 'flex',
-    tabs: {
-      padding: 10,
-    },
+    alignItems: 'center',
   },
   leftHeader: {
     padding: 10,

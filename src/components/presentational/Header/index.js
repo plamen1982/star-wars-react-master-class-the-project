@@ -6,9 +6,7 @@ import { ThemeContext } from '../../../contexts';
 import { makeStyles } from '@material-ui/core';
 const Header = () => {
   const {
-    currentTheme: {
-      theme: { colors },
-    },
+    currentTheme: { colors },
     toggleTheme,
   } = useContext(ThemeContext);
   const currentStyles = {
@@ -26,7 +24,7 @@ const Header = () => {
         to="/"
         exact={true}
         activeClassName={classes.active}
-        className={`${classes.appBar.color} ${classes.leftHeader}`}
+        className={classes.leftHeader}
       >
         SWAPP
       </NavLink>
