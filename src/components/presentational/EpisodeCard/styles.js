@@ -4,7 +4,8 @@ export const styles = {
     flexDirection: 'column',
     alignItems: 'center',
     maxWidth: '25%',
-    margin: '1%',
+    marginLeft: '1%',
+    marginRight: '1%',
   },
   title: {
     fontSize: 14,

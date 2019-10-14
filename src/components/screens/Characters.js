@@ -1,6 +1,12 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { ThemeContext } from '../../contexts';
 
-const Character = props => {
-  return <h1>Character</h1>;
+const Character = () => {
+  const theme = useContext(ThemeContext);
+  const container = {
+    height: 300,
+    border: '1px solid blue',
+  };
+  return <h1 style={container}>Character</h1>;
 };
 export default Character;

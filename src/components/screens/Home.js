@@ -1,10 +1,10 @@
 import React from 'react';
-import StarWarsList from '../containers/StarWarsList';
+import EpisodesList from '../containers/EpisodesList';
 
 const Home = props => {
   return (
     <>
-      <StarWarsList />
+      <EpisodesList />
     </>
   );
 };

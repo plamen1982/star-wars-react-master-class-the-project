@@ -1,27 +1,17 @@
 import React, { useContext } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import {
-  Card,
-  CardActions,
-  CardContent,
-  Button,
-  Typography,
-} from '@material-ui/core';
+import { Card, CardContent, Typography } from '@material-ui/core';
 import { styles } from './styles';
 import { Link } from 'react-router-dom';
 import { ThemeContext } from '../../../contexts';
 
-export default function StarWarsCard({ data }) {
+export default function EpisodeCard({ data }) {
   const {
     currentTheme: {
-      theme: {
-        colors: { cards, defaultColors },
-      },
+      colors: { cards, defaultColors },
     },
   } = useContext(ThemeContext);
   const styleWithTheme = { ...styles, cards, defaultColors };
-
-  debugger;
   const useStyles = makeStyles(styleWithTheme);
   const classes = useStyles();
   const { node: movie } = data;

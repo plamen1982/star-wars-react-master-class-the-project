@@ -6,13 +6,15 @@ const useTheme = () => {
   const [currentTheme, setCurrentTheme] = useState(theme);
   const toggleTheme = () => {
     setCurrentTheme(oldTheme => {
-      if (oldTheme.theme.name === 'light') {
+      if (oldTheme.name === 'light') {
         return {
-          theme: { name: 'dark', colors: { ...darkTheme } },
+          name: 'dark',
+          colors: { ...darkTheme },
         };
       }
       return {
-        theme: { name: 'light', colors: { ...lightTheme } },
+        name: 'light',
+        colors: { ...lightTheme },
       };
     });
   };

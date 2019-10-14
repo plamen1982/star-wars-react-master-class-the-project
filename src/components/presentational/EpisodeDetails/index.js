@@ -1,6 +1,6 @@
 import React from 'react';
 import * as data from '../../../allEpisodes.json';
-import StarWarsCard from './../StarWarsCard';
+import EpisodeCard from './../EpisodeCard';
 
 const EpisodeDetails = props => {
   const {
@@ -8,9 +8,10 @@ const EpisodeDetails = props => {
       params: { episodeId },
     },
   } = props;
-  const { allEpisodes } = data.data;
-
-  const currentEpisode = allEpisodes.find(episode => episode.id === episodeId);
-  return <StarWarsCard data={currentEpisode} />;
+  const { edges: allEpisodes } = data.data.allEpisodes;
+  const currentEpisode = allEpisodes.find(episode => {
+    return episode.node.episodeId === Number(episodeId);
+  });
+  return <EpisodeCard data={currentEpisode} />;
 };
 export default EpisodeDetails;

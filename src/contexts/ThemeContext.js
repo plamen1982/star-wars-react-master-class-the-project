@@ -2,7 +2,17 @@ import { createContext } from 'react';
 const toggleTheme = () => {};
 
 const ThemeContext = createContext({
-  theme: { name: '', colors: {} },
+  name: '',
+  colors: {
+    defaultColors: {},
+    cards: {},
+    appBar: {},
+    solidButtons: {},
+    outlineButtons: {},
+    inputs: {},
+    primaryHeading: {},
+    radar: {},
+  },
   toggleTheme,
 });
 
