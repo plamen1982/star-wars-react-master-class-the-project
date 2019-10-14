@@ -18,10 +18,14 @@ export default function EpisodesList() {
   const useStyles = makeStyles(currentStyles);
   const classes = useStyles();
   const { edges: allEpisodes } = data.data.allEpisodes;
-
+  const direction = 'vertical';
   return (
     <div className={classes.root}>
-      <ListData component={EpisodeCard} data={allEpisodes} />
+      <ListData
+        component={EpisodeCard}
+        data={allEpisodes}
+        direction={direction}
+      />
     </div>
   );
 }

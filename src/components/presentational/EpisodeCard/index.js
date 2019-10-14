@@ -5,13 +5,13 @@ import { styles } from './styles';
 import { Link } from 'react-router-dom';
 import { ThemeContext } from '../../../contexts';
 
-export default function EpisodeCard({ data }) {
+export default function EpisodeCard({ data, direction }) {
   const {
     currentTheme: {
       colors: { cards, defaultColors },
     },
   } = useContext(ThemeContext);
-  const styleWithTheme = { ...styles, cards, defaultColors };
+  const styleWithTheme = { ...styles[direction], cards, defaultColors };
   const useStyles = makeStyles(styleWithTheme);
   const classes = useStyles();
   const { node: movie } = data;

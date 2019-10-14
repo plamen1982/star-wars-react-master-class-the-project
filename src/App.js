@@ -1,6 +1,11 @@
 import React, { useContext } from 'react';
 import './App.css';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Redirect,
+} from 'react-router-dom';
 import { makeStyles } from '@material-ui/core/styles';
 import { ThemeContext } from './contexts';
 import {
@@ -61,7 +66,7 @@ const AllRoutes = () => {
   const classes = useStyles();
   return (
     <div className={classes.defaultColors}>
-      <Route exact path="/" component={Home} />
+      <Route exact path="/" render={() => <Redirect to="/episodes" />} />
       <Route exact path="/login" component={Login} />
       <Route exact path="/episodes" component={Episodes} />
       <Route exact path="/episodes/:episodeId" component={EpisodeDetails} />

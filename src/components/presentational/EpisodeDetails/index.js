@@ -12,6 +12,16 @@ const EpisodeDetails = props => {
   const currentEpisode = allEpisodes.find(episode => {
     return episode.node.episodeId === Number(episodeId);
   });
-  return <EpisodeCard data={currentEpisode} />;
+  const styles = {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+  };
+  const episodeDirection = 'horizontal';
+  return (
+    <div style={styles}>
+      <EpisodeCard data={currentEpisode} styles={episodeDirection} />
+    </div>
+  );
 };
 export default EpisodeDetails;

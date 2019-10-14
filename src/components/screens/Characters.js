@@ -7,6 +7,6 @@ const Character = () => {
     height: 300,
     border: '1px solid blue',
   };
-  return <h1 style={container}>Character</h1>;
+  return <h1 style={container}>List of Characters</h1>;
 };
 export default Character;
