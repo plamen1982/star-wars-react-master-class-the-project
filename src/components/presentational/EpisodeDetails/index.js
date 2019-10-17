@@ -20,7 +20,7 @@ const EpisodeDetails = props => {
   const episodeDirection = 'horizontal';
   return (
     <div style={styles}>
-      <EpisodeCard data={currentEpisode} styles={episodeDirection} />
+      <EpisodeCard data={currentEpisode} direction={episodeDirection} />
     </div>
   );
 };

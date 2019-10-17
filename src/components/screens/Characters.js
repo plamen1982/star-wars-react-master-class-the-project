@@ -1,12 +1,9 @@
 import React, { useContext } from 'react';
 import { ThemeContext } from '../../contexts';
-
+import CharactersList from '../containers/CharactersList';
 const Character = () => {
   const theme = useContext(ThemeContext);
-  const container = {
-    height: 300,
-    border: '1px solid blue',
-  };
-  return <h1 style={container}>List of Characters</h1>;
+
+  return <CharactersList />;
 };
 export default Character;

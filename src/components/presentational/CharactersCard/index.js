@@ -5,17 +5,16 @@ import { styles } from './styles';
 import { Link } from 'react-router-dom';
 import { ThemeContext } from '../../../contexts';
 
-export default function EpisodeCard({ data, direction }) {
+export default function CharactersCard({ data, direction }) {
   const {
     currentTheme: {
       colors: { cards, defaultColors },
     },
   } = useContext(ThemeContext);
   const styleWithTheme = { ...styles[direction], cards, defaultColors };
-  debugger;
   const useStyles = makeStyles(styleWithTheme);
   const classes = useStyles();
-  const { node: movie } = data;
+  const { node: character } = data;
   return (
     <Card className={`${classes.defaultColors} ${classes.container}`}>
       {direction === 'horizontal' ? (
@@ -24,12 +23,12 @@ export default function EpisodeCard({ data, direction }) {
             <div>
               <img
                 className={classes.imageStyles}
-                src={movie.image}
+                src={character.image}
                 alt="url"
               />
             </div>
             <div>
-              <Link to={`/episodes/${movie.episodeId}`}>{movie.title}</Link>
+              <Link to={`/episodes/${character.id}`}>{character.name}</Link>
             </div>
           </Card>
           <Card className={`${classes.cards} ${classes.openingDescription}`}>
@@ -39,7 +38,28 @@ export default function EpisodeCard({ data, direction }) {
                 color={classes.cards.color}
                 gutterBottom
               >
-                {movie.openingCrawl}
+                Height: {character.height}
+              </Typography>
+              <Typography
+                className={classes.title}
+                color={classes.cards.color}
+                gutterBottom
+              >
+                Mass: {character.mass}
+              </Typography>
+              <Typography
+                className={classes.title}
+                color={classes.cards.color}
+                gutterBottom
+              >
+                Species: {character.species.name}
+              </Typography>
+              <Typography
+                className={classes.title}
+                color={classes.cards.color}
+                gutterBottom
+              >
+                {character.homeworld.name}
               </Typography>
             </CardContent>
           </Card>
@@ -50,12 +70,12 @@ export default function EpisodeCard({ data, direction }) {
             <div>
               <img
                 className={classes.imageStyles}
-                src={movie.image}
+                src={character.image}
                 alt="url"
               />
             </div>
             <div>
-              <Link to={`/episodes/${movie.episodeId}`}>{movie.title}</Link>
+              <Link to={`/episodes/${character.id}`}>{character.name}</Link>
             </div>
           </CardContent>
           <Card className={`${classes.cards} ${classes.openingDescription}`}>
@@ -65,7 +85,28 @@ export default function EpisodeCard({ data, direction }) {
                 color={classes.cards.color}
                 gutterBottom
               >
-                {movie.openingCrawl}
+                Height: {character.height}
+              </Typography>
+              <Typography
+                className={classes.title}
+                color={classes.cards.color}
+                gutterBottom
+              >
+                Mass: {character.mass}
+              </Typography>
+              <Typography
+                className={classes.title}
+                color={classes.cards.color}
+                gutterBottom
+              >
+                Species: {character.species.name}
+              </Typography>
+              <Typography
+                className={classes.title}
+                color={classes.cards.color}
+                gutterBottom
+              >
+                {character.homeworld.name}
               </Typography>
             </CardContent>
           </Card>
