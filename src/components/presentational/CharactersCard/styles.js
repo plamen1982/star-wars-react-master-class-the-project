@@ -45,6 +45,7 @@ export const styles = {
     },
     openingDescription: {
       height: '10%',
+      width: '100%',
     },
   },
 };
