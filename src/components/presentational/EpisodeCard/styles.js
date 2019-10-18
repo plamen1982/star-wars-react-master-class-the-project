@@ -18,8 +18,8 @@ export const styles = {
       marginBottom: 12,
     },
     imageStyles: {
-      width: 330,
-      height: 330,
+      width: '100%',
+      height: '100%',
     },
   },
   horizontal: {

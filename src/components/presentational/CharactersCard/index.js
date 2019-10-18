@@ -28,7 +28,7 @@ export default function CharactersCard({ data, direction }) {
               />
             </div>
             <div>
-              <Link to={`/episodes/${character.id}`}>{character.name}</Link>
+              <Link to={`/characters/${character.id}`}>{character.name}</Link>
             </div>
           </Card>
           <Card className={`${classes.cards} ${classes.openingDescription}`}>
@@ -75,7 +75,7 @@ export default function CharactersCard({ data, direction }) {
               />
             </div>
             <div>
-              <Link to={`/episodes/${character.id}`}>{character.name}</Link>
+              <Link to={`/characters/${character.id}`}>{character.name}</Link>
             </div>
           </CardContent>
           <Card className={`${classes.cards} ${classes.openingDescription}`}>

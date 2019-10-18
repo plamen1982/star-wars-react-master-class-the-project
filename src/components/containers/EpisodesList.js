@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import EpisodeCard from '../presentational/EpisodeCard';
 import ListData from '../containers/ListData';
-import * as data from '../../allEpisodes.json';
+import axios from 'axios';
 export default function EpisodesList() {
   const stylesList = {
     root: {
@@ -13,18 +13,26 @@ export default function EpisodesList() {
       paddingTop: 15,
     },
   };
+  const [allEpisodes, setaAllEpisodes] = useState([]);
+
+  useEffect(() => {
+    axios.get('http://localhost:4200/allEpisodes').then(({ data }) => {
+      debugger;
+      setaAllEpisodes(data);
+    });
+  }, []);
 
   const currentStyles = { ...stylesList };
   const useStyles = makeStyles(currentStyles);
   const classes = useStyles();
-  const { edges: allEpisodes } = data.data.allEpisodes;
+
   const direction = 'vertical';
   return (
     <div className={classes.root}>
       <ListData
         component={EpisodeCard}
-        data={allEpisodes}
         direction={direction}
+        data={allEpisodes}
       />
     </div>
   );

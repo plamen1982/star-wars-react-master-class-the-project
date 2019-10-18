@@ -17,10 +17,10 @@ const EpisodeDetails = props => {
     justifyContent: 'center',
     alignItems: 'center',
   };
-  const episodeDirection = 'horizontal';
+  const episodeDirectionCard = 'horizontal';
   return (
     <div style={styles}>
-      <EpisodeCard data={currentEpisode} direction={episodeDirection} />
+      <EpisodeCard data={currentEpisode} direction={episodeDirectionCard} />
     </div>
   );
 };

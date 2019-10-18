@@ -4,7 +4,7 @@ const ListData = ({ data, component: Component, direction }) => {
   return (
     <>
       {data.map(item => (
-        <Component data={item} direction={direction} />
+        <Component data={item.node} direction={direction} />
       ))}
     </>
   );

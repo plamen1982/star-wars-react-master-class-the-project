@@ -1,6 +1,25 @@
 import React from 'react';
 
-const CharacterDetails = props => {
-  return <h1>Character Details</h1>;
+import CharactersCard from '../CharactersCard';
+
+const CharacterDetails = ({
+  match: {
+    params: { characterId },
+  },
+}) => {
+  // const { edges: allPeople } = data.data.allPeople;
+
+  // const currentCharacter = allPeople.find(character => {
+  //   return character.node.characterId === Number(characterId);
+  // });
+  // const chracterDirectionCard = 'horizontal';
+  return (
+    <div>
+      <CharactersCard
+      // data={currentCharacter}
+      // direction={chracterDirectionCard}
+      />
+    </div>
+  );
 };
 export default CharacterDetails;
