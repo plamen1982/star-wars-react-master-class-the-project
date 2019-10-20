@@ -1,23 +1,23 @@
 import React from 'react';
-
-import CharactersCard from '../CharactersCard';
+import CharactersCard from './../CharactersCard';
+import { useSelector } from 'react-redux';
 
 const CharacterDetails = ({
   match: {
     params: { characterId },
   },
 }) => {
-  // const { edges: allPeople } = data.data.allPeople;
+  const characters = useSelector(state => state.characters);
 
-  // const currentCharacter = allPeople.find(character => {
-  //   return character.node.characterId === Number(characterId);
-  // });
-  // const chracterDirectionCard = 'horizontal';
+  const currentCharacter = characters.find(character => {
+    return character.node.id === characterId;
+  });
+  const chracterDirectionCard = 'horizontal';
   return (
     <div>
       <CharactersCard
-      // data={currentCharacter}
-      // direction={chracterDirectionCard}
+        data={currentCharacter.node}
+        direction={chracterDirectionCard}
       />
     </div>
   );

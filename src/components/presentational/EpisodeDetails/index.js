@@ -1,6 +1,6 @@
 import React from 'react';
-import * as data from '../../../allEpisodes.json';
 import EpisodeCard from './../EpisodeCard';
+import { useSelector } from 'react-redux';
 
 const EpisodeDetails = props => {
   const {
@@ -8,8 +8,8 @@ const EpisodeDetails = props => {
       params: { episodeId },
     },
   } = props;
-  const { edges: allEpisodes } = data.data.allEpisodes;
-  const currentEpisode = allEpisodes.find(episode => {
+  const episodes = useSelector(state => state.episodes);
+  const currentEpisode = episodes.find(episode => {
     return episode.node.episodeId === Number(episodeId);
   });
   const styles = {
@@ -20,7 +20,10 @@ const EpisodeDetails = props => {
   const episodeDirectionCard = 'horizontal';
   return (
     <div style={styles}>
-      <EpisodeCard data={currentEpisode} direction={episodeDirectionCard} />
+      <EpisodeCard
+        data={currentEpisode.node}
+        direction={episodeDirectionCard}
+      />
     </div>
   );
 };

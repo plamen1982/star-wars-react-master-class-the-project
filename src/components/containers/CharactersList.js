@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import CharactersCard from '../presentational/CharactersCard';
 import ListData from '../containers/ListData';
-import * as data from '../../allPeople.json';
+import { useDispatch, useSelector } from 'react-redux';
+import { getAllCharacters } from '../../store/actions';
+
 export default function EpisodesList() {
   const stylesList = {
     root: {
@@ -13,19 +15,26 @@ export default function EpisodesList() {
       paddingTop: 15,
     },
   };
-
   const currentStyles = { ...stylesList };
   const useStyles = makeStyles(currentStyles);
   const classes = useStyles();
-  const { edges: allPeople } = data.data.allPeople;
+  const characters = useSelector(state => state.characters);
+  const dispatch = useDispatch();
   const direction = 'vertical';
+
+  useEffect(() => {
+    dispatch(getAllCharacters());
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
   return (
-    <div className={classes.root}>
-      <ListData
-        component={CharactersCard}
-        data={allPeople}
-        direction={direction}
-      />
-    </div>
+    characters && (
+      <div className={classes.root}>
+        <ListData
+          component={CharactersCard}
+          data={characters}
+          direction={direction}
+        />
+      </div>
+    )
   );
 }

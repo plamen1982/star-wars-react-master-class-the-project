@@ -15,21 +15,17 @@ export default function EpisodeCard({ data, direction }) {
   debugger;
   const useStyles = makeStyles(styleWithTheme);
   const classes = useStyles();
-  const { node: movie } = data;
-  return (
+
+  return data ? (
     <Card className={`${classes.defaultColors} ${classes.container}`}>
       {direction === 'horizontal' ? (
         <>
           <Card className={`${classes.imageAndTitle} ${classes.cards}`}>
             <div>
-              <img
-                className={classes.imageStyles}
-                src={movie.image}
-                alt="url"
-              />
+              <img className={classes.imageStyles} src={data.image} alt="url" />
             </div>
             <div>
-              <Link to={`/episodes/${movie.episodeId}`}>{movie.title}</Link>
+              <Link to={`/episodes/${data.episodeId}`}>{data.title}</Link>
             </div>
           </Card>
           <Card className={`${classes.cards} ${classes.openingDescription}`}>
@@ -39,7 +35,7 @@ export default function EpisodeCard({ data, direction }) {
                 color={classes.cards.color}
                 gutterBottom
               >
-                {movie.openingCrawl}
+                {data.openingCrawl}
               </Typography>
             </CardContent>
           </Card>
@@ -48,14 +44,10 @@ export default function EpisodeCard({ data, direction }) {
         <>
           <CardContent className={`${classes.imageAndTitle} ${classes.cards}`}>
             <div>
-              <img
-                className={classes.imageStyles}
-                src={movie.image}
-                alt="url"
-              />
+              <img className={classes.imageStyles} src={data.image} alt="url" />
             </div>
             <div>
-              <Link to={`/episodes/${movie.episodeId}`}>{movie.title}</Link>
+              <Link to={`/episodes/${data.episodeId}`}>{data.title}</Link>
             </div>
           </CardContent>
           <Card className={`${classes.cards} ${classes.openingDescription}`}>
@@ -65,12 +57,12 @@ export default function EpisodeCard({ data, direction }) {
                 color={classes.cards.color}
                 gutterBottom
               >
-                {movie.openingCrawl}
+                {data.openingCrawl}
               </Typography>
             </CardContent>
           </Card>
         </>
       )}
     </Card>
-  );
+  ) : null;
 }

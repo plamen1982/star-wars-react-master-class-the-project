@@ -1,8 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import EpisodeCard from '../presentational/EpisodeCard';
 import ListData from '../containers/ListData';
-import axios from 'axios';
+import { getAllEpisodes } from '../../store/actions/';
+import { useSelector, useDispatch } from 'react-redux';
+
 export default function EpisodesList() {
   const stylesList = {
     root: {
@@ -13,27 +15,22 @@ export default function EpisodesList() {
       paddingTop: 15,
     },
   };
-  const [allEpisodes, setaAllEpisodes] = useState([]);
-
-  useEffect(() => {
-    axios.get('http://localhost:4200/allEpisodes').then(({ data }) => {
-      debugger;
-      setaAllEpisodes(data);
-    });
-  }, []);
-
+  const episodes = useSelector(state => state.episodes);
+  const dispatch = useDispatch();
   const currentStyles = { ...stylesList };
   const useStyles = makeStyles(currentStyles);
   const classes = useStyles();
 
   const direction = 'vertical';
-  return (
+
+  useEffect(() => {
+    dispatch(getAllEpisodes());
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  return episodes ? (
     <div className={classes.root}>
-      <ListData
-        component={EpisodeCard}
-        direction={direction}
-        data={allEpisodes}
-      />
+      <ListData component={EpisodeCard} direction={direction} data={episodes} />
     </div>
-  );
+  ) : null;
 }
