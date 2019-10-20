@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 const useForm = (initialState, validate, authenticate) => {
   const [values, setValues] = useState(initialState);
@@ -15,6 +15,7 @@ const useForm = (initialState, validate, authenticate) => {
         setSubmitting(false);
       }
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [errors]);
 
   const handleChange = ({ target: { name, value } }) => {
