@@ -1,5 +1,5 @@
-import React, { useContext, useEffect, useState } from 'react';
-import { TextField, Button } from '@material-ui/core';
+import React, { useContext } from 'react';
+import { TextField } from '@material-ui/core';
 import axios from 'axios';
 import { ThemeContext } from '../../../contexts';
 import { styles, inputStyles } from './styles';
