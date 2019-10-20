@@ -3,9 +3,9 @@ import React from 'react';
 const ListData = ({ data, component: Component, direction }) => {
   return (
     <>
-      {data.map(item => (
-        <Component data={item} direction={direction} />
-      ))}
+      {data.map(item => {
+        return <Component data={item.node} direction={direction} />;
+      })}
     </>
   );
 };
