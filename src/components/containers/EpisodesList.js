@@ -1,11 +1,13 @@
 import React, { useEffect } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import EpisodeCard from '../presentational/EpisodeCard';
-import ListData from '../containers/ListData';
+import ListData from '../presentational/ListData';
 import { getAllEpisodes } from '../../store/actions/';
 import { useSelector, useDispatch } from 'react-redux';
+import { useHistory } from 'react-router-dom';
 
 export default function EpisodesList() {
+  let history = useHistory();
   const stylesList = {
     root: {
       display: 'flex',
@@ -24,7 +26,7 @@ export default function EpisodesList() {
   const direction = 'vertical';
 
   useEffect(() => {
-    dispatch(getAllEpisodes());
+    dispatch(getAllEpisodes(history));
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 

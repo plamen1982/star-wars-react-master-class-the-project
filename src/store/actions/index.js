@@ -1,11 +1,22 @@
-import axios from 'axios';
+import { baseUrl } from '../../constants/url-releted';
 import {
   GET_ALL_CHARACTERS,
   GET_ALL_EPISODES,
   GET_ALL_STARSHIPS,
 } from './actionTypes';
+import { post } from '../../api/requester';
+import {
+  allPeopleQuery,
+  allEpisodes,
+  allStarships,
+} from '../../constants/queries';
+
 const getAllCharacters = () => async dispatch => {
-  const data = await axios.get(`http://localhost:4200/allPeople`);
+  const config = {
+    query: allPeopleQuery,
+  };
+  const data = await post(baseUrl, config);
+  debugger;
   const action = {
     type: GET_ALL_CHARACTERS,
     data,
@@ -14,7 +25,10 @@ const getAllCharacters = () => async dispatch => {
 };
 
 const getAllStarships = () => async dispatch => {
-  const data = await axios.get(`http://localhost:4200/allStarships`);
+  const config = {
+    query: allStarships,
+  };
+  const data = await post(baseUrl, config);
   const action = {
     type: GET_ALL_STARSHIPS,
     data,
@@ -22,13 +36,20 @@ const getAllStarships = () => async dispatch => {
   dispatch(action);
 };
 
-const getAllEpisodes = () => async dispatch => {
-  const data = await axios.get(`http://localhost:4200/allEpisodes`);
-  const action = {
-    type: GET_ALL_EPISODES,
-    data,
+const getAllEpisodes = history => async dispatch => {
+  const config = {
+    query: allEpisodes,
   };
-  dispatch(action);
+  try {
+    const data = await post(baseUrl, config);
+    const action = {
+      type: GET_ALL_EPISODES,
+      data,
+    };
+    dispatch(action);
+  } catch (e) {
+    history.push('/');
+  }
 };
 
 export { getAllCharacters, getAllStarships, getAllEpisodes };

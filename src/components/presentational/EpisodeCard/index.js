@@ -12,7 +12,6 @@ export default function EpisodeCard({ data, direction }) {
     },
   } = useContext(ThemeContext);
   const styleWithTheme = { ...styles[direction], cards, defaultColors };
-  debugger;
   const useStyles = makeStyles(styleWithTheme);
   const classes = useStyles();
 

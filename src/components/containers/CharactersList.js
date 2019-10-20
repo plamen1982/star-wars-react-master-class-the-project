@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import CharactersCard from '../presentational/CharactersCard';
-import ListData from '../containers/ListData';
+import ListData from '../presentational/ListData';
 import { useDispatch, useSelector } from 'react-redux';
 import { getAllCharacters } from '../../store/actions';
 

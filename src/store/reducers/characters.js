@@ -4,7 +4,7 @@ const initialState = [];
 const characters = (state = initialState, action) => {
   switch (action.type) {
     case GET_ALL_CHARACTERS:
-      return [...state, ...action.data.data];
+      return [...state, ...action.data.data.allPeople.edges];
     default:
       return state;
   }

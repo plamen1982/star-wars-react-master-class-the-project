@@ -612,3 +612,2104 @@ To ignore, add // eslint-disable-next-line to the line before.
 
 Compiling...
 Compiled successfully!
+Compiling...
+Compiled successfully!
+Failed to compile.
+
+./src/components/containers/ListData.js
+Error: ENOENT: no such file or directory, open '/home/plamen/Projects/star-wars-react-master-class/ui/src/components/containers/ListData.js'
+Compiling...
+Failed to compile.
+
+./src/components/containers/ListData.js
+Error: ENOENT: no such file or directory, open '/home/plamen/Projects/star-wars-react-master-class/ui/src/components/containers/ListData.js'
+Compiling...
+Compiled successfully!
+Compiling...
+Compiled successfully!
+Compiling...
+Failed to compile.
+
+./src/components/screens/Login.js
+Syntax error: Unexpected token (9:3)
+
+   7 |   return (
+   8 | 
+>  9 |   );
+     |   ^
+  10 | };
+  11 | export default Login;
+  12 |
+Compiling...
+Compiled successfully!
+Compiling...
+Compiled successfully!
+Compiling...
+Compiled successfully!
+Compiling...
+Failed to compile.
+
+./src/components/containers/FormLogin.js
+  Line 11:24:  'theme' is not defined  no-undef
+
+Search for the keywords to learn more about each error.
+Compiling...
+Compiled successfully!
+Compiling...
+Compiled successfully!
+Failed to compile.
+
+./src/components/containers/FormLogin.js
+Error: ENOENT: no such file or directory, open '/home/plamen/Projects/star-wars-react-master-class/ui/src/components/containers/FormLogin.js'
+Compiling...
+Failed to compile.
+
+./src/components/containers/FormLogin.js
+Error: ENOENT: no such file or directory, open '/home/plamen/Projects/star-wars-react-master-class/ui/src/components/containers/FormLogin.js'
+Compiling...
+Failed to compile.
+
+./src/components/containers/FormLogin/index.js
+Module not found: Can't resolve '../../contexts' in '/home/plamen/Projects/star-wars-react-master-class/ui/src/components/containers/FormLogin'
+Compiling...
+Failed to compile.
+
+./src/components/containers/FormLogin.js
+Error: ENOENT: no such file or directory, open '/home/plamen/Projects/star-wars-react-master-class/ui/src/components/containers/FormLogin.js'
+Compiling...
+Failed to compile.
+
+./src/components/containers/FormLogin/index.js
+Module not found: Can't resolve '../../contexts' in '/home/plamen/Projects/star-wars-react-master-class/ui/src/components/containers/FormLogin'
+Compiling...
+Compiled successfully!
+Compiling...
+Failed to compile.
+
+./src/components/containers/FormLogin/index.js
+  Line 12:36:  'handleSubmit' is not defined  no-undef
+  Line 16:19:  'handleChange' is not defined  no-undef
+  Line 17:16:  'values' is not defined        no-undef
+  Line 26:19:  'handleChange' is not defined  no-undef
+  Line 27:16:  'values' is not defined        no-undef
+
+Search for the keywords to learn more about each error.
+Compiling...
+Failed to compile.
+
+./src/components/containers/FormLogin/index.js
+  Line 12:36:  'handleSubmit' is not defined  no-undef
+  Line 16:19:  'handleChange' is not defined  no-undef
+  Line 17:16:  'values' is not defined        no-undef
+  Line 26:19:  'handleChange' is not defined  no-undef
+  Line 27:16:  'values' is not defined        no-undef
+
+Search for the keywords to learn more about each error.
+Compiling...
+Failed to compile.
+
+./src/components/containers/FormLogin/index.js
+Attempted import error: '../../../hooks/useForm' does not contain a default export (imported as 'useForm').
+Compiling...
+Failed to compile.
+
+./src/components/containers/FormLogin/index.js
+Attempted import error: '../../../hooks/useForm' does not contain a default export (imported as 'useForm').
+Compiling...
+Failed to compile.
+
+./src/components/containers/FormLogin/index.js
+Attempted import error: '../../../hooks/useForm' does not contain a default export (imported as 'useForm').
+Compiling...
+Failed to compile.
+
+./src/components/containers/FormLogin/index.js
+Attempted import error: '../../../hooks/useForm' does not contain a default export (imported as 'useForm').
+Compiling...
+Failed to compile.
+
+./src/components/containers/FormLogin/index.js
+Attempted import error: '../../../hooks/useForm' does not contain a default export (imported as 'useForm').
+Compiling...
+Failed to compile.
+
+./src/components/containers/FormLogin/index.js
+Attempted import error: '../../../hooks/useForm' does not contain a default export (imported as 'useForm').
+Compiling...
+Failed to compile.
+
+./src/components/containers/FormLogin/index.js
+Attempted import error: '../../../hooks/useForm' does not contain a default export (imported as 'useForm').
+Compiling...
+Failed to compile.
+
+./src/components/containers/FormLogin/index.js
+Attempted import error: '../../../hooks/useForm' does not contain a default export (imported as 'useForm').
+Compiling...
+Failed to compile.
+
+./src/components/containers/FormLogin/index.js
+Attempted import error: '../../../hooks/useForm' does not contain a default export (imported as 'useForm').
+Compiling...
+Failed to compile.
+
+./src/components/containers/FormLogin/index.js
+Attempted import error: '../../../hooks/useForm' does not contain a default export (imported as 'useForm').
+Compiling...
+Failed to compile.
+
+./src/components/containers/FormLogin/index.js
+Attempted import error: '../../../hooks/useForm' does not contain a default export (imported as 'useForm').
+Compiling...
+Failed to compile.
+
+./src/components/containers/FormLogin/index.js
+Syntax error: Unexpected token (30:13)
+
+  28 |         console.log('Invalid credential!')
+  29 |       }
+> 30 |     } catch((e) => {
+     |             ^
+  31 |       console.log(e)
+  32 |     })
+  33 |
+Compiling...
+Failed to compile.
+
+./src/components/containers/FormLogin/index.js
+Attempted import error: '../../../hooks/useForm' does not contain a default export (imported as 'useForm').
+Compiling...
+Compiled with warnings.
+
+./src/components/containers/FormLogin/index.js
+  Line 1:29:   'useEffect' is defined but never used              no-unused-vars
+  Line 1:40:   'useState' is defined but never used               no-unused-vars
+  Line 34:47:  'errors' is assigned a value but never used        no-unused-vars
+  Line 34:55:  'isSubmitting' is assigned a value but never used  no-unused-vars
+
+./src/hooks/useForm.js
+  Line 1:8:   'React' is defined but never used                                                                                                                                                                                                                             no-unused-vars
+  Line 17:6:  React Hook useEffect has missing dependencies: 'authenticate' and 'isSubmitting'. Either include them or remove the dependency array. If 'authenticate' changes too often, find the parent component that defines it and wrap that definition in useCallback  react-hooks/exhaustive-deps
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+Compiled with warnings.
+
+./src/components/containers/FormLogin/index.js
+  Line 1:29:   'useEffect' is defined but never used              no-unused-vars
+  Line 1:40:   'useState' is defined but never used               no-unused-vars
+  Line 35:47:  'errors' is assigned a value but never used        no-unused-vars
+  Line 35:55:  'isSubmitting' is assigned a value but never used  no-unused-vars
+
+./src/hooks/useForm.js
+  Line 1:8:   'React' is defined but never used                                                                                                                                                                                                                             no-unused-vars
+  Line 17:6:  React Hook useEffect has missing dependencies: 'authenticate' and 'isSubmitting'. Either include them or remove the dependency array. If 'authenticate' changes too often, find the parent component that defines it and wrap that definition in useCallback  react-hooks/exhaustive-deps
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+Compiled with warnings.
+
+./src/components/containers/FormLogin/index.js
+  Line 1:29:   'useEffect' is defined but never used              no-unused-vars
+  Line 1:40:   'useState' is defined but never used               no-unused-vars
+  Line 35:47:  'errors' is assigned a value but never used        no-unused-vars
+  Line 35:55:  'isSubmitting' is assigned a value but never used  no-unused-vars
+
+./src/hooks/useForm.js
+  Line 1:8:   'React' is defined but never used                                                                                                                                                                                                                             no-unused-vars
+  Line 17:6:  React Hook useEffect has missing dependencies: 'authenticate' and 'isSubmitting'. Either include them or remove the dependency array. If 'authenticate' changes too often, find the parent component that defines it and wrap that definition in useCallback  react-hooks/exhaustive-deps
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+Compiled with warnings.
+
+./src/components/containers/FormLogin/index.js
+  Line 1:29:   'useEffect' is defined but never used              no-unused-vars
+  Line 1:40:   'useState' is defined but never used               no-unused-vars
+  Line 35:47:  'errors' is assigned a value but never used        no-unused-vars
+  Line 35:55:  'isSubmitting' is assigned a value but never used  no-unused-vars
+
+./src/hooks/useForm.js
+  Line 1:8:   'React' is defined but never used                                                                                                                                                                                                                             no-unused-vars
+  Line 17:6:  React Hook useEffect has missing dependencies: 'authenticate' and 'isSubmitting'. Either include them or remove the dependency array. If 'authenticate' changes too often, find the parent component that defines it and wrap that definition in useCallback  react-hooks/exhaustive-deps
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+Compiled with warnings.
+
+./src/components/containers/FormLogin/index.js
+  Line 1:29:   'useEffect' is defined but never used              no-unused-vars
+  Line 1:40:   'useState' is defined but never used               no-unused-vars
+  Line 35:47:  'errors' is assigned a value but never used        no-unused-vars
+  Line 35:55:  'isSubmitting' is assigned a value but never used  no-unused-vars
+
+./src/hooks/useForm.js
+  Line 1:8:   'React' is defined but never used                                                                                                                                                                                                                             no-unused-vars
+  Line 17:6:  React Hook useEffect has missing dependencies: 'authenticate' and 'isSubmitting'. Either include them or remove the dependency array. If 'authenticate' changes too often, find the parent component that defines it and wrap that definition in useCallback  react-hooks/exhaustive-deps
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+Compiled with warnings.
+
+./src/components/containers/FormLogin/index.js
+  Line 1:29:   'useEffect' is defined but never used              no-unused-vars
+  Line 1:40:   'useState' is defined but never used               no-unused-vars
+  Line 35:47:  'errors' is assigned a value but never used        no-unused-vars
+  Line 35:55:  'isSubmitting' is assigned a value but never used  no-unused-vars
+
+./src/hooks/useForm.js
+  Line 1:8:   'React' is defined but never used                                                                                                                                                                                                                             no-unused-vars
+  Line 17:6:  React Hook useEffect has missing dependencies: 'authenticate' and 'isSubmitting'. Either include them or remove the dependency array. If 'authenticate' changes too often, find the parent component that defines it and wrap that definition in useCallback  react-hooks/exhaustive-deps
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+Compiled with warnings.
+
+./src/components/containers/FormLogin/index.js
+  Line 1:29:   'useEffect' is defined but never used              no-unused-vars
+  Line 1:40:   'useState' is defined but never used               no-unused-vars
+  Line 35:47:  'errors' is assigned a value but never used        no-unused-vars
+  Line 35:55:  'isSubmitting' is assigned a value but never used  no-unused-vars
+
+./src/hooks/useForm.js
+  Line 1:8:   'React' is defined but never used                                                                                                                                                                                                                                        no-unused-vars
+  Line 17:6:  React Hook useEffect has missing dependencies: 'authenticate', 'errors', and 'isSubmitting'. Either include them or remove the dependency array. If 'authenticate' changes too often, find the parent component that defines it and wrap that definition in useCallback  react-hooks/exhaustive-deps
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+Compiled with warnings.
+
+./src/components/containers/FormLogin/index.js
+  Line 1:29:   'useEffect' is defined but never used              no-unused-vars
+  Line 1:40:   'useState' is defined but never used               no-unused-vars
+  Line 35:47:  'errors' is assigned a value but never used        no-unused-vars
+  Line 35:55:  'isSubmitting' is assigned a value but never used  no-unused-vars
+
+./src/hooks/useForm.js
+  Line 1:8:   'React' is defined but never used                                                                                                                                                                                                                             no-unused-vars
+  Line 17:6:  React Hook useEffect has missing dependencies: 'authenticate' and 'isSubmitting'. Either include them or remove the dependency array. If 'authenticate' changes too often, find the parent component that defines it and wrap that definition in useCallback  react-hooks/exhaustive-deps
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+Compiled with warnings.
+
+./src/components/containers/FormLogin/index.js
+  Line 1:29:   'useEffect' is defined but never used              no-unused-vars
+  Line 1:40:   'useState' is defined but never used               no-unused-vars
+  Line 35:47:  'errors' is assigned a value but never used        no-unused-vars
+  Line 35:55:  'isSubmitting' is assigned a value but never used  no-unused-vars
+
+./src/hooks/useForm.js
+  Line 1:8:   'React' is defined but never used                                                                                                                                                                                                                             no-unused-vars
+  Line 18:6:  React Hook useEffect has missing dependencies: 'authenticate' and 'isSubmitting'. Either include them or remove the dependency array. If 'authenticate' changes too often, find the parent component that defines it and wrap that definition in useCallback  react-hooks/exhaustive-deps
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+Compiled with warnings.
+
+./src/components/containers/FormLogin/index.js
+  Line 1:29:   'useEffect' is defined but never used              no-unused-vars
+  Line 1:40:   'useState' is defined but never used               no-unused-vars
+  Line 35:47:  'errors' is assigned a value but never used        no-unused-vars
+  Line 35:55:  'isSubmitting' is assigned a value but never used  no-unused-vars
+
+./src/hooks/useForm.js
+  Line 1:8:   'React' is defined but never used                                                                                                                                                                                                                             no-unused-vars
+  Line 18:6:  React Hook useEffect has missing dependencies: 'authenticate' and 'isSubmitting'. Either include them or remove the dependency array. If 'authenticate' changes too often, find the parent component that defines it and wrap that definition in useCallback  react-hooks/exhaustive-deps
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+Compiled with warnings.
+
+./src/components/containers/FormLogin/index.js
+  Line 1:29:   'useEffect' is defined but never used              no-unused-vars
+  Line 1:40:   'useState' is defined but never used               no-unused-vars
+  Line 2:21:   'Button' is defined but never used                 no-unused-vars
+  Line 35:47:  'errors' is assigned a value but never used        no-unused-vars
+  Line 35:55:  'isSubmitting' is assigned a value but never used  no-unused-vars
+
+./src/hooks/useForm.js
+  Line 1:8:   'React' is defined but never used                                                                                                                                                                                                                             no-unused-vars
+  Line 18:6:  React Hook useEffect has missing dependencies: 'authenticate' and 'isSubmitting'. Either include them or remove the dependency array. If 'authenticate' changes too often, find the parent component that defines it and wrap that definition in useCallback  react-hooks/exhaustive-deps
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+Failed to compile.
+
+./src/components/containers/FormLogin/index.js
+Syntax error: Unexpected token (22:33)
+
+  20 |     const { email, password } = values;
+  21 |     try {
+> 22 |       const token = await axios.({
+     |                                 ^
+  23 |         url: 'http://softuni-swapp-212366186.eu-west-1.elb.amazonaws.com/graphql',
+  24 |         data: {
+  25 |           query: `mutation {
+Compiling...
+Failed to compile.
+
+./src/components/containers/FormLogin/index.js
+Syntax error: Unexpected token, expected "," (31:9)
+
+  29 |       }
+  30 |         // #   signIn(email: "demo@st6.io" password: "demo1234") {token}
+> 31 |         { email, password },
+     |         ^
+  32 |       );
+  33 |       if (token.length > 0) {
+  34 |         localStorage.setItem(token);
+Compiling...
+Compiled with warnings.
+
+./src/components/containers/FormLogin/index.js
+  Line 1:29:   'useEffect' is defined but never used              no-unused-vars
+  Line 1:40:   'useState' is defined but never used               no-unused-vars
+  Line 2:21:   'Button' is defined but never used                 no-unused-vars
+  Line 40:47:  'errors' is assigned a value but never used        no-unused-vars
+  Line 40:55:  'isSubmitting' is assigned a value but never used  no-unused-vars
+
+./src/hooks/useForm.js
+  Line 1:8:   'React' is defined but never used                                                                                                                                                                                                                             no-unused-vars
+  Line 18:6:  React Hook useEffect has missing dependencies: 'authenticate' and 'isSubmitting'. Either include them or remove the dependency array. If 'authenticate' changes too often, find the parent component that defines it and wrap that definition in useCallback  react-hooks/exhaustive-deps
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+Compiled with warnings.
+
+./src/components/containers/FormLogin/index.js
+  Line 1:29:   'useEffect' is defined but never used              no-unused-vars
+  Line 1:40:   'useState' is defined but never used               no-unused-vars
+  Line 2:21:   'Button' is defined but never used                 no-unused-vars
+  Line 40:47:  'errors' is assigned a value but never used        no-unused-vars
+  Line 40:55:  'isSubmitting' is assigned a value but never used  no-unused-vars
+
+./src/hooks/useForm.js
+  Line 1:8:   'React' is defined but never used                                                                                                                                                                                                                             no-unused-vars
+  Line 18:6:  React Hook useEffect has missing dependencies: 'authenticate' and 'isSubmitting'. Either include them or remove the dependency array. If 'authenticate' changes too often, find the parent component that defines it and wrap that definition in useCallback  react-hooks/exhaustive-deps
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+Compiled with warnings.
+
+./src/components/containers/FormLogin/index.js
+  Line 1:29:   'useEffect' is defined but never used              no-unused-vars
+  Line 1:40:   'useState' is defined but never used               no-unused-vars
+  Line 2:21:   'Button' is defined but never used                 no-unused-vars
+  Line 40:47:  'errors' is assigned a value but never used        no-unused-vars
+  Line 40:55:  'isSubmitting' is assigned a value but never used  no-unused-vars
+
+./src/hooks/useForm.js
+  Line 1:8:   'React' is defined but never used                                                                                                                                                                                                                             no-unused-vars
+  Line 18:6:  React Hook useEffect has missing dependencies: 'authenticate' and 'isSubmitting'. Either include them or remove the dependency array. If 'authenticate' changes too often, find the parent component that defines it and wrap that definition in useCallback  react-hooks/exhaustive-deps
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+Compiled with warnings.
+
+./src/components/containers/FormLogin/index.js
+  Line 1:29:   'useEffect' is defined but never used              no-unused-vars
+  Line 1:40:   'useState' is defined but never used               no-unused-vars
+  Line 2:21:   'Button' is defined but never used                 no-unused-vars
+  Line 41:47:  'errors' is assigned a value but never used        no-unused-vars
+  Line 41:55:  'isSubmitting' is assigned a value but never used  no-unused-vars
+
+./src/hooks/useForm.js
+  Line 1:8:   'React' is defined but never used                                                                                                                                                                                                                             no-unused-vars
+  Line 18:6:  React Hook useEffect has missing dependencies: 'authenticate' and 'isSubmitting'. Either include them or remove the dependency array. If 'authenticate' changes too often, find the parent component that defines it and wrap that definition in useCallback  react-hooks/exhaustive-deps
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+Compiled with warnings.
+
+./src/components/containers/FormLogin/index.js
+  Line 1:29:   'useEffect' is defined but never used              no-unused-vars
+  Line 1:40:   'useState' is defined but never used               no-unused-vars
+  Line 2:21:   'Button' is defined but never used                 no-unused-vars
+  Line 39:47:  'errors' is assigned a value but never used        no-unused-vars
+  Line 39:55:  'isSubmitting' is assigned a value but never used  no-unused-vars
+
+./src/hooks/useForm.js
+  Line 1:8:   'React' is defined but never used                                                                                                                                                                                                                             no-unused-vars
+  Line 18:6:  React Hook useEffect has missing dependencies: 'authenticate' and 'isSubmitting'. Either include them or remove the dependency array. If 'authenticate' changes too often, find the parent component that defines it and wrap that definition in useCallback  react-hooks/exhaustive-deps
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+Compiled with warnings.
+
+./src/components/containers/FormLogin/index.js
+  Line 1:29:   'useEffect' is defined but never used              no-unused-vars
+  Line 1:40:   'useState' is defined but never used               no-unused-vars
+  Line 2:21:   'Button' is defined but never used                 no-unused-vars
+  Line 37:47:  'errors' is assigned a value but never used        no-unused-vars
+  Line 37:55:  'isSubmitting' is assigned a value but never used  no-unused-vars
+
+./src/hooks/useForm.js
+  Line 1:8:   'React' is defined but never used                                                                                                                                                                                                                             no-unused-vars
+  Line 18:6:  React Hook useEffect has missing dependencies: 'authenticate' and 'isSubmitting'. Either include them or remove the dependency array. If 'authenticate' changes too often, find the parent component that defines it and wrap that definition in useCallback  react-hooks/exhaustive-deps
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+Compiled with warnings.
+
+./src/components/containers/FormLogin/index.js
+  Line 1:29:   'useEffect' is defined but never used              no-unused-vars
+  Line 1:40:   'useState' is defined but never used               no-unused-vars
+  Line 2:21:   'Button' is defined but never used                 no-unused-vars
+  Line 37:47:  'errors' is assigned a value but never used        no-unused-vars
+  Line 37:55:  'isSubmitting' is assigned a value but never used  no-unused-vars
+
+./src/hooks/useForm.js
+  Line 1:8:   'React' is defined but never used                                                                                                                                                                                                                             no-unused-vars
+  Line 18:6:  React Hook useEffect has missing dependencies: 'authenticate' and 'isSubmitting'. Either include them or remove the dependency array. If 'authenticate' changes too often, find the parent component that defines it and wrap that definition in useCallback  react-hooks/exhaustive-deps
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+Compiled with warnings.
+
+./src/components/containers/FormLogin/index.js
+  Line 1:29:   'useEffect' is defined but never used              no-unused-vars
+  Line 1:40:   'useState' is defined but never used               no-unused-vars
+  Line 2:21:   'Button' is defined but never used                 no-unused-vars
+  Line 40:47:  'errors' is assigned a value but never used        no-unused-vars
+  Line 40:55:  'isSubmitting' is assigned a value but never used  no-unused-vars
+
+./src/hooks/useForm.js
+  Line 1:8:   'React' is defined but never used                                                                                                                                                                                                                             no-unused-vars
+  Line 18:6:  React Hook useEffect has missing dependencies: 'authenticate' and 'isSubmitting'. Either include them or remove the dependency array. If 'authenticate' changes too often, find the parent component that defines it and wrap that definition in useCallback  react-hooks/exhaustive-deps
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+Compiled with warnings.
+
+./src/components/containers/FormLogin/index.js
+  Line 1:29:   'useEffect' is defined but never used              no-unused-vars
+  Line 1:40:   'useState' is defined but never used               no-unused-vars
+  Line 2:21:   'Button' is defined but never used                 no-unused-vars
+  Line 40:47:  'errors' is assigned a value but never used        no-unused-vars
+  Line 40:55:  'isSubmitting' is assigned a value but never used  no-unused-vars
+
+./src/hooks/useForm.js
+  Line 1:8:   'React' is defined but never used                                                                                                                                                                                                                             no-unused-vars
+  Line 18:6:  React Hook useEffect has missing dependencies: 'authenticate' and 'isSubmitting'. Either include them or remove the dependency array. If 'authenticate' changes too often, find the parent component that defines it and wrap that definition in useCallback  react-hooks/exhaustive-deps
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+Compiled with warnings.
+
+./src/components/containers/FormLogin/index.js
+  Line 1:29:   'useEffect' is defined but never used              no-unused-vars
+  Line 1:40:   'useState' is defined but never used               no-unused-vars
+  Line 2:21:   'Button' is defined but never used                 no-unused-vars
+  Line 40:47:  'errors' is assigned a value but never used        no-unused-vars
+  Line 40:55:  'isSubmitting' is assigned a value but never used  no-unused-vars
+
+./src/hooks/useForm.js
+  Line 1:8:   'React' is defined but never used                                                                                                                                                                                                                             no-unused-vars
+  Line 18:6:  React Hook useEffect has missing dependencies: 'authenticate' and 'isSubmitting'. Either include them or remove the dependency array. If 'authenticate' changes too often, find the parent component that defines it and wrap that definition in useCallback  react-hooks/exhaustive-deps
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+Compiled with warnings.
+
+./src/components/containers/FormLogin/index.js
+  Line 1:29:   'useEffect' is defined but never used              no-unused-vars
+  Line 1:40:   'useState' is defined but never used               no-unused-vars
+  Line 2:21:   'Button' is defined but never used                 no-unused-vars
+  Line 44:47:  'errors' is assigned a value but never used        no-unused-vars
+  Line 44:55:  'isSubmitting' is assigned a value but never used  no-unused-vars
+
+./src/hooks/useForm.js
+  Line 1:8:   'React' is defined but never used                                                                                                                                                                                                                             no-unused-vars
+  Line 18:6:  React Hook useEffect has missing dependencies: 'authenticate' and 'isSubmitting'. Either include them or remove the dependency array. If 'authenticate' changes too often, find the parent component that defines it and wrap that definition in useCallback  react-hooks/exhaustive-deps
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+Compiled with warnings.
+
+./src/components/containers/FormLogin/index.js
+  Line 1:29:   'useEffect' is defined but never used              no-unused-vars
+  Line 1:40:   'useState' is defined but never used               no-unused-vars
+  Line 2:21:   'Button' is defined but never used                 no-unused-vars
+  Line 45:47:  'errors' is assigned a value but never used        no-unused-vars
+  Line 45:55:  'isSubmitting' is assigned a value but never used  no-unused-vars
+
+./src/hooks/useForm.js
+  Line 1:8:   'React' is defined but never used                                                                                                                                                                                                                             no-unused-vars
+  Line 18:6:  React Hook useEffect has missing dependencies: 'authenticate' and 'isSubmitting'. Either include them or remove the dependency array. If 'authenticate' changes too often, find the parent component that defines it and wrap that definition in useCallback  react-hooks/exhaustive-deps
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+Failed to compile.
+
+./src/components/containers/FormLogin/index.js
+  Line 31:11:  'token' is not defined  no-undef
+  Line 33:30:  'token' is not defined  no-undef
+
+Search for the keywords to learn more about each error.
+Compiling...
+Compiled with warnings.
+
+./src/components/containers/FormLogin/index.js
+  Line 1:29:   'useEffect' is defined but never used              no-unused-vars
+  Line 1:40:   'useState' is defined but never used               no-unused-vars
+  Line 2:21:   'Button' is defined but never used                 no-unused-vars
+  Line 44:47:  'errors' is assigned a value but never used        no-unused-vars
+  Line 44:55:  'isSubmitting' is assigned a value but never used  no-unused-vars
+
+./src/hooks/useForm.js
+  Line 1:8:   'React' is defined but never used                                                                                                                                                                                                                             no-unused-vars
+  Line 18:6:  React Hook useEffect has missing dependencies: 'authenticate' and 'isSubmitting'. Either include them or remove the dependency array. If 'authenticate' changes too often, find the parent component that defines it and wrap that definition in useCallback  react-hooks/exhaustive-deps
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+Compiled with warnings.
+
+./src/components/containers/FormLogin/index.js
+  Line 1:29:   'useEffect' is defined but never used              no-unused-vars
+  Line 1:40:   'useState' is defined but never used               no-unused-vars
+  Line 2:21:   'Button' is defined but never used                 no-unused-vars
+  Line 45:47:  'errors' is assigned a value but never used        no-unused-vars
+  Line 45:55:  'isSubmitting' is assigned a value but never used  no-unused-vars
+
+./src/hooks/useForm.js
+  Line 1:8:   'React' is defined but never used                                                                                                                                                                                                                             no-unused-vars
+  Line 18:6:  React Hook useEffect has missing dependencies: 'authenticate' and 'isSubmitting'. Either include them or remove the dependency array. If 'authenticate' changes too often, find the parent component that defines it and wrap that definition in useCallback  react-hooks/exhaustive-deps
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+Compiled with warnings.
+
+./src/components/containers/FormLogin/index.js
+  Line 1:29:   'useEffect' is defined but never used              no-unused-vars
+  Line 1:40:   'useState' is defined but never used               no-unused-vars
+  Line 2:21:   'Button' is defined but never used                 no-unused-vars
+  Line 44:47:  'errors' is assigned a value but never used        no-unused-vars
+  Line 44:55:  'isSubmitting' is assigned a value but never used  no-unused-vars
+
+./src/hooks/useForm.js
+  Line 1:8:   'React' is defined but never used                                                                                                                                                                                                                             no-unused-vars
+  Line 18:6:  React Hook useEffect has missing dependencies: 'authenticate' and 'isSubmitting'. Either include them or remove the dependency array. If 'authenticate' changes too often, find the parent component that defines it and wrap that definition in useCallback  react-hooks/exhaustive-deps
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+Compiled with warnings.
+
+./src/components/containers/FormLogin/index.js
+  Line 1:29:   'useEffect' is defined but never used              no-unused-vars
+  Line 1:40:   'useState' is defined but never used               no-unused-vars
+  Line 2:21:   'Button' is defined but never used                 no-unused-vars
+  Line 45:47:  'errors' is assigned a value but never used        no-unused-vars
+  Line 45:55:  'isSubmitting' is assigned a value but never used  no-unused-vars
+
+./src/hooks/useForm.js
+  Line 1:8:   'React' is defined but never used                                                                                                                                                                                                                             no-unused-vars
+  Line 18:6:  React Hook useEffect has missing dependencies: 'authenticate' and 'isSubmitting'. Either include them or remove the dependency array. If 'authenticate' changes too often, find the parent component that defines it and wrap that definition in useCallback  react-hooks/exhaustive-deps
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+Compiled with warnings.
+
+./src/components/containers/FormLogin/index.js
+  Line 1:29:   'useEffect' is defined but never used              no-unused-vars
+  Line 1:40:   'useState' is defined but never used               no-unused-vars
+  Line 2:21:   'Button' is defined but never used                 no-unused-vars
+  Line 48:47:  'errors' is assigned a value but never used        no-unused-vars
+  Line 48:55:  'isSubmitting' is assigned a value but never used  no-unused-vars
+
+./src/hooks/useForm.js
+  Line 1:8:   'React' is defined but never used                                                                                                                                                                                                                             no-unused-vars
+  Line 18:6:  React Hook useEffect has missing dependencies: 'authenticate' and 'isSubmitting'. Either include them or remove the dependency array. If 'authenticate' changes too often, find the parent component that defines it and wrap that definition in useCallback  react-hooks/exhaustive-deps
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+Compiled with warnings.
+
+./src/components/containers/FormLogin/index.js
+  Line 1:29:   'useEffect' is defined but never used              no-unused-vars
+  Line 1:40:   'useState' is defined but never used               no-unused-vars
+  Line 2:21:   'Button' is defined but never used                 no-unused-vars
+  Line 47:47:  'errors' is assigned a value but never used        no-unused-vars
+  Line 47:55:  'isSubmitting' is assigned a value but never used  no-unused-vars
+
+./src/hooks/useForm.js
+  Line 1:8:   'React' is defined but never used                                                                                                                                                                                                                             no-unused-vars
+  Line 18:6:  React Hook useEffect has missing dependencies: 'authenticate' and 'isSubmitting'. Either include them or remove the dependency array. If 'authenticate' changes too often, find the parent component that defines it and wrap that definition in useCallback  react-hooks/exhaustive-deps
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+Compiled with warnings.
+
+./src/components/containers/FormLogin/index.js
+  Line 1:29:   'useEffect' is defined but never used              no-unused-vars
+  Line 1:40:   'useState' is defined but never used               no-unused-vars
+  Line 2:21:   'Button' is defined but never used                 no-unused-vars
+  Line 47:47:  'errors' is assigned a value but never used        no-unused-vars
+  Line 47:55:  'isSubmitting' is assigned a value but never used  no-unused-vars
+
+./src/hooks/useForm.js
+  Line 1:8:   'React' is defined but never used                                                                                                                                                                                                                             no-unused-vars
+  Line 18:6:  React Hook useEffect has missing dependencies: 'authenticate' and 'isSubmitting'. Either include them or remove the dependency array. If 'authenticate' changes too often, find the parent component that defines it and wrap that definition in useCallback  react-hooks/exhaustive-deps
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+Compiled with warnings.
+
+./src/components/containers/FormLogin/index.js
+  Line 1:29:   'useEffect' is defined but never used              no-unused-vars
+  Line 1:40:   'useState' is defined but never used               no-unused-vars
+  Line 2:21:   'Button' is defined but never used                 no-unused-vars
+  Line 47:47:  'errors' is assigned a value but never used        no-unused-vars
+  Line 47:55:  'isSubmitting' is assigned a value but never used  no-unused-vars
+
+./src/hooks/useForm.js
+  Line 1:8:   'React' is defined but never used                                                                                                                                                                                                                             no-unused-vars
+  Line 18:6:  React Hook useEffect has missing dependencies: 'authenticate' and 'isSubmitting'. Either include them or remove the dependency array. If 'authenticate' changes too often, find the parent component that defines it and wrap that definition in useCallback  react-hooks/exhaustive-deps
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+Compiled with warnings.
+
+./src/components/containers/FormLogin/index.js
+  Line 1:29:   'useEffect' is defined but never used              no-unused-vars
+  Line 1:40:   'useState' is defined but never used               no-unused-vars
+  Line 2:21:   'Button' is defined but never used                 no-unused-vars
+  Line 47:47:  'errors' is assigned a value but never used        no-unused-vars
+  Line 47:55:  'isSubmitting' is assigned a value but never used  no-unused-vars
+
+./src/hooks/useForm.js
+  Line 1:8:   'React' is defined but never used                                                                                                                                                                                                                             no-unused-vars
+  Line 18:6:  React Hook useEffect has missing dependencies: 'authenticate' and 'isSubmitting'. Either include them or remove the dependency array. If 'authenticate' changes too often, find the parent component that defines it and wrap that definition in useCallback  react-hooks/exhaustive-deps
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+Compiled with warnings.
+
+./src/components/containers/FormLogin/index.js
+  Line 1:29:   'useEffect' is defined but never used              no-unused-vars
+  Line 1:40:   'useState' is defined but never used               no-unused-vars
+  Line 2:21:   'Button' is defined but never used                 no-unused-vars
+  Line 47:47:  'errors' is assigned a value but never used        no-unused-vars
+  Line 47:55:  'isSubmitting' is assigned a value but never used  no-unused-vars
+
+./src/hooks/useForm.js
+  Line 1:8:   'React' is defined but never used                                                                                                                                                                                                                             no-unused-vars
+  Line 18:6:  React Hook useEffect has missing dependencies: 'authenticate' and 'isSubmitting'. Either include them or remove the dependency array. If 'authenticate' changes too often, find the parent component that defines it and wrap that definition in useCallback  react-hooks/exhaustive-deps
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+Compiled with warnings.
+
+./src/components/containers/FormLogin/index.js
+  Line 1:29:   'useEffect' is defined but never used              no-unused-vars
+  Line 1:40:   'useState' is defined but never used               no-unused-vars
+  Line 2:21:   'Button' is defined but never used                 no-unused-vars
+  Line 47:47:  'errors' is assigned a value but never used        no-unused-vars
+  Line 47:55:  'isSubmitting' is assigned a value but never used  no-unused-vars
+
+./src/hooks/useForm.js
+  Line 1:8:   'React' is defined but never used                                                                                                                                                                                                                             no-unused-vars
+  Line 18:6:  React Hook useEffect has missing dependencies: 'authenticate' and 'isSubmitting'. Either include them or remove the dependency array. If 'authenticate' changes too often, find the parent component that defines it and wrap that definition in useCallback  react-hooks/exhaustive-deps
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+Compiled with warnings.
+
+./src/components/containers/FormLogin/index.js
+  Line 1:29:   'useEffect' is defined but never used              no-unused-vars
+  Line 1:40:   'useState' is defined but never used               no-unused-vars
+  Line 2:21:   'Button' is defined but never used                 no-unused-vars
+  Line 47:47:  'errors' is assigned a value but never used        no-unused-vars
+  Line 47:55:  'isSubmitting' is assigned a value but never used  no-unused-vars
+
+./src/hooks/useForm.js
+  Line 1:8:   'React' is defined but never used                                                                                                                                                                                                                             no-unused-vars
+  Line 18:6:  React Hook useEffect has missing dependencies: 'authenticate' and 'isSubmitting'. Either include them or remove the dependency array. If 'authenticate' changes too often, find the parent component that defines it and wrap that definition in useCallback  react-hooks/exhaustive-deps
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+Compiled with warnings.
+
+./src/components/containers/FormLogin/index.js
+  Line 1:29:   'useEffect' is defined but never used              no-unused-vars
+  Line 1:40:   'useState' is defined but never used               no-unused-vars
+  Line 2:21:   'Button' is defined but never used                 no-unused-vars
+  Line 47:47:  'errors' is assigned a value but never used        no-unused-vars
+  Line 47:55:  'isSubmitting' is assigned a value but never used  no-unused-vars
+
+./src/hooks/useForm.js
+  Line 1:8:   'React' is defined but never used                                                                                                                                                                                                                             no-unused-vars
+  Line 18:6:  React Hook useEffect has missing dependencies: 'authenticate' and 'isSubmitting'. Either include them or remove the dependency array. If 'authenticate' changes too often, find the parent component that defines it and wrap that definition in useCallback  react-hooks/exhaustive-deps
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+Compiled with warnings.
+
+./src/components/containers/FormLogin/index.js
+  Line 1:29:   'useEffect' is defined but never used              no-unused-vars
+  Line 1:40:   'useState' is defined but never used               no-unused-vars
+  Line 2:21:   'Button' is defined but never used                 no-unused-vars
+  Line 45:47:  'errors' is assigned a value but never used        no-unused-vars
+  Line 45:55:  'isSubmitting' is assigned a value but never used  no-unused-vars
+
+./src/hooks/useForm.js
+  Line 1:8:   'React' is defined but never used                                                                                                                                                                                                                             no-unused-vars
+  Line 18:6:  React Hook useEffect has missing dependencies: 'authenticate' and 'isSubmitting'. Either include them or remove the dependency array. If 'authenticate' changes too often, find the parent component that defines it and wrap that definition in useCallback  react-hooks/exhaustive-deps
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+Compiled with warnings.
+
+./src/components/containers/FormLogin/index.js
+  Line 1:29:   'useEffect' is defined but never used              no-unused-vars
+  Line 1:40:   'useState' is defined but never used               no-unused-vars
+  Line 2:21:   'Button' is defined but never used                 no-unused-vars
+  Line 45:47:  'errors' is assigned a value but never used        no-unused-vars
+  Line 45:55:  'isSubmitting' is assigned a value but never used  no-unused-vars
+
+./src/hooks/useForm.js
+  Line 1:8:   'React' is defined but never used                                                                                                                                                                                                                             no-unused-vars
+  Line 18:6:  React Hook useEffect has missing dependencies: 'authenticate' and 'isSubmitting'. Either include them or remove the dependency array. If 'authenticate' changes too often, find the parent component that defines it and wrap that definition in useCallback  react-hooks/exhaustive-deps
+
+./src/store/actions/index.js
+  Line 2:10:  'baseUrl' is defined but never used  no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+Compiled with warnings.
+
+./src/components/containers/FormLogin/index.js
+  Line 1:29:   'useEffect' is defined but never used              no-unused-vars
+  Line 1:40:   'useState' is defined but never used               no-unused-vars
+  Line 2:21:   'Button' is defined but never used                 no-unused-vars
+  Line 45:47:  'errors' is assigned a value but never used        no-unused-vars
+  Line 45:55:  'isSubmitting' is assigned a value but never used  no-unused-vars
+
+./src/hooks/useForm.js
+  Line 1:8:   'React' is defined but never used                                                                                                                                                                                                                             no-unused-vars
+  Line 18:6:  React Hook useEffect has missing dependencies: 'authenticate' and 'isSubmitting'. Either include them or remove the dependency array. If 'authenticate' changes too often, find the parent component that defines it and wrap that definition in useCallback  react-hooks/exhaustive-deps
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+Compiled with warnings.
+
+./src/components/containers/FormLogin/index.js
+  Line 1:29:   'useEffect' is defined but never used              no-unused-vars
+  Line 1:40:   'useState' is defined but never used               no-unused-vars
+  Line 2:21:   'Button' is defined but never used                 no-unused-vars
+  Line 45:47:  'errors' is assigned a value but never used        no-unused-vars
+  Line 45:55:  'isSubmitting' is assigned a value but never used  no-unused-vars
+
+./src/hooks/useForm.js
+  Line 1:8:   'React' is defined but never used                                                                                                                                                                                                                             no-unused-vars
+  Line 18:6:  React Hook useEffect has missing dependencies: 'authenticate' and 'isSubmitting'. Either include them or remove the dependency array. If 'authenticate' changes too often, find the parent component that defines it and wrap that definition in useCallback  react-hooks/exhaustive-deps
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+Compiled with warnings.
+
+./src/components/containers/FormLogin/index.js
+  Line 1:29:   'useEffect' is defined but never used              no-unused-vars
+  Line 1:40:   'useState' is defined but never used               no-unused-vars
+  Line 2:21:   'Button' is defined but never used                 no-unused-vars
+  Line 45:47:  'errors' is assigned a value but never used        no-unused-vars
+  Line 45:55:  'isSubmitting' is assigned a value but never used  no-unused-vars
+
+./src/hooks/useForm.js
+  Line 1:8:   'React' is defined but never used                                                                                                                                                                                                                             no-unused-vars
+  Line 18:6:  React Hook useEffect has missing dependencies: 'authenticate' and 'isSubmitting'. Either include them or remove the dependency array. If 'authenticate' changes too often, find the parent component that defines it and wrap that definition in useCallback  react-hooks/exhaustive-deps
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+Compiled with warnings.
+
+./src/components/containers/FormLogin/index.js
+  Line 1:29:   'useEffect' is defined but never used              no-unused-vars
+  Line 1:40:   'useState' is defined but never used               no-unused-vars
+  Line 2:21:   'Button' is defined but never used                 no-unused-vars
+  Line 45:47:  'errors' is assigned a value but never used        no-unused-vars
+  Line 45:55:  'isSubmitting' is assigned a value but never used  no-unused-vars
+
+./src/hooks/useForm.js
+  Line 1:8:   'React' is defined but never used                                                                                                                                                                                                                             no-unused-vars
+  Line 18:6:  React Hook useEffect has missing dependencies: 'authenticate' and 'isSubmitting'. Either include them or remove the dependency array. If 'authenticate' changes too often, find the parent component that defines it and wrap that definition in useCallback  react-hooks/exhaustive-deps
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+Failed to compile.
+
+./src/store/actions/index.js
+Syntax error: Unexpected token (11:28)
+
+   9 | const getAllCharacters = () => async dispatch => {
+  10 |   const token = window.localStorage.getItem('token');
+> 11 |   const headers = token ? {`Authorization: Bearer${token}`} : {};
+     |                            ^
+  12 |   const data = await axios.post(baseUrl, {
+  13 |     query: `query {
+  14 |       allPeople(first: 10) {
+Compiling...
+Failed to compile.
+
+./src/store/actions/index.js
+Syntax error: Unexpected token (11:28)
+
+   9 | const getAllCharacters = () => async dispatch => {
+  10 |   const token = window.localStorage.getItem('token');
+> 11 |   const headers = token ? {`Authorization: Bearer ${token}`} : {};
+     |                            ^
+  12 |   const data = await axios.post(baseUrl, {
+  13 |     query: `query {
+  14 |       allPeople(first: 10) {
+Compiling...
+Failed to compile.
+
+./src/store/actions/index.js
+Syntax error: Unexpected token, expected "," (11:56)
+
+   9 | const getAllCharacters = () => async dispatch => {
+  10 |   const token = window.localStorage.getItem('token');
+> 11 |   const headers = token ? {'Authorization': 'Bearer'+ ${token}} : {}};
+     |                                                        ^
+  12 |   const data = await axios.post(baseUrl, {
+  13 |     query: `query {
+  14 |       allPeople(first: 10) {
+Compiling...
+Failed to compile.
+
+./src/store/actions/index.js
+Syntax error: Can not use keyword 'await' outside an async function (12:16)
+
+  10 |   const token = window.localStorage.getItem('token');
+  11 |   const headers = token ? {'Authorization': 'Bearer'+ token} : {}};
+> 12 |   const data = await axios.post(baseUrl, {
+     |                ^
+  13 |     query: `query {
+  14 |       allPeople(first: 10) {
+  15 |        edges {
+Compiling...
+Failed to compile.
+
+./src/store/actions/index.js
+Syntax error: Can not use keyword 'await' outside an async function (12:16)
+
+  10 |   const token = window.localStorage.getItem('token');
+  11 |   const headers = token ? {'Authorization': 'Bearer'+ token} : {}};
+> 12 |   const data = await axios.post(baseUrl, {
+     |                ^
+  13 |     query: `query {
+  14 |       allPeople(first: 10) {
+  15 |        edges {
+Compiling...
+Compiled with warnings.
+
+./src/store/actions/index.js
+  Line 10:9:  'token' is assigned a value but never used  no-unused-vars
+
+./src/components/containers/FormLogin/index.js
+  Line 1:29:   'useEffect' is defined but never used              no-unused-vars
+  Line 1:40:   'useState' is defined but never used               no-unused-vars
+  Line 2:21:   'Button' is defined but never used                 no-unused-vars
+  Line 45:47:  'errors' is assigned a value but never used        no-unused-vars
+  Line 45:55:  'isSubmitting' is assigned a value but never used  no-unused-vars
+
+./src/hooks/useForm.js
+  Line 1:8:   'React' is defined but never used                                                                                                                                                                                                                             no-unused-vars
+  Line 18:6:  React Hook useEffect has missing dependencies: 'authenticate' and 'isSubmitting'. Either include them or remove the dependency array. If 'authenticate' changes too often, find the parent component that defines it and wrap that definition in useCallback  react-hooks/exhaustive-deps
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+Compiled with warnings.
+
+./src/components/containers/FormLogin/index.js
+  Line 1:29:   'useEffect' is defined but never used              no-unused-vars
+  Line 1:40:   'useState' is defined but never used               no-unused-vars
+  Line 2:21:   'Button' is defined but never used                 no-unused-vars
+  Line 45:47:  'errors' is assigned a value but never used        no-unused-vars
+  Line 45:55:  'isSubmitting' is assigned a value but never used  no-unused-vars
+
+./src/hooks/useForm.js
+  Line 1:8:   'React' is defined but never used                                                                                                                                                                                                                             no-unused-vars
+  Line 18:6:  React Hook useEffect has missing dependencies: 'authenticate' and 'isSubmitting'. Either include them or remove the dependency array. If 'authenticate' changes too often, find the parent component that defines it and wrap that definition in useCallback  react-hooks/exhaustive-deps
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+Compiled with warnings.
+
+./src/components/containers/FormLogin/index.js
+  Line 1:29:   'useEffect' is defined but never used              no-unused-vars
+  Line 1:40:   'useState' is defined but never used               no-unused-vars
+  Line 2:21:   'Button' is defined but never used                 no-unused-vars
+  Line 45:47:  'errors' is assigned a value but never used        no-unused-vars
+  Line 45:55:  'isSubmitting' is assigned a value but never used  no-unused-vars
+
+./src/hooks/useForm.js
+  Line 1:8:   'React' is defined but never used                                                                                                                                                                                                                             no-unused-vars
+  Line 18:6:  React Hook useEffect has missing dependencies: 'authenticate' and 'isSubmitting'. Either include them or remove the dependency array. If 'authenticate' changes too often, find the parent component that defines it and wrap that definition in useCallback  react-hooks/exhaustive-deps
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+Compiled with warnings.
+
+./src/components/containers/FormLogin/index.js
+  Line 1:29:   'useEffect' is defined but never used              no-unused-vars
+  Line 1:40:   'useState' is defined but never used               no-unused-vars
+  Line 2:21:   'Button' is defined but never used                 no-unused-vars
+  Line 8:10:   'baseUrl' is defined but never used                no-unused-vars
+  Line 45:47:  'errors' is assigned a value but never used        no-unused-vars
+  Line 45:55:  'isSubmitting' is assigned a value but never used  no-unused-vars
+
+./src/hooks/useForm.js
+  Line 1:8:   'React' is defined but never used                                                                                                                                                                                                                             no-unused-vars
+  Line 18:6:  React Hook useEffect has missing dependencies: 'authenticate' and 'isSubmitting'. Either include them or remove the dependency array. If 'authenticate' changes too often, find the parent component that defines it and wrap that definition in useCallback  react-hooks/exhaustive-deps
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+Compiled with warnings.
+
+./src/components/containers/FormLogin/index.js
+  Line 1:29:   'useEffect' is defined but never used              no-unused-vars
+  Line 1:40:   'useState' is defined but never used               no-unused-vars
+  Line 2:21:   'Button' is defined but never used                 no-unused-vars
+  Line 42:47:  'errors' is assigned a value but never used        no-unused-vars
+  Line 42:55:  'isSubmitting' is assigned a value but never used  no-unused-vars
+
+./src/hooks/useForm.js
+  Line 1:8:   'React' is defined but never used                                                                                                                                                                                                                             no-unused-vars
+  Line 18:6:  React Hook useEffect has missing dependencies: 'authenticate' and 'isSubmitting'. Either include them or remove the dependency array. If 'authenticate' changes too often, find the parent component that defines it and wrap that definition in useCallback  react-hooks/exhaustive-deps
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+Compiled with warnings.
+
+./src/components/containers/FormLogin/index.js
+  Line 1:29:   'useEffect' is defined but never used              no-unused-vars
+  Line 1:40:   'useState' is defined but never used               no-unused-vars
+  Line 2:21:   'Button' is defined but never used                 no-unused-vars
+  Line 39:47:  'errors' is assigned a value but never used        no-unused-vars
+  Line 39:55:  'isSubmitting' is assigned a value but never used  no-unused-vars
+
+./src/hooks/useForm.js
+  Line 1:8:   'React' is defined but never used                                                                                                                                                                                                                             no-unused-vars
+  Line 18:6:  React Hook useEffect has missing dependencies: 'authenticate' and 'isSubmitting'. Either include them or remove the dependency array. If 'authenticate' changes too often, find the parent component that defines it and wrap that definition in useCallback  react-hooks/exhaustive-deps
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+Compiled with warnings.
+
+./src/components/containers/FormLogin/index.js
+  Line 1:29:   'useEffect' is defined but never used              no-unused-vars
+  Line 1:40:   'useState' is defined but never used               no-unused-vars
+  Line 2:21:   'Button' is defined but never used                 no-unused-vars
+  Line 39:47:  'errors' is assigned a value but never used        no-unused-vars
+  Line 39:55:  'isSubmitting' is assigned a value but never used  no-unused-vars
+
+./src/hooks/useForm.js
+  Line 1:8:   'React' is defined but never used                                                                                                                                                                                                                             no-unused-vars
+  Line 18:6:  React Hook useEffect has missing dependencies: 'authenticate' and 'isSubmitting'. Either include them or remove the dependency array. If 'authenticate' changes too often, find the parent component that defines it and wrap that definition in useCallback  react-hooks/exhaustive-deps
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+Compiled with warnings.
+
+./src/components/containers/FormLogin/index.js
+  Line 1:29:   'useEffect' is defined but never used              no-unused-vars
+  Line 1:40:   'useState' is defined but never used               no-unused-vars
+  Line 2:21:   'Button' is defined but never used                 no-unused-vars
+  Line 39:47:  'errors' is assigned a value but never used        no-unused-vars
+  Line 39:55:  'isSubmitting' is assigned a value but never used  no-unused-vars
+
+./src/hooks/useForm.js
+  Line 1:8:   'React' is defined but never used                                                                                                                                                                                                                             no-unused-vars
+  Line 18:6:  React Hook useEffect has missing dependencies: 'authenticate' and 'isSubmitting'. Either include them or remove the dependency array. If 'authenticate' changes too often, find the parent component that defines it and wrap that definition in useCallback  react-hooks/exhaustive-deps
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+Compiled with warnings.
+
+./src/components/containers/FormLogin/index.js
+  Line 1:29:   'useEffect' is defined but never used              no-unused-vars
+  Line 1:40:   'useState' is defined but never used               no-unused-vars
+  Line 2:21:   'Button' is defined but never used                 no-unused-vars
+  Line 40:47:  'errors' is assigned a value but never used        no-unused-vars
+  Line 40:55:  'isSubmitting' is assigned a value but never used  no-unused-vars
+
+./src/hooks/useForm.js
+  Line 1:8:   'React' is defined but never used                                                                                                                                                                                                                             no-unused-vars
+  Line 18:6:  React Hook useEffect has missing dependencies: 'authenticate' and 'isSubmitting'. Either include them or remove the dependency array. If 'authenticate' changes too often, find the parent component that defines it and wrap that definition in useCallback  react-hooks/exhaustive-deps
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+Compiled with warnings.
+
+./src/components/containers/FormLogin/index.js
+  Line 1:29:   'useEffect' is defined but never used              no-unused-vars
+  Line 1:40:   'useState' is defined but never used               no-unused-vars
+  Line 2:21:   'Button' is defined but never used                 no-unused-vars
+  Line 41:47:  'errors' is assigned a value but never used        no-unused-vars
+  Line 41:55:  'isSubmitting' is assigned a value but never used  no-unused-vars
+
+./src/hooks/useForm.js
+  Line 1:8:   'React' is defined but never used                                                                                                                                                                                                                             no-unused-vars
+  Line 18:6:  React Hook useEffect has missing dependencies: 'authenticate' and 'isSubmitting'. Either include them or remove the dependency array. If 'authenticate' changes too often, find the parent component that defines it and wrap that definition in useCallback  react-hooks/exhaustive-deps
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+Compiled with warnings.
+
+./src/components/containers/FormLogin/index.js
+  Line 1:29:   'useEffect' is defined but never used              no-unused-vars
+  Line 1:40:   'useState' is defined but never used               no-unused-vars
+  Line 2:21:   'Button' is defined but never used                 no-unused-vars
+  Line 42:47:  'errors' is assigned a value but never used        no-unused-vars
+  Line 42:55:  'isSubmitting' is assigned a value but never used  no-unused-vars
+
+./src/hooks/useForm.js
+  Line 1:8:   'React' is defined but never used                                                                                                                                                                                                                             no-unused-vars
+  Line 18:6:  React Hook useEffect has missing dependencies: 'authenticate' and 'isSubmitting'. Either include them or remove the dependency array. If 'authenticate' changes too often, find the parent component that defines it and wrap that definition in useCallback  react-hooks/exhaustive-deps
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+Compiled with warnings.
+
+./src/components/containers/FormLogin/index.js
+  Line 1:29:   'useEffect' is defined but never used              no-unused-vars
+  Line 1:40:   'useState' is defined but never used               no-unused-vars
+  Line 2:21:   'Button' is defined but never used                 no-unused-vars
+  Line 42:47:  'errors' is assigned a value but never used        no-unused-vars
+  Line 42:55:  'isSubmitting' is assigned a value but never used  no-unused-vars
+
+./src/hooks/useForm.js
+  Line 1:8:   'React' is defined but never used                                                                                                                                                                                                                             no-unused-vars
+  Line 18:6:  React Hook useEffect has missing dependencies: 'authenticate' and 'isSubmitting'. Either include them or remove the dependency array. If 'authenticate' changes too often, find the parent component that defines it and wrap that definition in useCallback  react-hooks/exhaustive-deps
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+Compiled with warnings.
+
+./src/components/containers/FormLogin/index.js
+  Line 1:29:   'useEffect' is defined but never used              no-unused-vars
+  Line 1:40:   'useState' is defined but never used               no-unused-vars
+  Line 2:21:   'Button' is defined but never used                 no-unused-vars
+  Line 40:47:  'errors' is assigned a value but never used        no-unused-vars
+  Line 40:55:  'isSubmitting' is assigned a value but never used  no-unused-vars
+
+./src/hooks/useForm.js
+  Line 1:8:   'React' is defined but never used                                                                                                                                                                                                                             no-unused-vars
+  Line 18:6:  React Hook useEffect has missing dependencies: 'authenticate' and 'isSubmitting'. Either include them or remove the dependency array. If 'authenticate' changes too often, find the parent component that defines it and wrap that definition in useCallback  react-hooks/exhaustive-deps
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+Compiled with warnings.
+
+./src/components/containers/FormLogin/index.js
+  Line 1:29:   'useEffect' is defined but never used              no-unused-vars
+  Line 1:40:   'useState' is defined but never used               no-unused-vars
+  Line 2:21:   'Button' is defined but never used                 no-unused-vars
+  Line 40:47:  'errors' is assigned a value but never used        no-unused-vars
+  Line 40:55:  'isSubmitting' is assigned a value but never used  no-unused-vars
+
+./src/hooks/useForm.js
+  Line 1:8:   'React' is defined but never used                                                                                                                                                                                                                             no-unused-vars
+  Line 18:6:  React Hook useEffect has missing dependencies: 'authenticate' and 'isSubmitting'. Either include them or remove the dependency array. If 'authenticate' changes too often, find the parent component that defines it and wrap that definition in useCallback  react-hooks/exhaustive-deps
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+Compiled with warnings.
+
+./src/components/containers/FormLogin/index.js
+  Line 1:29:   'useEffect' is defined but never used              no-unused-vars
+  Line 1:40:   'useState' is defined but never used               no-unused-vars
+  Line 2:21:   'Button' is defined but never used                 no-unused-vars
+  Line 40:47:  'errors' is assigned a value but never used        no-unused-vars
+  Line 40:55:  'isSubmitting' is assigned a value but never used  no-unused-vars
+
+./src/hooks/useForm.js
+  Line 1:8:   'React' is defined but never used                                                                                                                                                                                                                             no-unused-vars
+  Line 18:6:  React Hook useEffect has missing dependencies: 'authenticate' and 'isSubmitting'. Either include them or remove the dependency array. If 'authenticate' changes too often, find the parent component that defines it and wrap that definition in useCallback  react-hooks/exhaustive-deps
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+Compiled with warnings.
+
+./src/components/containers/FormLogin/index.js
+  Line 1:29:   'useEffect' is defined but never used              no-unused-vars
+  Line 1:40:   'useState' is defined but never used               no-unused-vars
+  Line 2:21:   'Button' is defined but never used                 no-unused-vars
+  Line 40:47:  'errors' is assigned a value but never used        no-unused-vars
+  Line 40:55:  'isSubmitting' is assigned a value but never used  no-unused-vars
+
+./src/hooks/useForm.js
+  Line 1:8:   'React' is defined but never used                                                                                                                                                                                                                             no-unused-vars
+  Line 18:6:  React Hook useEffect has missing dependencies: 'authenticate' and 'isSubmitting'. Either include them or remove the dependency array. If 'authenticate' changes too often, find the parent component that defines it and wrap that definition in useCallback  react-hooks/exhaustive-deps
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+Compiled with warnings.
+
+./src/components/containers/FormLogin/index.js
+  Line 1:29:   'useEffect' is defined but never used              no-unused-vars
+  Line 1:40:   'useState' is defined but never used               no-unused-vars
+  Line 2:21:   'Button' is defined but never used                 no-unused-vars
+  Line 40:47:  'errors' is assigned a value but never used        no-unused-vars
+  Line 40:55:  'isSubmitting' is assigned a value but never used  no-unused-vars
+
+./src/hooks/useForm.js
+  Line 1:8:   'React' is defined but never used                                                                                                                                                                                                                             no-unused-vars
+  Line 18:6:  React Hook useEffect has missing dependencies: 'authenticate' and 'isSubmitting'. Either include them or remove the dependency array. If 'authenticate' changes too often, find the parent component that defines it and wrap that definition in useCallback  react-hooks/exhaustive-deps
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+Failed to compile.
+
+./src/store/actions/index.js
+Syntax error: Unexpected token, expected "," (43:3)
+
+  41 |       ...headers,
+  42 |     },}
+> 43 |   });
+     |   ^
+  44 | 
+  45 |   const action = {
+  46 |     type: GET_ALL_CHARACTERS,
+Compiling...
+Failed to compile.
+
+./src/store/actions/index.js
+Syntax error: Unexpected token (38:3)
+
+  36 |      }
+  37 |   }`,
+> 38 |   {
+     |   ^
+  39 |     headers: {
+  40 |       'Content-Type': 'application/json'
+  41 |     },
+Compiling...
+Failed to compile.
+
+./src/store/actions/index.js
+Syntax error: Unexpected token (38:3)
+
+  36 |      }
+  37 |   }`,
+> 38 |   {
+     |   ^
+  39 |     headers: {
+  40 |       'Content-Type': 'application/json'
+  41 |     },
+Compiling...
+Compiled with warnings.
+
+./src/components/containers/FormLogin/index.js
+  Line 1:29:   'useEffect' is defined but never used              no-unused-vars
+  Line 1:40:   'useState' is defined but never used               no-unused-vars
+  Line 2:21:   'Button' is defined but never used                 no-unused-vars
+  Line 40:47:  'errors' is assigned a value but never used        no-unused-vars
+  Line 40:55:  'isSubmitting' is assigned a value but never used  no-unused-vars
+
+./src/hooks/useForm.js
+  Line 1:8:   'React' is defined but never used                                                                                                                                                                                                                             no-unused-vars
+  Line 18:6:  React Hook useEffect has missing dependencies: 'authenticate' and 'isSubmitting'. Either include them or remove the dependency array. If 'authenticate' changes too often, find the parent component that defines it and wrap that definition in useCallback  react-hooks/exhaustive-deps
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+Compiled with warnings.
+
+./src/components/containers/FormLogin/index.js
+  Line 1:29:   'useEffect' is defined but never used              no-unused-vars
+  Line 1:40:   'useState' is defined but never used               no-unused-vars
+  Line 2:21:   'Button' is defined but never used                 no-unused-vars
+  Line 40:47:  'errors' is assigned a value but never used        no-unused-vars
+  Line 40:55:  'isSubmitting' is assigned a value but never used  no-unused-vars
+
+./src/hooks/useForm.js
+  Line 1:8:   'React' is defined but never used                                                                                                                                                                                                                             no-unused-vars
+  Line 18:6:  React Hook useEffect has missing dependencies: 'authenticate' and 'isSubmitting'. Either include them or remove the dependency array. If 'authenticate' changes too often, find the parent component that defines it and wrap that definition in useCallback  react-hooks/exhaustive-deps
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+Compiled with warnings.
+
+./src/components/containers/FormLogin/index.js
+  Line 1:29:   'useEffect' is defined but never used              no-unused-vars
+  Line 1:40:   'useState' is defined but never used               no-unused-vars
+  Line 2:21:   'Button' is defined but never used                 no-unused-vars
+  Line 40:47:  'errors' is assigned a value but never used        no-unused-vars
+  Line 40:55:  'isSubmitting' is assigned a value but never used  no-unused-vars
+
+./src/hooks/useForm.js
+  Line 1:8:   'React' is defined but never used                                                                                                                                                                                                                             no-unused-vars
+  Line 18:6:  React Hook useEffect has missing dependencies: 'authenticate' and 'isSubmitting'. Either include them or remove the dependency array. If 'authenticate' changes too often, find the parent component that defines it and wrap that definition in useCallback  react-hooks/exhaustive-deps
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+Compiled with warnings.
+
+./src/components/containers/FormLogin/index.js
+  Line 1:29:   'useEffect' is defined but never used              no-unused-vars
+  Line 1:40:   'useState' is defined but never used               no-unused-vars
+  Line 2:21:   'Button' is defined but never used                 no-unused-vars
+  Line 40:47:  'errors' is assigned a value but never used        no-unused-vars
+  Line 40:55:  'isSubmitting' is assigned a value but never used  no-unused-vars
+
+./src/hooks/useForm.js
+  Line 1:8:   'React' is defined but never used                                                                                                                                                                                                                             no-unused-vars
+  Line 18:6:  React Hook useEffect has missing dependencies: 'authenticate' and 'isSubmitting'. Either include them or remove the dependency array. If 'authenticate' changes too often, find the parent component that defines it and wrap that definition in useCallback  react-hooks/exhaustive-deps
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+Failed to compile.
+
+./src/store/actions/index.js
+Syntax error: Unexpected token (14:12)
+
+  12 |   const headers = token ? { Authorization: `Bearer ${token}` } : {};
+  13 |   const data = await axios.post(baseUrl, {
+> 14 |     query: ,
+     |            ^
+  15 |     headers: {
+  16 |       'Content-Type': 'application/json',
+  17 |       ...headers,
+Compiling...
+Compiled with warnings.
+
+./src/components/containers/FormLogin/index.js
+  Line 1:29:   'useEffect' is defined but never used              no-unused-vars
+  Line 1:40:   'useState' is defined but never used               no-unused-vars
+  Line 2:21:   'Button' is defined but never used                 no-unused-vars
+  Line 40:47:  'errors' is assigned a value but never used        no-unused-vars
+  Line 40:55:  'isSubmitting' is assigned a value but never used  no-unused-vars
+
+./src/hooks/useForm.js
+  Line 1:8:   'React' is defined but never used                                                                                                                                                                                                                             no-unused-vars
+  Line 18:6:  React Hook useEffect has missing dependencies: 'authenticate' and 'isSubmitting'. Either include them or remove the dependency array. If 'authenticate' changes too often, find the parent component that defines it and wrap that definition in useCallback  react-hooks/exhaustive-deps
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+Compiled with warnings.
+
+./src/components/containers/FormLogin/index.js
+  Line 1:29:   'useEffect' is defined but never used              no-unused-vars
+  Line 1:40:   'useState' is defined but never used               no-unused-vars
+  Line 2:21:   'Button' is defined but never used                 no-unused-vars
+  Line 40:47:  'errors' is assigned a value but never used        no-unused-vars
+  Line 40:55:  'isSubmitting' is assigned a value but never used  no-unused-vars
+
+./src/hooks/useForm.js
+  Line 1:8:   'React' is defined but never used                                                                                                                                                                                                                             no-unused-vars
+  Line 18:6:  React Hook useEffect has missing dependencies: 'authenticate' and 'isSubmitting'. Either include them or remove the dependency array. If 'authenticate' changes too often, find the parent component that defines it and wrap that definition in useCallback  react-hooks/exhaustive-deps
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+Compiled with warnings.
+
+./src/components/containers/FormLogin/index.js
+  Line 1:29:   'useEffect' is defined but never used              no-unused-vars
+  Line 1:40:   'useState' is defined but never used               no-unused-vars
+  Line 2:21:   'Button' is defined but never used                 no-unused-vars
+  Line 40:47:  'errors' is assigned a value but never used        no-unused-vars
+  Line 40:55:  'isSubmitting' is assigned a value but never used  no-unused-vars
+
+./src/hooks/useForm.js
+  Line 1:8:   'React' is defined but never used                                                                                                                                                                                                                             no-unused-vars
+  Line 18:6:  React Hook useEffect has missing dependencies: 'authenticate' and 'isSubmitting'. Either include them or remove the dependency array. If 'authenticate' changes too often, find the parent component that defines it and wrap that definition in useCallback  react-hooks/exhaustive-deps
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+Compiled with warnings.
+
+./src/store/actions/index.js
+  Line 12:9:  'headers' is assigned a value but never used  no-unused-vars
+
+./src/components/containers/FormLogin/index.js
+  Line 1:29:   'useEffect' is defined but never used              no-unused-vars
+  Line 1:40:   'useState' is defined but never used               no-unused-vars
+  Line 2:21:   'Button' is defined but never used                 no-unused-vars
+  Line 40:47:  'errors' is assigned a value but never used        no-unused-vars
+  Line 40:55:  'isSubmitting' is assigned a value but never used  no-unused-vars
+
+./src/hooks/useForm.js
+  Line 1:8:   'React' is defined but never used                                                                                                                                                                                                                             no-unused-vars
+  Line 18:6:  React Hook useEffect has missing dependencies: 'authenticate' and 'isSubmitting'. Either include them or remove the dependency array. If 'authenticate' changes too often, find the parent component that defines it and wrap that definition in useCallback  react-hooks/exhaustive-deps
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+Compiled with warnings.
+
+./src/store/actions/index.js
+  Line 12:9:  'headers' is assigned a value but never used  no-unused-vars
+
+./src/components/containers/FormLogin/index.js
+  Line 1:29:   'useEffect' is defined but never used              no-unused-vars
+  Line 1:40:   'useState' is defined but never used               no-unused-vars
+  Line 2:21:   'Button' is defined but never used                 no-unused-vars
+  Line 40:47:  'errors' is assigned a value but never used        no-unused-vars
+  Line 40:55:  'isSubmitting' is assigned a value but never used  no-unused-vars
+
+./src/hooks/useForm.js
+  Line 1:8:   'React' is defined but never used                                                                                                                                                                                                                             no-unused-vars
+  Line 18:6:  React Hook useEffect has missing dependencies: 'authenticate' and 'isSubmitting'. Either include them or remove the dependency array. If 'authenticate' changes too often, find the parent component that defines it and wrap that definition in useCallback  react-hooks/exhaustive-deps
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+Compiled with warnings.
+
+./src/store/actions/index.js
+  Line 12:9:  'headers' is assigned a value but never used  no-unused-vars
+
+./src/components/containers/FormLogin/index.js
+  Line 1:29:   'useEffect' is defined but never used              no-unused-vars
+  Line 1:40:   'useState' is defined but never used               no-unused-vars
+  Line 2:21:   'Button' is defined but never used                 no-unused-vars
+  Line 40:47:  'errors' is assigned a value but never used        no-unused-vars
+  Line 40:55:  'isSubmitting' is assigned a value but never used  no-unused-vars
+
+./src/hooks/useForm.js
+  Line 1:8:   'React' is defined but never used                                                                                                                                                                                                                             no-unused-vars
+  Line 18:6:  React Hook useEffect has missing dependencies: 'authenticate' and 'isSubmitting'. Either include them or remove the dependency array. If 'authenticate' changes too often, find the parent component that defines it and wrap that definition in useCallback  react-hooks/exhaustive-deps
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+Compiled with warnings.
+
+./src/store/actions/index.js
+  Line 12:9:  'headers' is assigned a value but never used  no-unused-vars
+
+./src/components/containers/FormLogin/index.js
+  Line 1:29:   'useEffect' is defined but never used              no-unused-vars
+  Line 1:40:   'useState' is defined but never used               no-unused-vars
+  Line 2:21:   'Button' is defined but never used                 no-unused-vars
+  Line 40:47:  'errors' is assigned a value but never used        no-unused-vars
+  Line 40:55:  'isSubmitting' is assigned a value but never used  no-unused-vars
+
+./src/hooks/useForm.js
+  Line 1:8:   'React' is defined but never used                                                                                                                                                                                                                             no-unused-vars
+  Line 18:6:  React Hook useEffect has missing dependencies: 'authenticate' and 'isSubmitting'. Either include them or remove the dependency array. If 'authenticate' changes too often, find the parent component that defines it and wrap that definition in useCallback  react-hooks/exhaustive-deps
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+Compiled with warnings.
+
+./src/store/actions/index.js
+  Line 12:9:  'headers' is assigned a value but never used  no-unused-vars
+
+./src/components/containers/FormLogin/index.js
+  Line 1:29:   'useEffect' is defined but never used              no-unused-vars
+  Line 1:40:   'useState' is defined but never used               no-unused-vars
+  Line 2:21:   'Button' is defined but never used                 no-unused-vars
+  Line 40:47:  'errors' is assigned a value but never used        no-unused-vars
+  Line 40:55:  'isSubmitting' is assigned a value but never used  no-unused-vars
+
+./src/hooks/useForm.js
+  Line 1:8:   'React' is defined but never used                                                                                                                                                                                                                             no-unused-vars
+  Line 18:6:  React Hook useEffect has missing dependencies: 'authenticate' and 'isSubmitting'. Either include them or remove the dependency array. If 'authenticate' changes too often, find the parent component that defines it and wrap that definition in useCallback  react-hooks/exhaustive-deps
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+Compiled with warnings.
+
+./src/store/actions/index.js
+  Line 12:9:  'headers' is assigned a value but never used  no-unused-vars
+
+./src/components/containers/FormLogin/index.js
+  Line 1:29:   'useEffect' is defined but never used              no-unused-vars
+  Line 1:40:   'useState' is defined but never used               no-unused-vars
+  Line 2:21:   'Button' is defined but never used                 no-unused-vars
+  Line 40:47:  'errors' is assigned a value but never used        no-unused-vars
+  Line 40:55:  'isSubmitting' is assigned a value but never used  no-unused-vars
+
+./src/hooks/useForm.js
+  Line 1:8:   'React' is defined but never used                                                                                                                                                                                                                             no-unused-vars
+  Line 18:6:  React Hook useEffect has missing dependencies: 'authenticate' and 'isSubmitting'. Either include them or remove the dependency array. If 'authenticate' changes too often, find the parent component that defines it and wrap that definition in useCallback  react-hooks/exhaustive-deps
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+Compiled with warnings.
+
+./src/store/actions/index.js
+  Line 12:9:  'headers' is assigned a value but never used  no-unused-vars
+
+./src/components/containers/FormLogin/index.js
+  Line 1:29:   'useEffect' is defined but never used              no-unused-vars
+  Line 1:40:   'useState' is defined but never used               no-unused-vars
+  Line 2:21:   'Button' is defined but never used                 no-unused-vars
+  Line 40:47:  'errors' is assigned a value but never used        no-unused-vars
+  Line 40:55:  'isSubmitting' is assigned a value but never used  no-unused-vars
+
+./src/hooks/useForm.js
+  Line 1:8:   'React' is defined but never used                                                                                                                                                                                                                             no-unused-vars
+  Line 18:6:  React Hook useEffect has missing dependencies: 'authenticate' and 'isSubmitting'. Either include them or remove the dependency array. If 'authenticate' changes too often, find the parent component that defines it and wrap that definition in useCallback  react-hooks/exhaustive-deps
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+Compiled with warnings.
+
+./src/store/actions/index.js
+  Line 12:9:  'headers' is assigned a value but never used  no-unused-vars
+
+./src/components/containers/FormLogin/index.js
+  Line 1:29:   'useEffect' is defined but never used              no-unused-vars
+  Line 1:40:   'useState' is defined but never used               no-unused-vars
+  Line 2:21:   'Button' is defined but never used                 no-unused-vars
+  Line 40:47:  'errors' is assigned a value but never used        no-unused-vars
+  Line 40:55:  'isSubmitting' is assigned a value but never used  no-unused-vars
+
+./src/hooks/useForm.js
+  Line 1:8:   'React' is defined but never used                                                                                                                                                                                                                             no-unused-vars
+  Line 18:6:  React Hook useEffect has missing dependencies: 'authenticate' and 'isSubmitting'. Either include them or remove the dependency array. If 'authenticate' changes too often, find the parent component that defines it and wrap that definition in useCallback  react-hooks/exhaustive-deps
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+Compiled with warnings.
+
+./src/store/actions/index.js
+  Line 12:9:  'headers' is assigned a value but never used  no-unused-vars
+
+./src/components/containers/FormLogin/index.js
+  Line 1:29:   'useEffect' is defined but never used              no-unused-vars
+  Line 1:40:   'useState' is defined but never used               no-unused-vars
+  Line 2:21:   'Button' is defined but never used                 no-unused-vars
+  Line 40:47:  'errors' is assigned a value but never used        no-unused-vars
+  Line 40:55:  'isSubmitting' is assigned a value but never used  no-unused-vars
+
+./src/hooks/useForm.js
+  Line 1:8:   'React' is defined but never used                                                                                                                                                                                                                             no-unused-vars
+  Line 18:6:  React Hook useEffect has missing dependencies: 'authenticate' and 'isSubmitting'. Either include them or remove the dependency array. If 'authenticate' changes too often, find the parent component that defines it and wrap that definition in useCallback  react-hooks/exhaustive-deps
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+Compiled with warnings.
+
+./src/store/actions/index.js
+  Line 12:9:  'headers' is assigned a value but never used  no-unused-vars
+
+./src/components/containers/FormLogin/index.js
+  Line 1:29:   'useEffect' is defined but never used              no-unused-vars
+  Line 1:40:   'useState' is defined but never used               no-unused-vars
+  Line 2:21:   'Button' is defined but never used                 no-unused-vars
+  Line 40:47:  'errors' is assigned a value but never used        no-unused-vars
+  Line 40:55:  'isSubmitting' is assigned a value but never used  no-unused-vars
+
+./src/hooks/useForm.js
+  Line 1:8:   'React' is defined but never used                                                                                                                                                                                                                             no-unused-vars
+  Line 18:6:  React Hook useEffect has missing dependencies: 'authenticate' and 'isSubmitting'. Either include them or remove the dependency array. If 'authenticate' changes too often, find the parent component that defines it and wrap that definition in useCallback  react-hooks/exhaustive-deps
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+Compiled with warnings.
+
+./src/store/actions/index.js
+  Line 12:9:  'headers' is assigned a value but never used  no-unused-vars
+
+./src/components/containers/FormLogin/index.js
+  Line 1:29:   'useEffect' is defined but never used              no-unused-vars
+  Line 1:40:   'useState' is defined but never used               no-unused-vars
+  Line 2:21:   'Button' is defined but never used                 no-unused-vars
+  Line 40:47:  'errors' is assigned a value but never used        no-unused-vars
+  Line 40:55:  'isSubmitting' is assigned a value but never used  no-unused-vars
+
+./src/hooks/useForm.js
+  Line 1:8:   'React' is defined but never used                                                                                                                                                                                                                             no-unused-vars
+  Line 18:6:  React Hook useEffect has missing dependencies: 'authenticate' and 'isSubmitting'. Either include them or remove the dependency array. If 'authenticate' changes too often, find the parent component that defines it and wrap that definition in useCallback  react-hooks/exhaustive-deps
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+Failed to compile.
+
+./src/store/actions/index.js
+  Line 21:22:  'axios' is not defined  no-undef
+  Line 31:22:  'axios' is not defined  no-undef
+  Line 40:22:  'axios' is not defined  no-undef
+
+Search for the keywords to learn more about each error.
+Compiling...
+Failed to compile.
+
+./src/store/actions/index.js
+Attempted import error: 'post' is not exported from '../../api/requester'.
+Compiling...
+Failed to compile.
+
+./src/store/actions/index.js
+  Line 27:22:  'axios' is not defined  no-undef
+  Line 36:22:  'axios' is not defined  no-undef
+
+Search for the keywords to learn more about each error.
+Compiling...
+Compiled with warnings.
+
+./src/store/actions/index.js
+  Line 13:9:  'headers' is assigned a value but never used  no-unused-vars
+
+./src/components/containers/FormLogin/index.js
+  Line 1:29:   'useEffect' is defined but never used              no-unused-vars
+  Line 1:40:   'useState' is defined but never used               no-unused-vars
+  Line 2:21:   'Button' is defined but never used                 no-unused-vars
+  Line 40:47:  'errors' is assigned a value but never used        no-unused-vars
+  Line 40:55:  'isSubmitting' is assigned a value but never used  no-unused-vars
+
+./src/hooks/useForm.js
+  Line 1:8:   'React' is defined but never used                                                                                                                                                                                                                             no-unused-vars
+  Line 18:6:  React Hook useEffect has missing dependencies: 'authenticate' and 'isSubmitting'. Either include them or remove the dependency array. If 'authenticate' changes too often, find the parent component that defines it and wrap that definition in useCallback  react-hooks/exhaustive-deps
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+Compiled with warnings.
+
+./src/store/actions/index.js
+  Line 13:9:  'headers' is assigned a value but never used  no-unused-vars
+
+./src/components/containers/FormLogin/index.js
+  Line 1:29:   'useEffect' is defined but never used              no-unused-vars
+  Line 1:40:   'useState' is defined but never used               no-unused-vars
+  Line 2:21:   'Button' is defined but never used                 no-unused-vars
+  Line 40:47:  'errors' is assigned a value but never used        no-unused-vars
+  Line 40:55:  'isSubmitting' is assigned a value but never used  no-unused-vars
+
+./src/hooks/useForm.js
+  Line 1:8:   'React' is defined but never used                                                                                                                                                                                                                             no-unused-vars
+  Line 18:6:  React Hook useEffect has missing dependencies: 'authenticate' and 'isSubmitting'. Either include them or remove the dependency array. If 'authenticate' changes too often, find the parent component that defines it and wrap that definition in useCallback  react-hooks/exhaustive-deps
+
+./src/constants/queries.js
+  Line 2:7:  'allEpisodes' is assigned a value but never used   no-unused-vars
+  Line 3:7:  'allStarships' is assigned a value but never used  no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+Compiled with warnings.
+
+./src/store/actions/index.js
+  Line 13:9:  'headers' is assigned a value but never used  no-unused-vars
+
+./src/components/containers/FormLogin/index.js
+  Line 1:29:   'useEffect' is defined but never used              no-unused-vars
+  Line 1:40:   'useState' is defined but never used               no-unused-vars
+  Line 2:21:   'Button' is defined but never used                 no-unused-vars
+  Line 40:47:  'errors' is assigned a value but never used        no-unused-vars
+  Line 40:55:  'isSubmitting' is assigned a value but never used  no-unused-vars
+
+./src/hooks/useForm.js
+  Line 1:8:   'React' is defined but never used                                                                                                                                                                                                                             no-unused-vars
+  Line 18:6:  React Hook useEffect has missing dependencies: 'authenticate' and 'isSubmitting'. Either include them or remove the dependency array. If 'authenticate' changes too often, find the parent component that defines it and wrap that definition in useCallback  react-hooks/exhaustive-deps
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+Compiled with warnings.
+
+./src/store/actions/index.js
+  Line 13:9:  'headers' is assigned a value but never used  no-unused-vars
+
+./src/components/containers/FormLogin/index.js
+  Line 1:29:   'useEffect' is defined but never used              no-unused-vars
+  Line 1:40:   'useState' is defined but never used               no-unused-vars
+  Line 2:21:   'Button' is defined but never used                 no-unused-vars
+  Line 40:47:  'errors' is assigned a value but never used        no-unused-vars
+  Line 40:55:  'isSubmitting' is assigned a value but never used  no-unused-vars
+
+./src/hooks/useForm.js
+  Line 1:8:   'React' is defined but never used                                                                                                                                                                                                                             no-unused-vars
+  Line 18:6:  React Hook useEffect has missing dependencies: 'authenticate' and 'isSubmitting'. Either include them or remove the dependency array. If 'authenticate' changes too often, find the parent component that defines it and wrap that definition in useCallback  react-hooks/exhaustive-deps
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+Failed to compile.
+
+./src/store/actions/index.js
+  Line 24:22:  'axios' is not defined  no-undef
+  Line 33:22:  'axios' is not defined  no-undef
+
+Search for the keywords to learn more about each error.
+Compiling...
+Failed to compile.
+
+./src/store/actions/index.js
+Syntax error: Export 'getAllStarships' is not defined (41:28)
+
+  39 | // };
+  40 | 
+> 41 | export { getAllCharacters, getAllStarships, getAllEpisodes };
+     |                            ^
+  42 |
+Compiling...
+Failed to compile.
+
+./src/store/actions/index.js
+Syntax error: Export 'getAllStarships' is not defined (41:28)
+
+  39 | // };
+  40 | 
+> 41 | export { getAllCharacters, getAllStarships, getAllEpisodes };
+     |                            ^
+  42 |
+Compiling...
+Compiled with warnings.
+
+./src/components/containers/FormLogin/index.js
+  Line 1:29:   'useEffect' is defined but never used              no-unused-vars
+  Line 1:40:   'useState' is defined but never used               no-unused-vars
+  Line 2:21:   'Button' is defined but never used                 no-unused-vars
+  Line 40:47:  'errors' is assigned a value but never used        no-unused-vars
+  Line 40:55:  'isSubmitting' is assigned a value but never used  no-unused-vars
+
+./src/hooks/useForm.js
+  Line 1:8:   'React' is defined but never used                                                                                                                                                                                                                             no-unused-vars
+  Line 18:6:  React Hook useEffect has missing dependencies: 'authenticate' and 'isSubmitting'. Either include them or remove the dependency array. If 'authenticate' changes too often, find the parent component that defines it and wrap that definition in useCallback  react-hooks/exhaustive-deps
+
+./src/store/actions/index.js
+  Line 4:3:  'GET_ALL_EPISODES' is defined but never used   no-unused-vars
+  Line 5:3:  'GET_ALL_STARSHIPS' is defined but never used  no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+Compiled with warnings.
+
+./src/components/containers/FormLogin/index.js
+  Line 1:29:   'useEffect' is defined but never used              no-unused-vars
+  Line 1:40:   'useState' is defined but never used               no-unused-vars
+  Line 2:21:   'Button' is defined but never used                 no-unused-vars
+  Line 40:47:  'errors' is assigned a value but never used        no-unused-vars
+  Line 40:55:  'isSubmitting' is assigned a value but never used  no-unused-vars
+
+./src/hooks/useForm.js
+  Line 1:8:   'React' is defined but never used                                                                                                                                                                                                                             no-unused-vars
+  Line 18:6:  React Hook useEffect has missing dependencies: 'authenticate' and 'isSubmitting'. Either include them or remove the dependency array. If 'authenticate' changes too often, find the parent component that defines it and wrap that definition in useCallback  react-hooks/exhaustive-deps
+
+./src/store/actions/index.js
+  Line 4:3:  'GET_ALL_EPISODES' is defined but never used   no-unused-vars
+  Line 5:3:  'GET_ALL_STARSHIPS' is defined but never used  no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+Compiled with warnings.
+
+./src/store/actions/index.js
+  Line 10:3:  'allEpisodes' is defined but never used  no-unused-vars
+
+./src/components/containers/FormLogin/index.js
+  Line 1:29:   'useEffect' is defined but never used              no-unused-vars
+  Line 1:40:   'useState' is defined but never used               no-unused-vars
+  Line 2:21:   'Button' is defined but never used                 no-unused-vars
+  Line 40:47:  'errors' is assigned a value but never used        no-unused-vars
+  Line 40:55:  'isSubmitting' is assigned a value but never used  no-unused-vars
+
+./src/hooks/useForm.js
+  Line 1:8:   'React' is defined but never used                                                                                                                                                                                                                             no-unused-vars
+  Line 18:6:  React Hook useEffect has missing dependencies: 'authenticate' and 'isSubmitting'. Either include them or remove the dependency array. If 'authenticate' changes too often, find the parent component that defines it and wrap that definition in useCallback  react-hooks/exhaustive-deps
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+Compiled with warnings.
+
+./src/components/containers/FormLogin/index.js
+  Line 1:29:   'useEffect' is defined but never used              no-unused-vars
+  Line 1:40:   'useState' is defined but never used               no-unused-vars
+  Line 2:21:   'Button' is defined but never used                 no-unused-vars
+  Line 40:47:  'errors' is assigned a value but never used        no-unused-vars
+  Line 40:55:  'isSubmitting' is assigned a value but never used  no-unused-vars
+
+./src/hooks/useForm.js
+  Line 1:8:   'React' is defined but never used                                                                                                                                                                                                                             no-unused-vars
+  Line 18:6:  React Hook useEffect has missing dependencies: 'authenticate' and 'isSubmitting'. Either include them or remove the dependency array. If 'authenticate' changes too often, find the parent component that defines it and wrap that definition in useCallback  react-hooks/exhaustive-deps
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+Compiled with warnings.
+
+./src/components/containers/FormLogin/index.js
+  Line 1:29:   'useEffect' is defined but never used              no-unused-vars
+  Line 1:40:   'useState' is defined but never used               no-unused-vars
+  Line 2:21:   'Button' is defined but never used                 no-unused-vars
+  Line 40:47:  'errors' is assigned a value but never used        no-unused-vars
+  Line 40:55:  'isSubmitting' is assigned a value but never used  no-unused-vars
+
+./src/hooks/useForm.js
+  Line 1:8:   'React' is defined but never used                                                                                                                                                                                                                             no-unused-vars
+  Line 18:6:  React Hook useEffect has missing dependencies: 'authenticate' and 'isSubmitting'. Either include them or remove the dependency array. If 'authenticate' changes too often, find the parent component that defines it and wrap that definition in useCallback  react-hooks/exhaustive-deps
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+Compiled with warnings.
+
+./src/components/containers/FormLogin/index.js
+  Line 1:29:   'useEffect' is defined but never used              no-unused-vars
+  Line 1:40:   'useState' is defined but never used               no-unused-vars
+  Line 2:21:   'Button' is defined but never used                 no-unused-vars
+  Line 40:47:  'errors' is assigned a value but never used        no-unused-vars
+  Line 40:55:  'isSubmitting' is assigned a value but never used  no-unused-vars
+
+./src/hooks/useForm.js
+  Line 1:8:   'React' is defined but never used                                                                                                                                                                                                                             no-unused-vars
+  Line 18:6:  React Hook useEffect has missing dependencies: 'authenticate' and 'isSubmitting'. Either include them or remove the dependency array. If 'authenticate' changes too often, find the parent component that defines it and wrap that definition in useCallback  react-hooks/exhaustive-deps
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+./src/components/containers/FormLogin/index.js
+  Line 1:29:   'useEffect' is defined but never used              no-unused-vars
+  Line 1:40:   'useState' is defined but never used               no-unused-vars
+  Line 2:21:   'Button' is defined but never used                 no-unused-vars
+  Line 40:47:  'errors' is assigned a value but never used        no-unused-vars
+  Line 40:55:  'isSubmitting' is assigned a value but never used  no-unused-vars
+
+./src/hooks/useForm.js
+  Line 1:8:   'React' is defined but never used                                                                                                                                                                                                                             no-unused-vars
+  Line 18:6:  React Hook useEffect has missing dependencies: 'authenticate' and 'isSubmitting'. Either include them or remove the dependency array. If 'authenticate' changes too often, find the parent component that defines it and wrap that definition in useCallback  react-hooks/exhaustive-deps
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiled with warnings.
+
+Compiling...
+Compiled with warnings.
+
+./src/components/containers/FormLogin/index.js
+  Line 1:29:   'useEffect' is defined but never used              no-unused-vars
+  Line 1:40:   'useState' is defined but never used               no-unused-vars
+  Line 2:21:   'Button' is defined but never used                 no-unused-vars
+  Line 40:47:  'errors' is assigned a value but never used        no-unused-vars
+  Line 40:55:  'isSubmitting' is assigned a value but never used  no-unused-vars
+
+./src/hooks/useForm.js
+  Line 1:8:   'React' is defined but never used                                                                                                                                                                                                                             no-unused-vars
+  Line 18:6:  React Hook useEffect has missing dependencies: 'authenticate' and 'isSubmitting'. Either include them or remove the dependency array. If 'authenticate' changes too often, find the parent component that defines it and wrap that definition in useCallback  react-hooks/exhaustive-deps
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+Failed to compile.
+
+./src/store/reducers/episodes.js
+Syntax error: Unexpected token (6:5)
+
+  4 | const episodes = (state = initialState, action) => {
+  5 |   switch (action.type) {
+> 6 |     debugger;
+    |     ^
+  7 |     case GET_ALL_EPISODES:
+  8 |       return [...state, ...action.data.data.allEpisodes.edges];
+  9 |     default:
+Compiling...
+Compiled with warnings.
+
+./src/components/containers/FormLogin/index.js
+  Line 1:29:   'useEffect' is defined but never used              no-unused-vars
+  Line 1:40:   'useState' is defined but never used               no-unused-vars
+  Line 2:21:   'Button' is defined but never used                 no-unused-vars
+  Line 40:47:  'errors' is assigned a value but never used        no-unused-vars
+  Line 40:55:  'isSubmitting' is assigned a value but never used  no-unused-vars
+
+./src/hooks/useForm.js
+  Line 1:8:   'React' is defined but never used                                                                                                                                                                                                                             no-unused-vars
+  Line 18:6:  React Hook useEffect has missing dependencies: 'authenticate' and 'isSubmitting'. Either include them or remove the dependency array. If 'authenticate' changes too often, find the parent component that defines it and wrap that definition in useCallback  react-hooks/exhaustive-deps
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+Compiled with warnings.
+
+./src/components/containers/FormLogin/index.js
+  Line 1:29:   'useEffect' is defined but never used              no-unused-vars
+  Line 1:40:   'useState' is defined but never used               no-unused-vars
+  Line 2:21:   'Button' is defined but never used                 no-unused-vars
+  Line 40:47:  'errors' is assigned a value but never used        no-unused-vars
+  Line 40:55:  'isSubmitting' is assigned a value but never used  no-unused-vars
+
+./src/hooks/useForm.js
+  Line 1:8:   'React' is defined but never used                                                                                                                                                                                                                             no-unused-vars
+  Line 18:6:  React Hook useEffect has missing dependencies: 'authenticate' and 'isSubmitting'. Either include them or remove the dependency array. If 'authenticate' changes too often, find the parent component that defines it and wrap that definition in useCallback  react-hooks/exhaustive-deps
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+Compiled with warnings.
+
+./src/components/containers/FormLogin/index.js
+  Line 1:29:   'useEffect' is defined but never used              no-unused-vars
+  Line 1:40:   'useState' is defined but never used               no-unused-vars
+  Line 2:21:   'Button' is defined but never used                 no-unused-vars
+  Line 40:47:  'errors' is assigned a value but never used        no-unused-vars
+  Line 40:55:  'isSubmitting' is assigned a value but never used  no-unused-vars
+
+./src/hooks/useForm.js
+  Line 1:8:   'React' is defined but never used                                                                                                                                                                                                                             no-unused-vars
+  Line 18:6:  React Hook useEffect has missing dependencies: 'authenticate' and 'isSubmitting'. Either include them or remove the dependency array. If 'authenticate' changes too often, find the parent component that defines it and wrap that definition in useCallback  react-hooks/exhaustive-deps
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+Compiled with warnings.
+
+./src/components/containers/FormLogin/index.js
+  Line 1:29:   'useEffect' is defined but never used              no-unused-vars
+  Line 1:40:   'useState' is defined but never used               no-unused-vars
+  Line 2:21:   'Button' is defined but never used                 no-unused-vars
+  Line 40:47:  'errors' is assigned a value but never used        no-unused-vars
+  Line 40:55:  'isSubmitting' is assigned a value but never used  no-unused-vars
+
+./src/hooks/useForm.js
+  Line 1:8:   'React' is defined but never used                                                                                                                                                                                                                             no-unused-vars
+  Line 18:6:  React Hook useEffect has missing dependencies: 'authenticate' and 'isSubmitting'. Either include them or remove the dependency array. If 'authenticate' changes too often, find the parent component that defines it and wrap that definition in useCallback  react-hooks/exhaustive-deps
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+Failed to compile.
+
+./src/store/actions/index.js
+Syntax error: Unexpected token, expected "," (51:21)
+
+  49 |     dispatch(action);
+  50 |   } catch(e) {
+> 51 |     history.push('/';)
+     |                     ^
+  52 |   }
+  53 | 
+  54 | };
+Compiling...
+Compiled with warnings.
+
+./src/components/containers/FormLogin/index.js
+  Line 1:29:   'useEffect' is defined but never used              no-unused-vars
+  Line 1:40:   'useState' is defined but never used               no-unused-vars
+  Line 2:21:   'Button' is defined but never used                 no-unused-vars
+  Line 40:47:  'errors' is assigned a value but never used        no-unused-vars
+  Line 40:55:  'isSubmitting' is assigned a value but never used  no-unused-vars
+
+./src/hooks/useForm.js
+  Line 1:8:   'React' is defined but never used                                                                                                                                                                                                                             no-unused-vars
+  Line 18:6:  React Hook useEffect has missing dependencies: 'authenticate' and 'isSubmitting'. Either include them or remove the dependency array. If 'authenticate' changes too often, find the parent component that defines it and wrap that definition in useCallback  react-hooks/exhaustive-deps
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+Compiled with warnings.
+
+./src/components/containers/FormLogin/index.js
+  Line 1:29:   'useEffect' is defined but never used              no-unused-vars
+  Line 1:40:   'useState' is defined but never used               no-unused-vars
+  Line 2:21:   'Button' is defined but never used                 no-unused-vars
+  Line 40:47:  'errors' is assigned a value but never used        no-unused-vars
+  Line 40:55:  'isSubmitting' is assigned a value but never used  no-unused-vars
+
+./src/hooks/useForm.js
+  Line 1:8:   'React' is defined but never used                                                                                                                                                                                                                             no-unused-vars
+  Line 18:6:  React Hook useEffect has missing dependencies: 'authenticate' and 'isSubmitting'. Either include them or remove the dependency array. If 'authenticate' changes too often, find the parent component that defines it and wrap that definition in useCallback  react-hooks/exhaustive-deps
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+Compiled with warnings.
+
+./src/components/containers/FormLogin/index.js
+  Line 1:29:   'useEffect' is defined but never used              no-unused-vars
+  Line 1:40:   'useState' is defined but never used               no-unused-vars
+  Line 2:21:   'Button' is defined but never used                 no-unused-vars
+  Line 40:47:  'errors' is assigned a value but never used        no-unused-vars
+  Line 40:55:  'isSubmitting' is assigned a value but never used  no-unused-vars
+
+./src/hooks/useForm.js
+  Line 1:8:   'React' is defined but never used                                                                                                                                                                                                                             no-unused-vars
+  Line 18:6:  React Hook useEffect has missing dependencies: 'authenticate' and 'isSubmitting'. Either include them or remove the dependency array. If 'authenticate' changes too often, find the parent component that defines it and wrap that definition in useCallback  react-hooks/exhaustive-deps
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+Compiling...
+Compiled with warnings.
+
+./src/components/containers/FormLogin/index.js
+  Line 1:29:   'useEffect' is defined but never used              no-unused-vars
+  Line 1:40:   'useState' is defined but never used               no-unused-vars
+  Line 2:21:   'Button' is defined but never used                 no-unused-vars
+  Line 40:47:  'errors' is assigned a value but never used        no-unused-vars
+  Line 40:55:  'isSubmitting' is assigned a value but never used  no-unused-vars
+
+./src/hooks/useForm.js
+  Line 1:8:   'React' is defined but never used                                                                                                                                                                                                                             no-unused-vars
+  Line 18:6:  React Hook useEffect has missing dependencies: 'authenticate' and 'isSubmitting'. Either include them or remove the dependency array. If 'authenticate' changes too often, find the parent component that defines it and wrap that definition in useCallback  react-hooks/exhaustive-deps
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
