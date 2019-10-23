@@ -7,3 +7,10 @@ command = "yarn ci && yarn build"
 #base = "/"
 #publish = "/storybook-static/"
 #command = "yarn ci && yarn build-storybook"
+
+[[redirects]]
+  from = "http://softuni-swapp-212366186.eu-west-1.elb.amazonaws.com/graphql"
+  to = "https://star-wars-react-master-class.netlify.com"
+  status = 200
+  force = true
+  headers = {X-From = "Netlify"}
