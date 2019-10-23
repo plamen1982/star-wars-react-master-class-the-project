@@ -16,7 +16,7 @@ const useForm = (initialState, validate, authenticate) => {
             setSubmitting(false);
           })
           .catch(errors => {
-            setErrors(errors);
+            setErrors(errors);p
           });
       } else {
         setSubmitting(false);
