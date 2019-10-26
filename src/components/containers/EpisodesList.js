@@ -1,13 +1,9 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import EpisodeCard from '../presentational/EpisodeCard';
 import ListData from '../presentational/ListData';
-import { getAllEpisodes } from '../../store/actions/';
-import { useSelector, useDispatch } from 'react-redux';
-import { useHistory } from 'react-router-dom';
-
+import { episodes } from './episodes';
 export default function EpisodesList() {
-  let history = useHistory();
   const stylesList = {
     root: {
       display: 'flex',
@@ -17,18 +13,11 @@ export default function EpisodesList() {
       paddingTop: 15,
     },
   };
-  const episodes = useSelector(state => state.episodes);
-  const dispatch = useDispatch();
   const currentStyles = { ...stylesList };
   const useStyles = makeStyles(currentStyles);
   const classes = useStyles();
 
   const direction = 'vertical';
-
-  useEffect(() => {
-    dispatch(getAllEpisodes(history));
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
 
   return episodes ? (
     <div className={classes.root}>

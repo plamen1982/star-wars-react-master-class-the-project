@@ -6,8 +6,6 @@ import {
   Route,
   Redirect,
 } from 'react-router-dom';
-import store from './store';
-import { Provider } from 'react-redux';
 
 import { makeStyles } from '@material-ui/core/styles';
 import { ThemeContext } from './contexts';
@@ -38,18 +36,16 @@ function App() {
   const useStyles = makeStyles(appStyles);
   const classes = useStyles();
   return (
-    <Provider store={store}>
-      <div className="App" classes={classes.container}>
-        <ThemeContext.Provider value={{ currentTheme, toggleTheme }}>
-          <Router>
-            <Header classes={classes.header} />
-            <Switch>
-              <AllRoutes />
-            </Switch>
-          </Router>
-        </ThemeContext.Provider>
-      </div>
-    </Provider>
+    <div className="App" classes={classes.container}>
+      <ThemeContext.Provider value={{ currentTheme, toggleTheme }}>
+        <Router>
+          <Header classes={classes.header} />
+          <Switch>
+            <AllRoutes />
+          </Switch>
+        </Router>
+      </ThemeContext.Provider>
+    </div>
   );
 }
 

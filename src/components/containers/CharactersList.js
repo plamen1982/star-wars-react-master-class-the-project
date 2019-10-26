@@ -2,8 +2,7 @@ import React, { useEffect } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import CharactersCard from '../presentational/CharactersCard';
 import ListData from '../presentational/ListData';
-import { useDispatch, useSelector } from 'react-redux';
-import { getAllCharacters } from '../../store/actions';
+import { characters } from './characters';
 
 export default function EpisodesList() {
   const stylesList = {
@@ -18,12 +17,9 @@ export default function EpisodesList() {
   const currentStyles = { ...stylesList };
   const useStyles = makeStyles(currentStyles);
   const classes = useStyles();
-  const characters = useSelector(state => state.characters);
-  const dispatch = useDispatch();
   const direction = 'vertical';
 
   useEffect(() => {
-    dispatch(getAllCharacters());
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   return (

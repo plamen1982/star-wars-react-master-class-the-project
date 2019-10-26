@@ -1,14 +1,12 @@
 import React from 'react';
 import CharactersCard from './../CharactersCard';
-import { useSelector } from 'react-redux';
+import { characters } from '../../containers/characters';
 
 const CharacterDetails = ({
   match: {
     params: { characterId },
   },
 }) => {
-  const characters = useSelector(state => state.characters);
-
   const currentCharacter = characters.find(character => {
     return character.node.id === characterId;
   });

@@ -3,8 +3,7 @@ import { TextField } from '@material-ui/core';
 import { ThemeContext } from '../../../contexts';
 import { styles, inputStyles } from './styles';
 import useForm from '../../../hooks/useForm';
-import { validateLogin, authenticateUser } from '../../../utils/validations';
-import { useHistory } from 'react-router-dom';
+import { validateLogin } from '../../../utils/validations';
 
 const INITIAL_STATE_FORM = {
   email: '',
@@ -12,22 +11,18 @@ const INITIAL_STATE_FORM = {
 };
 
 const FormLogin = props => {
-
   const { currentTheme } = useContext(ThemeContext);
   const { colors } = currentTheme;
-  const history = useHistory();
+  // const [errors, setErrors] = useState({ message: '' });
+  const errors = { message: '' };
+  const { handleSubmit, handleChange, values } = useForm(
+    INITIAL_STATE_FORM,
+    validateLogin,
+  );
 
-  const {
-    handleSubmit,
-    handleChange,
-    values,
-    errors,
-    isAuthenticated,
-  } = useForm(INITIAL_STATE_FORM, validateLogin, authenticateUser);
-
-  if (isAuthenticated) {
-    history.push('/');
-  }
+  // if (window.localStorage.token) {
+  //   props.history.push('/');
+  // }
 
   const { borderStyle, borderWidth, borderRadius, marginBottom } = inputStyles;
   return (

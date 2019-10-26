@@ -1,6 +1,6 @@
 import React from 'react';
 import EpisodeCard from './../EpisodeCard';
-import { useSelector } from 'react-redux';
+import { episodes } from '../../containers/episodes';
 
 const EpisodeDetails = props => {
   const {
@@ -8,7 +8,7 @@ const EpisodeDetails = props => {
       params: { episodeId },
     },
   } = props;
-  const episodes = useSelector(state => state.episodes);
+
   const currentEpisode = episodes.find(episode => {
     return episode.node.episodeId === Number(episodeId);
   });
