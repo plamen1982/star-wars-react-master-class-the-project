@@ -1,9 +1,13 @@
 import React, { useContext } from 'react';
+import { useHistory } from 'react-router-dom';
 import { TextField } from '@material-ui/core';
+import { useApolloClient, useMutation } from '@apollo/react-hooks';
+
 import { ThemeContext } from '../../../contexts';
 import { styles, inputStyles } from './styles';
 import useForm from '../../../hooks/useForm';
 import { validateLogin } from '../../../utils/validations';
+import { SIGN_IN } from '../../../queries';
 
 const INITIAL_STATE_FORM = {
   email: '',
@@ -13,17 +17,38 @@ const INITIAL_STATE_FORM = {
 const FormLogin = props => {
   const { currentTheme } = useContext(ThemeContext);
   const { colors } = currentTheme;
-  // const [errors, setErrors] = useState({ message: '' });
   const errors = { message: '' };
+
+  const client = useApolloClient();
+  const history = useHistory();
+  const token = window.localStorage.token;
+  if (token) {
+    history.push('/episodes');
+  }
+  const [login, { loading, error }] = useMutation(SIGN_IN, {
+    onCompleted: props => {
+      localStorage.setItem('token', `Bearer ${props.signIn.token}`);
+      client.writeData({ data: { authenticated: true } });
+      const token = window.localStorage.token;
+
+      if (token) {
+        history.push('/episodes');
+      }
+    },
+    onError: () => {
+      localStorage.setItem('token', '');
+      client.writeData({ data: { authenticated: false } });
+    },
+  });
+
   const { handleSubmit, handleChange, values } = useForm(
     INITIAL_STATE_FORM,
     validateLogin,
+    login,
   );
 
-  // if (window.localStorage.token) {
-  //   props.history.push('/');
-  // }
-
+  if (loading) return <div>Loading...</div>;
+  if (error) return <p>An error occurred</p>;
   const { borderStyle, borderWidth, borderRadius, marginBottom } = inputStyles;
   return (
     <>

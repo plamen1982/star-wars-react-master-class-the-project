@@ -6,7 +6,6 @@ import { Link } from 'react-router-dom';
 import { ThemeContext } from '../../../contexts';
 
 export default function EpisodeCard({ data, direction }) {
-  debugger;
   const {
     currentTheme: {
       colors: { cards, defaultColors },

@@ -4,7 +4,13 @@ const ListData = ({ data, component: Component, direction }) => {
   return (
     <>
       {data.map(item => {
-        return <Component data={item.node} direction={direction} />;
+        return (
+          <Component
+            data={item.node}
+            direction={direction}
+            key={item.node.episodeId || item.node.id}
+          />
+        );
       })}
     </>
   );
