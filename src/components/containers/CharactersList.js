@@ -36,9 +36,18 @@ export default function EpisodesList() {
       history.push('/login');
       return <div>...Ops you have errors, message: {props.error.message}</div>;
     },
+    onCompleted: props => {
+      if (!props.allEpisodes.edges) {
+        localStorage.set('token', '');
+        history.push('/login');
+      }
+    },
   });
   if (loading) {
     return <LinearProgress className={classesLoader.progress} />;
+  }
+  if (data.allPeople.edges) {
+    window.localStorage.setItem('token', '');
   }
   return (
     <div className={classes.root}>

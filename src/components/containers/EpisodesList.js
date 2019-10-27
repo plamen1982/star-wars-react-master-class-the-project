@@ -33,14 +33,21 @@ export default function EpisodesList() {
 
   const { data, loading } = useQuery(GET_ALL_EPISODES, {
     onError: props => {
+      debugger;
       localStorage.set('token', '');
       history.push('/login');
-      return <div>...Ops you have errors, message: {props.error.message}</div>;
+    },
+    onCompleted: props => {
+      if (!props.allEpisodes.edges) {
+        localStorage.set('token', '');
+        history.push('/login');
+      }
     },
   });
   if (loading) {
     return <LinearProgress className={classesLoader.progress} />;
   }
+
   return (
     <div className={classes.root}>
       <ListData
