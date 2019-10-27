@@ -13,7 +13,7 @@ const useStylesLoader = makeStyles(theme => ({
   },
 }));
 
-export default function EpisodesList() {
+export default function CharactersList() {
   const stylesList = {
     root: {
       display: 'flex',
@@ -29,26 +29,19 @@ export default function EpisodesList() {
   const direction = 'vertical';
   const classesLoader = useStylesLoader();
 
-  const history = useHistory();
-  const { data, loading } = useQuery(GET_ALL_CHARACTERS, {
-    onError: props => {
-      localStorage.set('token', '');
-      history.push('/login');
-      return <div>...Ops you have errors, message: {props.error.message}</div>;
-    },
-    onCompleted: props => {
-      if (!props.allPeople) {
-        window.localStorage.setItem('token', '');
-        history.push('/login');
-      }
+  const { data, loading, errors } = useQuery(GET_ALL_CHARACTERS, {
+    variables: {
+      first: 10,
     },
   });
+
   if (loading) {
     return <LinearProgress className={classesLoader.progress} />;
   }
-  if (data.allPeople.edges) {
-    window.localStorage.setItem('token', '');
+  if (errors) {
+    return <div>Error....</div>;
   }
+
   return (
     <div className={classes.root}>
       <ListData

@@ -1,8 +1,8 @@
 import gql from 'graphql-tag.macro';
 
 const GET_ALL_EPISODES = gql`
-  query {
-    allEpisodes(first: 10) {
+  query AllEpisodes($first: Int!, $numberPeople: Int) {
+    allEpisodes(first: $first) {
       edges {
         node {
           title
@@ -11,8 +11,22 @@ const GET_ALL_EPISODES = gql`
           director
           releaseDate
           image
+          people(first: $numberPeople) {
+            edges {
+              node {
+                name
+                image
+              }
+              cursor
+            }
+          }
         }
       }
+      pageInfo {
+        hasNextPage
+        endCursor
+      }
+      totalCount
     }
   }
 `;

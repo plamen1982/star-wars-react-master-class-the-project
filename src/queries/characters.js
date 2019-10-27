@@ -1,8 +1,8 @@
 import gql from 'graphql-tag.macro';
 
 const GET_ALL_CHARACTERS = gql`
-  query {
-    allPeople(first: 10) {
+  query AllPeople($numberPeople: Int!, $numberStarships: Int!) {
+    allPeople(first: $numberPeople) {
       edges {
         node {
           id
@@ -16,7 +16,7 @@ const GET_ALL_CHARACTERS = gql`
           species {
             name
           }
-          starships(first: 5) {
+          starships(first: $numberStarships) {
             edges {
               node {
                 name
@@ -24,6 +24,7 @@ const GET_ALL_CHARACTERS = gql`
             }
           }
         }
+        cursor
       }
     }
   }

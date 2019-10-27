@@ -5,7 +5,7 @@ import { styles } from './styles';
 import { Link } from 'react-router-dom';
 import { ThemeContext } from '../../../contexts';
 
-export default function EpisodeCard({ data, direction }) {
+export default function EpisodeCard({ data, direction, children }) {
   const {
     currentTheme: {
       colors: { cards, defaultColors },
@@ -38,6 +38,7 @@ export default function EpisodeCard({ data, direction }) {
               </Typography>
             </CardContent>
           </Card>
+          {children}
         </>
       ) : (
         <>
