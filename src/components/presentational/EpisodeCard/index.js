@@ -14,7 +14,6 @@ export default function EpisodeCard({ data, direction, children }) {
   const styleWithTheme = { ...styles[direction], cards, defaultColors };
   const useStyles = makeStyles(styleWithTheme);
   const classes = useStyles();
-
   return data ? (
     <Card className={`${classes.defaultColors} ${classes.container}`}>
       {direction === 'horizontal' ? (
@@ -38,7 +37,7 @@ export default function EpisodeCard({ data, direction, children }) {
               </Typography>
             </CardContent>
           </Card>
-          {children}
+          <>{children}</>
         </>
       ) : (
         <>

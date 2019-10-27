@@ -4,7 +4,6 @@ import PersonCardEpisode from '../PersonCardEpisode/PersonCardEpisode';
 import ListData from '../ListData';
 
 export default function PeopleListPerEpisode(props) {
-  debugger;
   const stylesList = {
     root: {
       display: 'flex',

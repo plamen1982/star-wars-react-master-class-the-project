@@ -3,7 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import CharactersCard from '../presentational/CharactersCard';
 import ListData from '../presentational/ListData';
 import { useQuery } from '@apollo/react-hooks';
-import { useHistory } from 'react-router-dom';
+// import { useHistory } from 'react-router-dom';
 import { GET_ALL_CHARACTERS } from '../../queries';
 import LinearProgress from '@material-ui/core/LinearProgress';
 
@@ -31,7 +31,8 @@ export default function CharactersList() {
 
   const { data, loading, errors } = useQuery(GET_ALL_CHARACTERS, {
     variables: {
-      first: 10,
+      numberPeople: 12,
+      numberStarships: 5,
     },
   });
 
@@ -41,7 +42,6 @@ export default function CharactersList() {
   if (errors) {
     return <div>Error....</div>;
   }
-
   return (
     <div className={classes.root}>
       <ListData

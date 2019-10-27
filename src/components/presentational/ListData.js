@@ -1,7 +1,6 @@
 import React from 'react';
 
 const ListData = ({ data, component: Component, direction }) => {
-  debugger;
   return (
     <>
       {data.map(item => {

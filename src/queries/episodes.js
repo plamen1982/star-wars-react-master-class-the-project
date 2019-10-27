@@ -1,7 +1,7 @@
 import gql from 'graphql-tag.macro';
 
 const GET_ALL_EPISODES = gql`
-  query AllEpisodes($first: Int!, $numberPeople: Int) {
+  query AllEpisodes($first: Int!, $numberPeople: Int, $after: String) {
     allEpisodes(first: $first) {
       edges {
         node {
@@ -11,7 +11,7 @@ const GET_ALL_EPISODES = gql`
           director
           releaseDate
           image
-          people(first: $numberPeople) {
+          people(first: $numberPeople, after: $after) {
             edges {
               node {
                 name

@@ -30,14 +30,21 @@ const EpisodeDetails = props => {
   const currentEpisode = episodes.find(episode => {
     return episode.node.episodeId === Number(episodeId);
   });
-
-  // const { cursor } = currentEpisode;
-  // debugger;
-  // const loadMore = () => {
-  //   fetchMore({
-  //     variables: { after: cursor },
-  //   });
-  // };
+  //TODO filtering with Graphql, only for the current episode, change the episode query, see schema
+  const { cursor } = currentEpisode.node.people.edges[4];
+  const loadMore = () => {
+    fetchMore({
+      variables: { after: cursor },
+      updateQuery: (prev, { fetchMoreResult: { allEpisodes } }) => {
+        return {
+          allEpisodes: {
+            ...prev,
+            ...allEpisodes,
+          },
+        };
+      },
+    });
+  };
 
   const styles = {
     display: 'flex',
@@ -45,11 +52,11 @@ const EpisodeDetails = props => {
     alignItems: 'center',
   };
   const episodeDirectionCard = 'horizontal';
-  debugger;
   return (
     <div style={styles}>
       <EpisodeCard data={currentEpisode.node} direction={episodeDirectionCard}>
         <PeopleListPerEpisode data={currentEpisode.node} />
+        <button onClick={loadMore}>Load More..</button>
       </EpisodeCard>
     </div>
   );
