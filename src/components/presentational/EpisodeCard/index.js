@@ -5,7 +5,7 @@ import { styles } from './styles';
 import { Link } from 'react-router-dom';
 import { ThemeContext } from '../../../contexts';
 
-export default function EpisodeCard({ data, direction }) {
+export default function EpisodeCard({ data, direction, children }) {
   const {
     currentTheme: {
       colors: { cards, defaultColors },
@@ -14,7 +14,6 @@ export default function EpisodeCard({ data, direction }) {
   const styleWithTheme = { ...styles[direction], cards, defaultColors };
   const useStyles = makeStyles(styleWithTheme);
   const classes = useStyles();
-
   return data ? (
     <Card className={`${classes.defaultColors} ${classes.container}`}>
       {direction === 'horizontal' ? (
@@ -38,6 +37,7 @@ export default function EpisodeCard({ data, direction }) {
               </Typography>
             </CardContent>
           </Card>
+          <>{children}</>
         </>
       ) : (
         <>

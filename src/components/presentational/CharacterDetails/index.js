@@ -16,7 +16,9 @@ const CharacterDetails = ({
       <CharactersCard
         data={currentCharacter.node}
         direction={chracterDirectionCard}
-      />
+      >
+        Children
+      </CharactersCard>
     </div>
   );
 };
