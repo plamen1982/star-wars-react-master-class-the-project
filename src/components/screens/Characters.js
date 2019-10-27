@@ -10,7 +10,6 @@ export const AUTHENTICATED_QUERY = gql`
 `;
 const Character = props => {
   const { data } = useQuery(AUTHENTICATED_QUERY);
-  debugger;
   if (!data.authenticated) {
     props.history.push('/login');
     return null;
