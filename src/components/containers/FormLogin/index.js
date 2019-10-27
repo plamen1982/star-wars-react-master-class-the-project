@@ -1,5 +1,7 @@
 import React, { useContext } from 'react';
 import { TextField } from '@material-ui/core';
+import { useApolloClient, useMutation } from '@apollo/react-hooks';
+import gql from 'graphql-tag';
 import { ThemeContext } from '../../../contexts';
 import { styles, inputStyles } from './styles';
 import useForm from '../../../hooks/useForm';
@@ -15,15 +17,38 @@ const FormLogin = props => {
   const { colors } = currentTheme;
   // const [errors, setErrors] = useState({ message: '' });
   const errors = { message: '' };
-  const { handleSubmit, handleChange, values } = useForm(
-    INITIAL_STATE_FORM,
-    validateLogin,
-  );
+
+  const LOG_IN = gql`
+    mutation SignIn($email: String!, $password: String!) {
+      signIn(email: $email, password: $password) {
+        token
+      }
+    }
+  `;
+
+  const client = useApolloClient();
 
   // if (window.localStorage.token) {
   //   props.history.push('/');
   // }
+  const [login, { loading, error }] = useMutation(LOG_IN, {
+    onCompleted: props => {
+      localStorage.setItem('token', `Bearer ${props.signIn.token}`);
+      client.writeData({ data: { authenticated: true } });
+    },
+  });
+  const token = window.localStorage.token;
+  if (token.length > 0) {
+    props.history.push('/episodes');
+  }
+  const { handleSubmit, handleChange, values } = useForm(
+    INITIAL_STATE_FORM,
+    validateLogin,
+    login,
+  );
 
+  if (loading) return <div>Loading...</div>;
+  if (error) return <p>An error occurred</p>;
   const { borderStyle, borderWidth, borderRadius, marginBottom } = inputStyles;
   return (
     <>

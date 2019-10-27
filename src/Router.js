@@ -6,7 +6,7 @@ import {
   Route,
   Redirect,
 } from 'react-router-dom';
-
+import { ApolloProvider } from '@apollo/react-hooks';
 import { makeStyles } from '@material-ui/core/styles';
 import { ThemeContext } from './contexts';
 import { Login, Characters, Starship, Episodes } from './components/screens';
@@ -17,6 +17,7 @@ import {
   Header,
 } from './components/presentational';
 import useTheme from './hooks/useTheme';
+import client from './apollo-client';
 
 const appStyles = {
   container: {
@@ -60,18 +61,20 @@ const AllRoutes = () => {
   const classes = useStyles();
   return (
     <div className={classes.defaultColors}>
-      <Route exact path="/" render={() => <Redirect to="/episodes" />} />
-      <Route exact path="/login" component={Login} />
-      <Route exact path="/episodes" component={Episodes} />
-      <Route exact path="/episodes/:episodeId" component={EpisodeDetails} />
-      <Route exact path="/characters" component={Characters} />
-      <Route
-        exact
-        path="/characters/:characterId"
-        component={CharacterDetails}
-      />
-      <Route exact path="/starships" component={Starship} />
-      <Route path="/starships/:starshipId" component={StarshipDetails} />
+      <ApolloProvider client={client}>
+        <Route exact path="/" render={() => <Redirect to="/episodes" />} />
+        <Route exact path="/login" component={Login} />
+        <Route exact path="/episodes" component={Episodes} />
+        <Route exact path="/episodes/:episodeId" component={EpisodeDetails} />
+        <Route exact path="/characters" component={Characters} />
+        <Route
+          exact
+          path="/characters/:characterId"
+          component={CharacterDetails}
+        />
+        <Route exact path="/starships" component={Starship} />
+        <Route path="/starships/:starshipId" component={StarshipDetails} />
+      </ApolloProvider>
     </div>
   );
 };
