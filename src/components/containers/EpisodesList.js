@@ -38,8 +38,8 @@ export default function EpisodesList() {
       history.push('/login');
     },
     onCompleted: props => {
-      if (!props.allEpisodes.edges) {
-        localStorage.set('token', '');
+      if (!props.allEpisodes) {
+        window.localStorage.set('token', '');
         history.push('/login');
       }
     },
