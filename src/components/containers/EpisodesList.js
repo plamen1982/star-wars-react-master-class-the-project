@@ -21,7 +21,9 @@ export default function EpisodesList() {
 
   const direction = 'vertical';
   const { data, loading, error } = useQuery(GET_ALL_EPISODES);
-  debugger;
+  if (error) {
+    return <div>...Ops you have errors, message: {error.message}</div>;
+  }
   return loading ? (
     <div>...Loading</div>
   ) : (

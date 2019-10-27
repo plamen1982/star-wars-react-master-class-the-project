@@ -1,9 +1,10 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import CharactersCard from '../presentational/CharactersCard';
 import ListData from '../presentational/ListData';
-import { characters } from './characters';
+import { useQuery } from '@apollo/react-hooks';
 
+import { GET_ALL_CHARACTERS } from '../../queries';
 export default function EpisodesList() {
   const stylesList = {
     root: {
@@ -18,19 +19,20 @@ export default function EpisodesList() {
   const useStyles = makeStyles(currentStyles);
   const classes = useStyles();
   const direction = 'vertical';
-
-  useEffect(() => {
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  const { data, errors, loading } = useQuery(GET_ALL_CHARACTERS);
+  if (errors) {
+    return <div>...Ops you have errors...</div>;
+  }
+  if (loading) {
+    return <div>...Loading</div>;
+  }
   return (
-    characters && (
-      <div className={classes.root}>
-        <ListData
-          component={CharactersCard}
-          data={characters}
-          direction={direction}
-        />
-      </div>
-    )
+    <div className={classes.root}>
+      <ListData
+        component={CharactersCard}
+        data={data.allPeople.edges}
+        direction={direction}
+      />
+    </div>
   );
 }
