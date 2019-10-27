@@ -7,7 +7,7 @@ import { typeDefs, resolvers } from './local';
 import authLink from './authLink';
 
 const httpLink = createHttpLink({
-  uri: 'http://softuni-swapp-212366186.eu-west-1.elb.amazonaws.com/graphql',
+  uri: 'https://swapp.st6.io/graphql',
 });
 
 const allLinks = [authLink, httpLink];
