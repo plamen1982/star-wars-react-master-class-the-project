@@ -2,7 +2,9 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import EpisodeCard from '../presentational/EpisodeCard';
 import ListData from '../presentational/ListData';
-import { episodes } from './episodes';
+import { useQuery } from '@apollo/react-hooks';
+import { GET_ALL_EPISODES } from '../../queries';
+// import { episodes } from './episodes';
 export default function EpisodesList() {
   const stylesList = {
     root: {
@@ -18,10 +20,17 @@ export default function EpisodesList() {
   const classes = useStyles();
 
   const direction = 'vertical';
-
-  return episodes ? (
+  const { data, loading, error } = useQuery(GET_ALL_EPISODES);
+  debugger;
+  return loading ? (
+    <div>...Loading</div>
+  ) : (
     <div className={classes.root}>
-      <ListData component={EpisodeCard} direction={direction} data={episodes} />
+      <ListData
+        component={EpisodeCard}
+        direction={direction}
+        data={data.allEpisodes.edges}
+      />
     </div>
-  ) : null;
+  );
 }
