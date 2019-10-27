@@ -38,7 +38,7 @@ export default function EpisodesList() {
     },
     onCompleted: props => {
       if (!props.appPeople) {
-        window.localStorage.set('token', '');
+        window.localStorage.setItem('token', '');
         history.push('/login');
       }
     },
