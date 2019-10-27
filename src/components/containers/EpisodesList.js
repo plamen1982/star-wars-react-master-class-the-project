@@ -4,7 +4,15 @@ import EpisodeCard from '../presentational/EpisodeCard';
 import ListData from '../presentational/ListData';
 import { useQuery } from '@apollo/react-hooks';
 import { GET_ALL_EPISODES } from '../../queries';
-// import { episodes } from './episodes';
+import { useHistory } from 'react-router-dom';
+import LinearProgress from '@material-ui/core/LinearProgress';
+
+const useStylesLoader = makeStyles(theme => ({
+  progress: {
+    margin: theme.spacing(2),
+  },
+}));
+
 export default function EpisodesList() {
   const stylesList = {
     root: {
@@ -18,15 +26,22 @@ export default function EpisodesList() {
   const currentStyles = { ...stylesList };
   const useStyles = makeStyles(currentStyles);
   const classes = useStyles();
+  const classesLoader = useStylesLoader();
 
   const direction = 'vertical';
-  const { data, loading, error } = useQuery(GET_ALL_EPISODES);
-  if (error) {
-    return <div>...Ops you have errors, message: {error.message}</div>;
+  const history = useHistory();
+
+  const { data, loading } = useQuery(GET_ALL_EPISODES, {
+    onError: props => {
+      localStorage.set('token', '');
+      history.push('/login');
+      return <div>...Ops you have errors, message: {props.error.message}</div>;
+    },
+  });
+  if (loading) {
+    return <LinearProgress className={classesLoader.progress} />;
   }
-  return loading ? (
-    <div>...Loading</div>
-  ) : (
+  return (
     <div className={classes.root}>
       <ListData
         component={EpisodeCard}

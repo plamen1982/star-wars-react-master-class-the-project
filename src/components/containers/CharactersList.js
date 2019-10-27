@@ -3,8 +3,16 @@ import { makeStyles } from '@material-ui/core/styles';
 import CharactersCard from '../presentational/CharactersCard';
 import ListData from '../presentational/ListData';
 import { useQuery } from '@apollo/react-hooks';
-
+import { useHistory } from 'react-router-dom';
 import { GET_ALL_CHARACTERS } from '../../queries';
+import LinearProgress from '@material-ui/core/LinearProgress';
+
+const useStylesLoader = makeStyles(theme => ({
+  progress: {
+    margin: theme.spacing(100),
+  },
+}));
+
 export default function EpisodesList() {
   const stylesList = {
     root: {
@@ -19,12 +27,18 @@ export default function EpisodesList() {
   const useStyles = makeStyles(currentStyles);
   const classes = useStyles();
   const direction = 'vertical';
-  const { data, errors, loading } = useQuery(GET_ALL_CHARACTERS);
-  if (errors) {
-    return <div>...Ops you have errors...</div>;
-  }
+  const classesLoader = useStylesLoader();
+
+  const history = useHistory();
+  const { data, loading } = useQuery(GET_ALL_CHARACTERS, {
+    onError: props => {
+      localStorage.set('token', '');
+      history.push('/login');
+      return <div>...Ops you have errors, message: {props.error.message}</div>;
+    },
+  });
   if (loading) {
-    return <div>...Loading</div>;
+    return <LinearProgress className={classesLoader.progress} />;
   }
   return (
     <div className={classes.root}>
