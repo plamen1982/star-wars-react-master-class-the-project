@@ -37,8 +37,8 @@ export default function EpisodesList() {
       return <div>...Ops you have errors, message: {props.error.message}</div>;
     },
     onCompleted: props => {
-      if (!props.appPeople) {
-        window.localStorage.set('token', '');
+      if (!props.allPeople) {
+        window.localStorage.setItem('token', '');
         history.push('/login');
       }
     },
