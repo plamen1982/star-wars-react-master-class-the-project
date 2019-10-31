@@ -14,6 +14,7 @@ const Episodes = props => {
     props.history.push('/login');
     return null;
   }
+
   return (
     <>
       <EpisodesList />
