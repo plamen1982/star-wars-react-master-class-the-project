@@ -1,7 +1,6 @@
 import React from 'react';
 import CharactersCard from './../CharactersCard';
 import { characters } from '../../containers/characters';
-
 const CharacterDetails = ({
   match: {
     params: { characterId },

@@ -1,8 +1,8 @@
 import React, { useContext } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { Card, CardContent, Typography } from '@material-ui/core';
-// import { useQuery } from '@apollo/react-hooks';
-// import { GET_ALL_EPISODES } from '../../../queries';
+import { useQuery } from '@apollo/react-hooks';
+import { GET_ALL_CHARACTERS } from '../../../queries';
 import { ThemeContext } from '../../../contexts';
 
 const PersonCardEpisode = ({ data, data: { name, image } }) => {
@@ -25,18 +25,7 @@ const PersonCardEpisode = ({ data, data: { name, image } }) => {
   const styleWithTheme = { cards, defaultColors, ...stylesList };
   const useStyles = makeStyles(styleWithTheme);
   const classes = useStyles();
-  // const { fetchMore } = useQuery(GET_ALL_EPISODES, {
-  //   variables: {
-  //     numberPeople: 5,
-  //   },
-  // });
-  // const { cursor } = data;
 
-  // const loadMore = () => {
-  //   fetchMore({
-  //     variables: { after: cursor },
-  //   });
-  // };
   return (
     <CardContent className={classes.root}>
       <Card className={`${classes.imageAndTitle} ${classes.cards}`}>

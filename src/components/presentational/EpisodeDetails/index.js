@@ -1,45 +1,50 @@
 import React from 'react';
+import gql from 'graphql-tag.macro';
 import { useQuery } from '@apollo/react-hooks';
 import EpisodeCard from './../EpisodeCard';
-import { GET_ALL_EPISODES } from '../../../queries';
 import PeopleListPerEpisode from '../PeopleListPerEpisode/PeopleListPerEpisode';
+import { GET_EPISODE_BY_ID } from '../../../queries';
 
 const EpisodeDetails = props => {
+  debugger;
   const {
     match: {
       params: { episodeId },
     },
   } = props;
 
-  const { data, loading, errors, fetchMore } = useQuery(GET_ALL_EPISODES, {
+  const { data, loading, errors, fetchMore } = useQuery(GET_EPISODE_BY_ID, {
     variables: {
-      first: 10,
-      numberPeople: 5,
+      id: episodeId,
+      first: 5,
     },
   });
+
   if (loading) {
     return <div>Loading...</div>;
   }
   if (errors) {
     return <div>Error...</div>;
   }
-  const {
-    allEpisodes: { edges: episodes },
-  } = data;
-
-  const currentEpisode = episodes.find(episode => {
-    return episode.node.episodeId === Number(episodeId);
-  });
-  //TODO filtering with Graphql, only for the current episode, change the episode query, see schema
-  const { cursor } = currentEpisode.node.people.edges[4];
+  const { episode } = data;
+  if (!episode) {
+    return null;
+  }
+  debugger;
+  const endIndexOfPeople = episode.people.edges.length - 1;
+  const { cursor } = episode.people.edges[endIndexOfPeople];
   const loadMore = () => {
     fetchMore({
-      variables: { after: cursor },
-      updateQuery: (prev, { fetchMoreResult: { allEpisodes } }) => {
+      variables: { first: 5, after: cursor },
+      updateQuery: (prev, { fetchMoreResult: { episode } }) => {
+        debugger;
+        console.log('prev', prev);
+        console.log('episode', episode);
         return {
-          allEpisodes: {
-            ...prev,
-            ...allEpisodes,
+          episode: {
+            ...prev.episode,
+            ...episode,
+            people: [...prev.episode.people.edges, ...episode.people.edges],
           },
         };
       },
@@ -54,8 +59,10 @@ const EpisodeDetails = props => {
   const episodeDirectionCard = 'horizontal';
   return (
     <div style={styles}>
-      <EpisodeCard data={currentEpisode.node} direction={episodeDirectionCard}>
-        <PeopleListPerEpisode data={currentEpisode.node} />
+      {/* ADD data atribute with current episode */}
+      <EpisodeCard direction={episodeDirectionCard} data={episode}>
+        {/* ADD data atribute with current people for this episode episode */}
+        <PeopleListPerEpisode data={episode.people.edges} />
         <button onClick={loadMore}>Load More..</button>
       </EpisodeCard>
     </div>

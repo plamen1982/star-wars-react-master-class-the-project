@@ -36,14 +36,15 @@ export default function EpisodesList() {
       numberPeople: 5,
     },
   });
-
   if (loading) {
     return <LinearProgress className={classesLoader.progress} />;
   }
   if (errors) {
     return <p></p>;
   }
-
+  if (!data) {
+    return null;
+  }
   return (
     <div className={classes.root}>
       <ListData

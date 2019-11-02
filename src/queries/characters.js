@@ -1,9 +1,17 @@
 import gql from 'graphql-tag.macro';
 
 const GET_ALL_CHARACTERS = gql`
-  query AllPeople($numberPeople: Int!, $numberStarships: Int!) {
-    allPeople(first: $numberPeople) {
+  query AllPeople(
+    $numberPeople: Int!
+    $numberStarships: Int!
+    $after: String!
+  ) {
+    allPeople(first: $numberPeople, after: $after) {
+      pageInfo {
+        hasNextPage
+      }
       edges {
+        cursor
         node {
           id
           name
@@ -24,9 +32,9 @@ const GET_ALL_CHARACTERS = gql`
             }
           }
         }
-        cursor
       }
     }
   }
 `;
+
 export { GET_ALL_CHARACTERS };

@@ -1,17 +1,18 @@
 import gql from 'graphql-tag.macro';
 
-const GET_ALL_EPISODES = gql`
-  query AllEpisodes($first: Int!, $numberPeople: Int, $after: String) {
+export const GET_ALL_EPISODES = gql`
+  query AllEpisodes($first: Int!, $numberPeople: Int) {
     allEpisodes(first: $first) {
       edges {
         node {
+          id
           title
           episodeId
           openingCrawl
           director
           releaseDate
           image
-          people(first: $numberPeople, after: $after) {
+          people(first: $numberPeople) {
             edges {
               node {
                 name
@@ -30,4 +31,25 @@ const GET_ALL_EPISODES = gql`
     }
   }
 `;
-export { GET_ALL_EPISODES };
+
+export const GET_EPISODE_BY_ID = gql`
+  query Episode($id: ID!, $first: Int, $after: String) {
+    episode(id: $id) {
+      id
+      title
+      openingCrawl
+      director
+      releaseDate
+      image
+      people(first: $first, after: $after) {
+        edges {
+          cursor
+          node {
+            name
+            image
+          }
+        }
+      }
+    }
+  }
+`;

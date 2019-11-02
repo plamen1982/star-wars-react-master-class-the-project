@@ -23,7 +23,7 @@ export default function EpisodeCard({ data, direction, children }) {
               <img className={classes.imageStyles} src={data.image} alt="url" />
             </div>
             <div>
-              <Link to={`/episodes/${data.episodeId}`}>{data.title}</Link>
+              <Link to={`/episodes/${data.id}`}>{data.title}</Link>
             </div>
           </Card>
           <Card className={`${classes.cards} ${classes.openingDescription}`}>
@@ -46,7 +46,7 @@ export default function EpisodeCard({ data, direction, children }) {
               <img className={classes.imageStyles} src={data.image} alt="url" />
             </div>
             <div>
-              <Link to={`/episodes/${data.episodeId}`}>{data.title}</Link>
+              <Link to={`/episodes/${data.id}`}>{data.title}</Link>
             </div>
           </CardContent>
           <Card className={`${classes.cards} ${classes.openingDescription}`}>
