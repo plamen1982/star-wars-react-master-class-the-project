@@ -1,9 +1,9 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import EpisodeCard from '../presentational/EpisodeCard';
-import ListData from '../presentational/ListData';
+import EpisodeCard from '../EpisodeCard/EpisodeCard';
+import ListData from '../../../common/ListData/ListData';
 import { useQuery } from '@apollo/react-hooks';
-import { GET_ALL_EPISODES } from '../../queries';
+import { GET_ALL_EPISODES } from '../../../../queries';
 import LinearProgress from '@material-ui/core/LinearProgress';
 
 export default function EpisodesList() {

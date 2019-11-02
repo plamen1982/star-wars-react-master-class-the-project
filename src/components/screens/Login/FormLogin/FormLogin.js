@@ -10,10 +10,10 @@ import {
 } from '@material-ui/core';
 import { useApolloClient, useMutation } from '@apollo/react-hooks';
 
-import { ThemeContext } from '../../../contexts';
-import useForm from '../../../hooks/useForm';
-import { validateLogin } from '../../../utils/validations';
-import { SIGN_IN } from '../../../queries';
+import { ThemeContext } from '../../../../contexts';
+import useForm from '../../../../hooks/useForm';
+import { validateLogin } from '../../../../utils/validations';
+import { SIGN_IN } from '../../../../queries';
 
 const INITIAL_STATE_FORM = {
   email: '',

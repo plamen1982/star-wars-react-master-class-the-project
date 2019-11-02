@@ -1,5 +1,5 @@
 import React from 'react';
-import EpisodesList from '../containers/EpisodesList';
+import EpisodesList from './EpisodesList/EpisodesList';
 import { useQuery } from '@apollo/react-hooks';
 import { Container } from '@material-ui/core';
 

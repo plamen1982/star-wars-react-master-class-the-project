@@ -1,5 +1,5 @@
 import React from 'react';
-import CharactersList from '../containers/CharactersList';
+import CharactersList from './CharactersList/CharactersList';
 import { useQuery } from '@apollo/react-hooks';
 import gql from 'graphql-tag.macro';
 // TODO move in query file

@@ -9,13 +9,21 @@ import {
 import { ApolloProvider } from '@apollo/react-hooks';
 import { makeStyles } from '@material-ui/core/styles';
 import { ThemeContext } from './contexts';
-import { Login, Characters, Starship, Episodes } from './components/screens';
+
 import {
+  Login,
+  Characters,
+  Starship,
+  Episodes,
   EpisodeDetails,
-  CharacterDetails,
-  StarshipDetails,
-  Header,
-} from './components/presentational';
+} from './components/screens';
+// import {
+//   CharacterDetails,
+//   StarshipDetails,
+//   Header,
+// } from './components/presentational';
+import { Header } from './components/common';
+import { StarshipDetails, CharacterDetails } from './components/screens';
 import useTheme from './hooks/useTheme';
 import client from './apollo-client';
 

@@ -1,10 +1,10 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import CharactersCard from '../presentational/CharactersCard';
-import ListData from '../presentational/ListData';
+import CharactersCard from '../CharactersCard/CharactersCard';
+import ListData from '../../../common/ListData/ListData';
 import { useQuery } from '@apollo/react-hooks';
 // import { useHistory } from 'react-router-dom';
-import { GET_ALL_CHARACTERS } from '../../queries';
+import { GET_ALL_CHARACTERS } from '../../../../queries';
 import LinearProgress from '@material-ui/core/LinearProgress';
 
 const useStylesLoader = makeStyles(theme => ({

@@ -21,7 +21,7 @@ export default function VerticalCard({ data, navigateTo, children, grid }) {
   const styleWithTheme = { cards, defaultColors };
   const useStyles = makeStyles(styleWithTheme);
   const classes = useStyles();
-  const history = useHistory();
+  // const history = useHistory();
   // console.log(history);
   // console.log(data);
   return (

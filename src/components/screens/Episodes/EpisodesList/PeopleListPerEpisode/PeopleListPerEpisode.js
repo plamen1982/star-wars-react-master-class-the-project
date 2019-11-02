@@ -1,6 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import PersonCardEpisode from '../PersonCardEpisode/PersonCardEpisode';
+import PersonCardEpisode from '../../../../presentational/PersonCardEpisode/PersonCardEpisode';
 import ListData from '../ListData';
 
 export default function PeopleListPerEpisode(props) {
