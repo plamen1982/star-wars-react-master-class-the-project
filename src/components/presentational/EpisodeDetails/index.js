@@ -1,11 +1,10 @@
 import React from 'react';
 import { useQuery } from '@apollo/react-hooks';
 import EpisodeCard from './../EpisodeCard';
-import PeopleListPerEpisode from '../PeopleListPerEpisode/PeopleListPerEpisode';
+// import PeopleListPerEpisode from '../PeopleListPerEpisode/PeopleListPerEpisode';
 import { GET_EPISODE_BY_ID } from '../../../queries';
 
 const EpisodeDetails = props => {
-  debugger;
   const {
     match: {
       params: { episodeId },

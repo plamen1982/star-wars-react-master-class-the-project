@@ -2,7 +2,6 @@ import React from 'react';
 import { Grid } from '@material-ui/core';
 
 const ListData = ({ data, grid, direction, component: Component }) => {
-  debugger;
   return (
     <Grid container spacing={4}>
       {data.map(item => {

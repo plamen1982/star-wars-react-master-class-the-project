@@ -1,23 +1,19 @@
-import React, { useContext } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { makeStyles } from '@material-ui/core/styles';
-import { Grid, Card, CardContent, Typography } from '@material-ui/core';
-import { styles } from './styles';
-import { ThemeContext } from '../../../contexts';
+import React from 'react';
+// import React, { useContext } from 'react';
+// import { makeStyles } from '@material-ui/core/styles';
+// import { styles } from './styles';
+// import { ThemeContext } from '../../../contexts';
 import VerticalCard from '../VerticalCard/VerticalCard';
 import HorizontalCard from '../HorizontalCard/HorizantalCard';
 import ListData from '../ListData';
 export default function EpisodeCard({ data, grid, direction, children }) {
-  const {
-    currentTheme: {
-      colors: { cards, defaultColors },
-    },
-  } = useContext(ThemeContext);
-  const styleWithTheme = { cards, defaultColors };
-  const useStyles = makeStyles(styleWithTheme);
-  const classes = useStyles();
-  const location = useLocation();
-  const { pathname } = location;
+  // const {
+  //   currentTheme: {
+  //     colors: { cards, defaultColors },
+  //   },
+  // } = useContext(ThemeContext);
+  // const styleWithTheme = { cards, defaultColors };
+  // const useStyles = makeStyles(styleWithTheme);
   const gridSettingsEpisode = {
     grid: 3,
     spacing: 12,

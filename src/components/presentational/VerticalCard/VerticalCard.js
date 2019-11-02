@@ -22,10 +22,8 @@ export default function VerticalCard({ data, navigateTo, children, grid }) {
   const useStyles = makeStyles(styleWithTheme);
   const classes = useStyles();
   const history = useHistory();
-  const { pathname } = history;
-  console.log(history);
-  console.log(data);
-  debugger;
+  // console.log(history);
+  // console.log(data);
   return (
     <Grid item md={4} sm={6} xs={12}>
       <Card className={classes.cards}>

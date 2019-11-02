@@ -19,7 +19,7 @@ const Episodes = props => {
 
   return (
     <>
-      <Container>
+      <Container style={{ marginTop: 16 }}>
         <EpisodesList />
       </Container>
     </>

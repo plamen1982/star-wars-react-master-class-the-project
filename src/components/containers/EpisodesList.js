@@ -46,7 +46,6 @@ export default function EpisodesList() {
     columns: 4,
   };
   const direction = 'row';
-  debugger;
   return (
     <ListData
       component={EpisodeCard}

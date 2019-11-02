@@ -22,7 +22,6 @@ export default function HorizontalCard({
   const classes = useStyles();
   const location = useLocation();
   const { pathname } = location;
-  debugger;
   return (
     <Grid container spacing={grid.containerSpacing}>
       <Grid item xs={grid.numberOfItemColumns}>

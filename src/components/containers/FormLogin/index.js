@@ -11,7 +11,6 @@ import {
 import { useApolloClient, useMutation } from '@apollo/react-hooks';
 
 import { ThemeContext } from '../../../contexts';
-import { inputStyles } from './styles';
 import useForm from '../../../hooks/useForm';
 import { validateLogin } from '../../../utils/validations';
 import { SIGN_IN } from '../../../queries';
