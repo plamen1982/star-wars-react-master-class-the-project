@@ -1,8 +1,6 @@
 import React, { useContext } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { Card, CardContent, Typography } from '@material-ui/core';
-import { useQuery } from '@apollo/react-hooks';
-import { GET_ALL_CHARACTERS } from '../../../queries';
 import { ThemeContext } from '../../../contexts';
 
 const PersonCardEpisode = ({ data, data: { name, image } }) => {

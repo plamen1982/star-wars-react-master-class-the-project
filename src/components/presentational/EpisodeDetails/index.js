@@ -1,5 +1,4 @@
 import React from 'react';
-import gql from 'graphql-tag.macro';
 import { useQuery } from '@apollo/react-hooks';
 import EpisodeCard from './../EpisodeCard';
 import PeopleListPerEpisode from '../PeopleListPerEpisode/PeopleListPerEpisode';
@@ -37,9 +36,6 @@ const EpisodeDetails = props => {
     fetchMore({
       variables: { first: 5, after: cursor },
       updateQuery: (prev, { fetchMoreResult: { episode } }) => {
-        debugger;
-        console.log('prev', prev);
-        console.log('episode', episode);
         return {
           episode: {
             ...prev.episode,
