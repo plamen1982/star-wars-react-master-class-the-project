@@ -12,7 +12,7 @@ const EpisodeDetails = props => {
     },
   } = props;
 
-  const { data, loading, errors, fetchMore } = useQuery(GET_EPISODE_BY_ID, {
+  const { data, loading, errors } = useQuery(GET_EPISODE_BY_ID, {
     variables: {
       id: episodeId,
       first: 5,
@@ -29,23 +29,6 @@ const EpisodeDetails = props => {
   if (!episode) {
     return null;
   }
-  debugger;
-  const endIndexOfPeople = episode.people.edges.length - 1;
-  const { cursor } = episode.people.edges[endIndexOfPeople];
-  const loadMore = () => {
-    fetchMore({
-      variables: { first: 5, after: cursor },
-      updateQuery: (prev, { fetchMoreResult: { episode } }) => {
-        return {
-          episode: {
-            ...prev.episode,
-            ...episode,
-            people: [...prev.episode.people.edges, ...episode.people.edges],
-          },
-        };
-      },
-    });
-  };
 
   const styles = {
     display: 'flex',
@@ -53,15 +36,29 @@ const EpisodeDetails = props => {
     alignItems: 'center',
   };
   const episodeDirectionCard = 'horizontal';
+
   return (
     <div style={styles}>
       {/* ADD data atribute with current episode */}
-      <EpisodeCard direction={episodeDirectionCard} data={episode}>
-        {/* ADD data atribute with current people for this episode episode */}
-        <PeopleListPerEpisode data={episode.people.edges} />
-        <button onClick={loadMore}>Load More..</button>
-      </EpisodeCard>
+      <EpisodeCard direction={episodeDirectionCard} data={episode} />
     </div>
   );
 };
 export default EpisodeDetails;
+// Refactor for the other cases
+// const endIndexOfPeople = episode.people.edges.length - 1;
+// const { cursor } = episode.people.edges[endIndexOfPeople];
+// const loadMore = () => {
+//   fetchMore({
+//     variables: { first: 5, after: cursor },
+//     updateQuery: (prev, { fetchMoreResult: { episode } }) => {
+//       return {
+//         episode: {
+//           ...prev.episode,
+//           ...episode,
+//           people: [...prev.episode.people.edges, ...episode.people.edges],
+//         },
+//       };
+//     },
+//   });
+// };

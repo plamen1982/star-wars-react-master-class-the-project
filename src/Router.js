@@ -19,34 +19,17 @@ import {
 import useTheme from './hooks/useTheme';
 import client from './apollo-client';
 
-const appStyles = {
-  container: {
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    flexDirection: 'column',
-    alignContent: 'center',
-  },
-  app: {
-    backgroundColor: 'black',
-  },
-};
-
 function App() {
   const { currentTheme, toggleTheme } = useTheme();
-  const useStyles = makeStyles(appStyles);
-  const classes = useStyles();
   return (
-    <div className="App" classes={classes.container}>
-      <ThemeContext.Provider value={{ currentTheme, toggleTheme }}>
-        <Router>
-          <Header classes={classes.header} />
-          <Switch>
-            <AllRoutes />
-          </Switch>
-        </Router>
-      </ThemeContext.Provider>
-    </div>
+    <ThemeContext.Provider value={{ currentTheme, toggleTheme }}>
+      <Router>
+        <Header />
+        <Switch>
+          <AllRoutes />
+        </Switch>
+      </Router>
+    </ThemeContext.Provider>
   );
 }
 

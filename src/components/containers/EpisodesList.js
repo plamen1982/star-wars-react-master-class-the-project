@@ -4,31 +4,27 @@ import EpisodeCard from '../presentational/EpisodeCard';
 import ListData from '../presentational/ListData';
 import { useQuery } from '@apollo/react-hooks';
 import { GET_ALL_EPISODES } from '../../queries';
-// import { useHistory } from 'react-router-dom';
 import LinearProgress from '@material-ui/core/LinearProgress';
 
-const useStylesLoader = makeStyles(theme => ({
-  progress: {
-    margin: theme.spacing(2),
-  },
-}));
-
 export default function EpisodesList() {
-  const stylesList = {
-    root: {
-      display: 'flex',
-      flexWrap: 'wrap',
-      justifyContent: 'space-around',
-      alignContent: 'center',
-      paddingTop: 15,
+  const useStylesLoader = makeStyles(theme => ({
+    progress: {
+      margin: theme.spacing(2),
     },
-  };
-  const currentStyles = { ...stylesList };
-  const useStyles = makeStyles(currentStyles);
-  const classes = useStyles();
+  }));
+  // const stylesList = {
+  //   root: {
+  //     display: 'flex',
+  //     flexWrap: 'wrap',
+  //     justifyContent: 'space-around',
+  //     alignContent: 'center',
+  //     paddingTop: 15,
+  //   },
+  // };
+  // const currentStyles = { ...stylesList };
+  // const useStyles = makeStyles(currentStyles);
+  // const classes = useStyles();
   const classesLoader = useStylesLoader();
-
-  const direction = 'vertical';
 
   const { data, loading, errors } = useQuery(GET_ALL_EPISODES, {
     variables: {
@@ -45,13 +41,18 @@ export default function EpisodesList() {
   if (!data) {
     return null;
   }
+  const episodesGridSettings = {
+    spacing: 3,
+    columns: 4,
+  };
+  const direction = 'row';
+  debugger;
   return (
-    <div className={classes.root}>
-      <ListData
-        component={EpisodeCard}
-        direction={direction}
-        data={data.allEpisodes.edges}
-      />
-    </div>
+    <ListData
+      component={EpisodeCard}
+      direction={direction}
+      data={data.allEpisodes.edges}
+      grid={episodesGridSettings}
+    />
   );
 }
