@@ -6,6 +6,7 @@ import {
   CardContent,
   Typography,
   CardMedia,
+  Box,
 } from '@material-ui/core';
 import { Link } from 'react-router-dom';
 import { ThemeContext } from '../../../contexts';
@@ -27,7 +28,7 @@ export default function VerticalCard({ data, navigateTo, children, grid }) {
   debugger;
   return (
     <Grid item md={4} sm={6} xs={12}>
-      <Card className={`${classes.imageAndTitle} ${classes.cards}`}>
+      <Card className={classes.cards}>
         <CardMedia
           className={classes.imageStyles}
           component="img"
@@ -36,7 +37,14 @@ export default function VerticalCard({ data, navigateTo, children, grid }) {
         />
         <CardContent>
           <Typography>
-            <Link to={`${navigateTo}/${data.id}`}>{data.title}</Link>
+            <Box m={2} fontSize={25} fontFamily="Roboto" fontWeight="bold">
+              <Link
+                style={{ textDecoration: 'none' }}
+                to={`${navigateTo}/${data.id}`}
+              >
+                {data.title}
+              </Link>
+            </Box>
           </Typography>
           <Typography
             className={classes.title}

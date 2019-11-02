@@ -2,12 +2,10 @@ const styles = {
   appBar: {},
   cards: {},
   container: {
-    display: 'flex',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    width: '100%',
-    paddingTop: 5,
-    paddingBottom: 5,
+    // display: 'flex',
+    // justifyContent: 'flex-end',
+    // alignItems: 'flex-end',
+    // flexDirection: 'row',
   },
   rightHeader: {
     display: 'flex',
