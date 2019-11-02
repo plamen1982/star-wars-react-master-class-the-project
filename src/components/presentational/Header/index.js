@@ -47,16 +47,9 @@ const Header = () => {
           className={themeClasses.title}
           onClick={toggleTheme}
         >
-          <NavLink
-            to="/"
-            exact={true}
-            activeClassName={classes.active}
-            className={classes.leftHeader}
-          >
-            <Box fontSize={23} fontStyle="italic" fontFamily="Roboto">
-              SWAPP
-            </Box>
-          </NavLink>
+          <Box fontSize={23} fontStyle="italic" fontFamily="Roboto">
+            SWAPP
+          </Box>
         </Typography>
         <Typography>
           <NavLink

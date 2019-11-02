@@ -39,11 +39,12 @@ const AllRoutes = () => {
       colors: { defaultColors },
     },
   } = useContext(ThemeContext);
+
   const styles = { defaultColors };
   const useStyles = makeStyles(styles);
   const classes = useStyles();
   return (
-    <div className={classes.defaultColors}>
+    <div className={classes.defaultColors} style={{ paddingBottom: '100vh' }}>
       <ApolloProvider client={client}>
         <Route exact path="/" render={() => <Redirect to="/episodes" />} />
         <Route exact path="/login" component={Login} />
