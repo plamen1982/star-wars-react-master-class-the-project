@@ -1,59 +1,50 @@
 import React from 'react';
+import gql from 'graphql-tag.macro';
 import { useQuery } from '@apollo/react-hooks';
 import EpisodeCard from './../EpisodeCard';
-import { GET_ALL_EPISODES, GET_ALL_CHARACTERS } from '../../../queries';
 import PeopleListPerEpisode from '../PeopleListPerEpisode/PeopleListPerEpisode';
+import { GET_EPISODE_BY_ID } from '../../../queries';
 
 const EpisodeDetails = props => {
+  debugger;
   const {
     match: {
       params: { episodeId },
     },
   } = props;
 
-  const { data: allEpisodes } = useQuery(GET_ALL_EPISODES, {
+  const { data, loading, errors, fetchMore } = useQuery(GET_EPISODE_BY_ID, {
     variables: {
-      first: 10,
-      numberPeople: 5,
+      id: episodeId,
+      first: 5,
     },
   });
 
-  const { data: allPeople, loading, errors, fetchMore } = useQuery(
-    GET_ALL_CHARACTERS,
-    {
-      variables: {
-        first: 10,
-        numberPeople: 5,
-        numberOfStar: 5,
-      },
-    },
-  );
-  debugger;
   if (loading) {
     return <div>Loading...</div>;
   }
   if (errors) {
     return <div>Error...</div>;
   }
-  // const {
-  //   allEpisodes: { edges: episodes },
-  // } = data;
-
-  // const currentEpisode = episodes.find(episode => {
-  //   return episode.node.episodeId === Number(episodeId);
-  // });
-  // const endIndexOfPeople = currentEpisode.node.people.edges.length - 1;
-  // const { cursor } = currentEpisode.node.people.edges[endIndexOfPeople];
+  const { episode } = data;
+  if (!episode) {
+    return null;
+  }
+  debugger;
+  const endIndexOfPeople = episode.people.edges.length - 1;
+  const { cursor } = episode.people.edges[endIndexOfPeople];
   const loadMore = () => {
     fetchMore({
-      // variables: { after: cursor },
-      updateQuery: (prev, { fetchMoreResult: { allEpisodes } }) => {
+      variables: { first: 5, after: cursor },
+      updateQuery: (prev, { fetchMoreResult: { episode } }) => {
         debugger;
-
+        console.log('prev', prev);
+        console.log('episode', episode);
         return {
-          allEpisodes: {
-            ...prev,
-            ...allEpisodes,
+          episode: {
+            ...prev.episode,
+            ...episode,
+            people: [...prev.episode.people.edges, ...episode.people.edges],
           },
         };
       },
@@ -69,9 +60,9 @@ const EpisodeDetails = props => {
   return (
     <div style={styles}>
       {/* ADD data atribute with current episode */}
-      <EpisodeCard direction={episodeDirectionCard}>
+      <EpisodeCard direction={episodeDirectionCard} data={episode}>
         {/* ADD data atribute with current people for this episode episode */}
-        <PeopleListPerEpisode />
+        <PeopleListPerEpisode data={episode.people.edges} />
         <button onClick={loadMore}>Load More..</button>
       </EpisodeCard>
     </div>

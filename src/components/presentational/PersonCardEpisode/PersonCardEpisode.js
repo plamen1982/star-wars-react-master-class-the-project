@@ -25,18 +25,7 @@ const PersonCardEpisode = ({ data, data: { name, image } }) => {
   const styleWithTheme = { cards, defaultColors, ...stylesList };
   const useStyles = makeStyles(styleWithTheme);
   const classes = useStyles();
-  // const { data, error, loading, fetchMore } = useQuery(GET_ALL_CHARACTERS, {
-  //   variables: {
-  //     numberPeople: 5,
-  //   },
-  // });
-  const { cursor } = data;
 
-  // const loadMore = () => {
-  //   fetchMore({
-  //     variables: { after: cursor },
-  //   });
-  // };
   return (
     <CardContent className={classes.root}>
       <Card className={`${classes.imageAndTitle} ${classes.cards}`}>

@@ -19,7 +19,7 @@ export default function PeopleListPerEpisode(props) {
 
   return (
     <div className={classes.root}>
-      <ListData component={PersonCardEpisode} data={props.data.people.edges} />
+      <ListData component={PersonCardEpisode} data={props.data} />
     </div>
   );
 }

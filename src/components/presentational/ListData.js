@@ -8,7 +8,7 @@ const ListData = ({ data, component: Component, direction }) => {
           <Component
             data={item.node}
             direction={direction}
-            key={item.node.episodeId || item.node.id}
+            key={item.node.id}
           />
         );
       })}
