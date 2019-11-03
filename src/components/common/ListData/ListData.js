@@ -1,6 +1,11 @@
 import React from 'react';
 
-const ListData = ({ data, navigateTo, grid, component: Component }) => {
+const ListData = ({
+  data,
+  navigateTo,
+  styleProperties,
+  component: Component,
+}) => {
   return (
     <>
       {data.map(item => {
@@ -9,7 +14,7 @@ const ListData = ({ data, navigateTo, grid, component: Component }) => {
             data={item.node}
             key={item.node.id}
             navigateTo={navigateTo}
-            grid={grid}
+            styleProperties={styleProperties}
           />
         );
       })}

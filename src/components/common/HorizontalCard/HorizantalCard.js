@@ -8,6 +8,7 @@ import {
   CardMedia,
   Container,
   CardHeader,
+  Box,
 } from '@material-ui/core';
 import { Link } from 'react-router-dom';
 import { ThemeContext } from '../../../contexts';
@@ -17,7 +18,7 @@ export default function HorizontalCard({
   data,
   navigateTo,
   styles,
-  grid,
+  styleProperties,
   children,
 }) {
   const {
@@ -32,33 +33,97 @@ export default function HorizontalCard({
   const { pathname } = location;
   debugger;
   return (
-    <Grid item item md={grid}>
+    <Grid
+      item
+      md={styleProperties.grid.md}
+      sm={styleProperties.grid.sm}
+      xs={styleProperties.grid.xs}
+    >
       <Card
         className={`${classes.cards} ${classes.openingDescription}`}
-        style={{ display: 'flex', alignItems: 'stretch' }}
+        style={{
+          display: 'flex',
+          alignItems: 'stretch',
+          height: styleProperties.sizeImage.height,
+        }}
       >
-        <Typography style={{ flexGrow: '6' }}>
+        <div>
           <CardMedia
             className={classes.cards}
             component="img"
             image={data.image}
             alt="url"
-            style={{ width: '30%' }}
+            style={{
+              width: styleProperties.sizeImage.width,
+              height: styleProperties.sizeImage.height,
+            }}
           />
-        </Typography>
+        </div>
 
-        {navigateTo ? (
-          <Typography
-            className={classes.cards}
-            style={{ flexGrow: '1', paddingLeft: 30, paddingRight: 30 }}
-          >
-            <Link to={pathname}>{data.title}</Link>
-          </Typography>
-        ) : (
-          <Typography className={classes.cards} style={{ flexGrow: '1' }}>
-            {data.title}
-          </Typography>
-        )}
+        <CardContent>
+          {navigateTo ? (
+            <Typography
+              className={classes.cards}
+              style={{ paddingLeft: '20%', paddingRight: '20%' }}
+            >
+              <Link to={pathname}>
+                {data.title ? (
+                  <Typography>
+                    <Box
+                      m={2}
+                      fontSize={25}
+                      fontFamily="Roboto"
+                      fontWeight="bold"
+                    >
+                      {data.title}
+                    </Box>
+                  </Typography>
+                ) : (
+                  <Typography>
+                    <Box
+                      m={2}
+                      fontSize={25}
+                      fontFamily="Roboto"
+                      fontWeight="bold"
+                    >
+                      {data.name}
+                    </Box>
+                  </Typography>
+                )}
+              </Link>
+            </Typography>
+          ) : (
+            <Typography
+              style={{ paddingLeft: '20%', paddingRight: '20%' }}
+              className={classes.cards}
+            >
+              {data.title ? (
+                <Typography>
+                  {' '}
+                  <Box
+                    m={2}
+                    fontSize={25}
+                    fontFamily="Roboto"
+                    fontWeight="bold"
+                  >
+                    {data.title}
+                  </Box>
+                </Typography>
+              ) : (
+                <Typography>
+                  <Box
+                    m={2}
+                    fontSize={25}
+                    fontFamily="Roboto"
+                    fontWeight="bold"
+                  >
+                    {data.name}
+                  </Box>
+                </Typography>
+              )}
+            </Typography>
+          )}
+        </CardContent>
       </Card>
       {children}
     </Grid>

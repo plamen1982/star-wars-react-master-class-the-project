@@ -60,95 +60,94 @@ const FormLogin = props => {
   if (error) return <p>An error occurred</p>;
 
   return (
-    <>
-      <form
-        onSubmit={handleSubmit}
+    <form
+      onSubmit={handleSubmit}
+      style={{
+        display: 'flex',
+        justifyContent: 'center',
+        flexDirection: 'column',
+        paddingBottom: '40vh',
+      }}
+    >
+      <Typography
         style={{
+          color: classes.colors.primaryHeading,
           display: 'flex',
           justifyContent: 'center',
-          flexDirection: 'column',
         }}
       >
+        <Box
+          fontSize={100}
+          fontStyle="italic"
+          fontFamily="Roboto"
+          fontWeight="bold"
+        >
+          SWAPP
+        </Box>
+      </Typography>
+      <Container
+        style={{
+          display: 'flex',
+          flexDirection: 'column',
+          width: 500,
+          backgroundColor: 'lightgrey',
+          padding: 40,
+          borderRadius: 5,
+        }}
+      >
+        {errors.message && <div> {errors.message} </div>}
+        <TextField
+          name="email"
+          onChange={handleChange}
+          value={values.email}
+          style={{
+            backgroundColor: 'white',
+            borderWidth: 1,
+            borderStyle: 'none',
+            borderRadius: 5,
+            marginBottom: 15,
+            paddingLeft: 5,
+          }}
+          className={classes.colors.inputs}
+        />
+        <TextField
+          name="password"
+          onChange={handleChange}
+          value={values.password}
+          type="password"
+          style={{
+            backgroundColor: 'white',
+            borderWidth: 1,
+            borderStyle: 'none',
+            borderRadius: 5,
+            marginBottom: 15,
+            paddingLeft: 5,
+          }}
+          className={classes.colors.inputs}
+        />
         <Typography
           style={{
-            color: classes.colors.primaryHeading,
             display: 'flex',
-            justifyContent: 'center',
+            justifyContent: 'flex-end',
+            color: theme.colors.solidButtons.color,
           }}
         >
-          <Box
-            fontSize={100}
-            fontStyle="italic"
-            fontFamily="Roboto"
-            fontWeight="bold"
-          >
-            SWAPP
-          </Box>
-        </Typography>
-        <Container
-          style={{
-            display: 'flex',
-            flexDirection: 'column',
-            width: 500,
-            backgroundColor: 'lightgrey',
-            padding: 40,
-            borderRadius: 5,
-          }}
-        >
-          {errors.message && <div> {errors.message} </div>}
-          <TextField
-            name="email"
-            onChange={handleChange}
-            value={values.email}
-            style={{
-              backgroundColor: 'white',
-              borderWidth: 1,
-              borderStyle: 'none',
-              borderRadius: 5,
-              marginBottom: 15,
-              paddingLeft: 5,
-            }}
-            className={classes.colors.inputs}
-          />
-          <TextField
-            name="password"
-            onChange={handleChange}
-            value={values.password}
-            type="password"
-            style={{
-              backgroundColor: 'white',
-              borderWidth: 1,
-              borderStyle: 'none',
-              borderRadius: 5,
-              marginBottom: 15,
-              paddingLeft: 5,
-            }}
-            className={classes.colors.inputs}
-          />
-          <div
-            style={{
-              display: 'flex',
-              justifyContent: 'flex-end',
+          <Button
+            variant="contained"
+            styles={{
+              width: 100,
+              height: 100,
+              backgroundColor: theme.colors.solidButtons.backgroundColor,
               color: theme.colors.solidButtons.color,
             }}
+            className={classes.colors.solidButtons}
+            onClick={handleSubmit}
           >
-            <Button
-              variant="contained"
-              styles={{
-                width: 100,
-                height: 100,
-                backgroundColor: theme.colors.solidButtons.backgroundColor,
-                color: theme.colors.solidButtons.color,
-              }}
-              className={classes.colors.solidButtons}
-              onClick={handleSubmit}
-            >
-              Login
-            </Button>
-          </div>
-        </Container>
-      </form>
-    </>
+            Login
+          </Button>
+        </Typography>
+      </Container>
+    </form>
   );
 };
 

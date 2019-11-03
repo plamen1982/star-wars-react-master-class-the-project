@@ -52,7 +52,7 @@ const AllRoutes = () => {
   const useStyles = makeStyles(styles);
   const classes = useStyles();
   return (
-    <div className={classes.defaultColors} style={{ paddingBottom: '100vh' }}>
+    <div className={classes.defaultColors} style={{ paddingBottom: '50vh' }}>
       <ApolloProvider client={client}>
         <Route exact path="/" render={() => <Redirect to="/episodes" />} />
         <Route exact path="/login" component={Login} />

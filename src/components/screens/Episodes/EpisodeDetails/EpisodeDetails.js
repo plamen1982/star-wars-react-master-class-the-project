@@ -48,24 +48,46 @@ const EpisodeDetails = props => {
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
+    paddingTop: 20,
   };
 
-  const gridEpisodeDetails = 8;
+  const gridEpisodeDetails = {
+    grid: {
+      sm: 12,
+      xs: 12,
+      md: 8,
+    },
+    sizeImage: {
+      height: 300,
+      width: 300,
+    },
+  };
+  const gridPeople = {
+    grid: {
+      sm: 12,
+      xs: 12,
+      md: 4,
+    },
+    sizeImage: {
+      height: 100,
+      width: 100,
+    },
+  };
+  debugger;
   return (
     <div style={styles}>
-      {/* ADD data atribute with current episode */}
-      <HorizontalCard data={data.episode} grid={gridEpisodeDetails}>
-        <Card>
+      <HorizontalCard data={data.episode} styleProperties={gridEpisodeDetails}>
+        <Card style={{ marginBottom: 20, marginTop: 20 }}>
           <CardContent className={classes.cards}>
             <Typography>{data.episode.openingCrawl}</Typography>
           </CardContent>
         </Card>
-        <Grid container>
+        <Grid container spacing={1}>
           <ListData
             data={data.episode.people.edges}
             component={HorizontalCard}
             flexDirection="row"
-            grid={4}
+            styleProperties={gridPeople}
           />
         </Grid>
       </HorizontalCard>
