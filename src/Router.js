@@ -9,44 +9,35 @@ import {
 import { ApolloProvider } from '@apollo/react-hooks';
 import { makeStyles } from '@material-ui/core/styles';
 import { ThemeContext } from './contexts';
-import { Login, Characters, Starship, Episodes } from './components/screens';
+
 import {
+  Login,
+  Characters,
+  Starship,
+  Episodes,
   EpisodeDetails,
-  CharacterDetails,
-  StarshipDetails,
-  Header,
-} from './components/presentational';
+} from './components/screens';
+// import {
+//   CharacterDetails,
+//   StarshipDetails,
+//   Header,
+// } from './components/presentational';
+import { Header } from './components/common';
+import { StarshipDetails, CharacterDetails } from './components/screens';
 import useTheme from './hooks/useTheme';
 import client from './apollo-client';
 
-const appStyles = {
-  container: {
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    flexDirection: 'column',
-    alignContent: 'center',
-  },
-  app: {
-    backgroundColor: 'black',
-  },
-};
-
 function App() {
   const { currentTheme, toggleTheme } = useTheme();
-  const useStyles = makeStyles(appStyles);
-  const classes = useStyles();
   return (
-    <div className="App" classes={classes.container}>
-      <ThemeContext.Provider value={{ currentTheme, toggleTheme }}>
-        <Router>
-          <Header classes={classes.header} />
-          <Switch>
-            <AllRoutes />
-          </Switch>
-        </Router>
-      </ThemeContext.Provider>
-    </div>
+    <ThemeContext.Provider value={{ currentTheme, toggleTheme }}>
+      <Router>
+        <Header />
+        <Switch>
+          <AllRoutes />
+        </Switch>
+      </Router>
+    </ThemeContext.Provider>
   );
 }
 
@@ -56,11 +47,12 @@ const AllRoutes = () => {
       colors: { defaultColors },
     },
   } = useContext(ThemeContext);
+
   const styles = { defaultColors };
   const useStyles = makeStyles(styles);
   const classes = useStyles();
   return (
-    <div className={classes.defaultColors}>
+    <div className={classes.defaultColors} style={{ paddingBottom: '50vh' }}>
       <ApolloProvider client={client}>
         <Route exact path="/" render={() => <Redirect to="/episodes" />} />
         <Route exact path="/login" component={Login} />

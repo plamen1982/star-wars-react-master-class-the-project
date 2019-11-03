@@ -1,14 +1,20 @@
 import React from 'react';
 
-const ListData = ({ data, component: Component, direction }) => {
+const ListData = ({
+  data,
+  navigateTo,
+  styleProperties,
+  component: Component,
+}) => {
   return (
     <>
       {data.map(item => {
         return (
           <Component
             data={item.node}
-            direction={direction}
             key={item.node.id}
+            navigateTo={navigateTo}
+            styleProperties={styleProperties}
           />
         );
       })}

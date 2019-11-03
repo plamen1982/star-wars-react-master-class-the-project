@@ -1,6 +1,8 @@
 import React from 'react';
-import EpisodesList from '../containers/EpisodesList';
+import EpisodesList from './EpisodesList/EpisodesList';
 import { useQuery } from '@apollo/react-hooks';
+import { Container } from '@material-ui/core';
+
 import gql from 'graphql-tag.macro';
 // TODO move in query file
 export const AUTHENTICATED_QUERY = gql`
@@ -17,8 +19,11 @@ const Episodes = props => {
 
   return (
     <>
-      <EpisodesList />
+      <Container style={{ marginTop: 16 }}>
+        <EpisodesList />
+      </Container>
     </>
   );
 };
 export default Episodes;
+//Checked!
