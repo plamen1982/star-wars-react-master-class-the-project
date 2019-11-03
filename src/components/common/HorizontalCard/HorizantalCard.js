@@ -6,8 +6,6 @@ import {
   CardContent,
   Typography,
   CardMedia,
-  Container,
-  CardHeader,
   Box,
 } from '@material-ui/core';
 import { Link } from 'react-router-dom';

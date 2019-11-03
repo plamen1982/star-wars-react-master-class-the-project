@@ -76,13 +76,8 @@ const EpisodeDetails = props => {
   const endIndexOfPeople = episode.people.edges.length - 1;
   const { cursor } = episode.people.edges[endIndexOfPeople];
   const {
-    people: {
-      pageInfo: { hasNextPage },
-      totalCount,
-      edges,
-    },
+    people: { totalCount, edges },
   } = episode;
-  debugger;
   const loadMore = () => {
     debugger;
     fetchMore({
