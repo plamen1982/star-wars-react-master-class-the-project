@@ -49,6 +49,11 @@ export const GET_EPISODE_BY_ID = gql`
             image
           }
         }
+        pageInfo {
+          hasNextPage
+          endCursor
+        }
+        totalCount
       }
     }
   }

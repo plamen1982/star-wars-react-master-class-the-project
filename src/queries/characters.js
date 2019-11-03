@@ -1,12 +1,8 @@
 import gql from 'graphql-tag.macro';
 
 const GET_ALL_CHARACTERS = gql`
-  query AllPeople(
-    $numberPeople: Int!
-    $numberStarships: Int!
-    $after: String!
-  ) {
-    allPeople(first: $numberPeople, after: $after) {
+  query AllPeople($after: String!) {
+    allPeople(first: $first, after: $after) {
       pageInfo {
         hasNextPage
       }
@@ -36,5 +32,23 @@ const GET_ALL_CHARACTERS = gql`
     }
   }
 `;
+
+// export const GET_ALL_CHARACTERS = gql`
+//   query getCharacters($first: Int!, $after: String!) {
+//     allPeople(first: $first, after: $after) {
+//       pageInfo {
+//         hasNextPage
+//       }
+//       edges {
+//         cursor
+//         node {
+//           id
+//           name
+//           image
+//         }
+//       }
+//     }
+//   }
+// `;
 
 export { GET_ALL_CHARACTERS };

@@ -22,9 +22,9 @@ const INITIAL_STATE_FORM = {
 
 const FormLogin = props => {
   const { currentTheme } = useContext(ThemeContext);
-  const theme = currentTheme;
-  const useStyles = makeStyles(theme);
-  console.log('theme', theme);
+  const { colors } = currentTheme;
+  const useStyles = makeStyles(colors);
+  // console.log('theme', theme);
   const classes = useStyles();
   const errors = { message: '' };
 
@@ -58,7 +58,7 @@ const FormLogin = props => {
 
   if (loading) return <div>Loading...</div>;
   if (error) return <p>An error occurred</p>;
-
+  debugger;
   return (
     <form
       onSubmit={handleSubmit}
@@ -71,10 +71,10 @@ const FormLogin = props => {
     >
       <Typography
         style={{
-          color: classes.colors.primaryHeading,
           display: 'flex',
           justifyContent: 'center',
         }}
+        className={classes.primaryHeading}
       >
         <Box
           fontSize={100}
@@ -108,7 +108,7 @@ const FormLogin = props => {
             marginBottom: 15,
             paddingLeft: 5,
           }}
-          className={classes.colors.inputs}
+          className={classes.inputs}
         />
         <TextField
           name="password"
@@ -123,24 +123,17 @@ const FormLogin = props => {
             marginBottom: 15,
             paddingLeft: 5,
           }}
-          className={classes.colors.inputs}
+          className={classes.inputs}
         />
         <Typography
           style={{
             display: 'flex',
             justifyContent: 'flex-end',
-            color: theme.colors.solidButtons.color,
           }}
         >
           <Button
             variant="contained"
-            styles={{
-              width: 100,
-              height: 100,
-              backgroundColor: theme.colors.solidButtons.backgroundColor,
-              color: theme.colors.solidButtons.color,
-            }}
-            className={classes.colors.solidButtons}
+            className={classes.solidButtons}
             onClick={handleSubmit}
           >
             Login

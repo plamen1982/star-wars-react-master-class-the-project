@@ -62,10 +62,7 @@ export default function HorizontalCard({
 
         <CardContent>
           {navigateTo ? (
-            <Typography
-              className={classes.cards}
-              style={{ paddingLeft: '20%', paddingRight: '20%' }}
-            >
+            <Typography className={classes.cards}>
               <Link to={pathname}>
                 {data.title ? (
                   <Typography>
@@ -93,13 +90,9 @@ export default function HorizontalCard({
               </Link>
             </Typography>
           ) : (
-            <Typography
-              style={{ paddingLeft: '20%', paddingRight: '20%' }}
-              className={classes.cards}
-            >
+            <Typography className={classes.cards}>
               {data.title ? (
                 <Typography>
-                  {' '}
                   <Box
                     m={2}
                     fontSize={25}
