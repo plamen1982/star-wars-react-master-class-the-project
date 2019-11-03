@@ -1,8 +1,15 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { useQuery } from '@apollo/react-hooks';
-import EpisodeCard from '../EpisodeCard/EpisodeCard';
-// import PeopleListPerEpisode from '../PeopleListPerEpisode/PeopleListPerEpisode';
+import { HorizontalCard, ListData } from '../../../common';
 import { GET_EPISODE_BY_ID } from '../../../../queries';
+import {
+  Card,
+  CardContent,
+  Typography,
+  makeStyles,
+  Grid,
+} from '@material-ui/core';
+import { ThemeContext } from '../../../../contexts';
 
 const EpisodeDetails = props => {
   const {
@@ -10,6 +17,14 @@ const EpisodeDetails = props => {
       params: { episodeId },
     },
   } = props;
+  const {
+    currentTheme: {
+      colors: { cards, defaultColors },
+    },
+  } = useContext(ThemeContext);
+  const styleWithTheme = { cards, defaultColors };
+  const useStyles = makeStyles(styleWithTheme);
+  const classes = useStyles();
 
   const { data, loading, errors } = useQuery(GET_EPISODE_BY_ID, {
     variables: {
@@ -17,7 +32,7 @@ const EpisodeDetails = props => {
       first: 5,
     },
   });
-
+  debugger;
   if (loading) {
     return <div>Loading...</div>;
   }
@@ -34,12 +49,26 @@ const EpisodeDetails = props => {
     justifyContent: 'center',
     alignItems: 'center',
   };
-  const episodeDirectionCard = 'horizontal';
 
+  const gridEpisodeDetails = 8;
   return (
     <div style={styles}>
       {/* ADD data atribute with current episode */}
-      <EpisodeCard direction={episodeDirectionCard} data={episode} />
+      <HorizontalCard data={data.episode} grid={gridEpisodeDetails}>
+        <Card>
+          <CardContent className={classes.cards}>
+            <Typography>{data.episode.openingCrawl}</Typography>
+          </CardContent>
+        </Card>
+        <Grid container>
+          <ListData
+            data={data.episode.people.edges}
+            component={HorizontalCard}
+            flexDirection="row"
+            grid={4}
+          />
+        </Grid>
+      </HorizontalCard>
     </div>
   );
 };

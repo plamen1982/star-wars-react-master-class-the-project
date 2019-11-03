@@ -13,6 +13,7 @@ import { ThemeContext } from '../../../contexts';
 import { useHistory } from 'react-router-dom';
 
 export default function VerticalCard({ data, navigateTo, children, grid }) {
+  debugger;
   const {
     currentTheme: {
       colors: { cards, defaultColors },
