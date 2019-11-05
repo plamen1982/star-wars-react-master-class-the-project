@@ -12,7 +12,6 @@ import { Link } from 'react-router-dom';
 import { ThemeContext } from '../../../contexts';
 
 export default function VerticalCard({ data, navigateTo, children, grid }) {
-  debugger;
   const {
     currentTheme: {
       colors: { cards, defaultColors },

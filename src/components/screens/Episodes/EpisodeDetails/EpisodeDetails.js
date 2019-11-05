@@ -79,7 +79,6 @@ const EpisodeDetails = props => {
     people: { totalCount, edges },
   } = episode;
   const loadMore = () => {
-    debugger;
     fetchMore({
       variables: { first: 5, after: cursor },
       updateQuery: (prev, { fetchMoreResult: { episode } }) => {

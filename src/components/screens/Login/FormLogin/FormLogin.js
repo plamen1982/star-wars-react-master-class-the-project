@@ -11,7 +11,7 @@ import {
 import { useApolloClient, useMutation } from '@apollo/react-hooks';
 
 import { ThemeContext } from '../../../../contexts';
-import useForm from '../../../../hooks/useForm';
+import useForm from '../../../../hooks/useForm/useForm';
 import { validateLogin } from '../../../../utils/validations';
 import { SIGN_IN } from '../../../../queries';
 
@@ -58,7 +58,6 @@ const FormLogin = props => {
 
   if (loading) return <div>Loading...</div>;
   if (error) return <p>An error occurred</p>;
-  debugger;
   return (
     <form
       onSubmit={handleSubmit}

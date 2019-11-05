@@ -29,7 +29,6 @@ export default function HorizontalCard({
   const classes = useStyles();
   const location = useLocation();
   const { pathname } = location;
-  debugger;
   return (
     <Grid
       item
