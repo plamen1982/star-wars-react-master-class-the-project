@@ -10,13 +10,13 @@ import {
 } from '@material-ui/core';
 import { Link } from 'react-router-dom';
 import { ThemeContext } from '../../../contexts';
-import { useLocation } from 'react-router-dom';
 
 export default function HorizontalCard({
   data,
   navigateTo,
   styleProperties,
   children,
+  key,
 }) {
   const {
     currentTheme: {
@@ -26,8 +26,6 @@ export default function HorizontalCard({
   const styleWithTheme = { cards, defaultColors, links };
   const useStyles = makeStyles(styleWithTheme);
   const classes = useStyles();
-  const location = useLocation();
-  const { pathname } = location;
   debugger;
   return (
     <Grid
@@ -60,31 +58,29 @@ export default function HorizontalCard({
         <CardContent>
           {navigateTo ? (
             <Typography className={classes.cards}>
-              <Link to={pathname}>
-                {data.title ? (
-                  <Typography className={classes.links}>
-                    <Box
-                      m={2}
-                      fontSize={25}
-                      fontFamily="Roboto"
-                      fontWeight="bold"
-                    >
-                      {data.title}
-                    </Box>
-                  </Typography>
-                ) : (
-                  <Typography className={classes.links}>
-                    <Box
-                      m={2}
-                      fontSize={25}
-                      fontFamily="Roboto"
-                      fontWeight="bold"
-                    >
-                      {data.name}
-                    </Box>
-                  </Typography>
-                )}
-              </Link>
+              {data.title ? (
+                <Typography className={classes.links}>
+                  <Box
+                    m={2}
+                    fontSize={25}
+                    fontFamily="Roboto"
+                    fontWeight="bold"
+                  >
+                    {data.title}
+                  </Box>
+                </Typography>
+              ) : (
+                <Typography className={classes.links}>
+                  <Box
+                    m={2}
+                    fontSize={25}
+                    fontFamily="Roboto"
+                    fontWeight="bold"
+                  >
+                    <Link to={{ pathname: data.id }}>{data.name}</Link>
+                  </Box>
+                </Typography>
+              )}
             </Typography>
           ) : (
             <Typography className={classes.cards}>

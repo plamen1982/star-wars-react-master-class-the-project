@@ -33,7 +33,6 @@ const Characters = props => {
       numberStarships: 5,
     },
   });
-  debugger;
   if (loading) {
     return <LinearProgress />;
   }

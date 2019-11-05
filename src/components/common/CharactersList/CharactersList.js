@@ -23,6 +23,7 @@ const CharactersList = ({ data }) => {
         component={HorizontalCard}
         flexDirection="row"
         styleProperties={gridPeople}
+        navigateTo={true}
       />
     </Grid>
   ) : null;
