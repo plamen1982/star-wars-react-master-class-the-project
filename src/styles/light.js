@@ -27,6 +27,10 @@ const solidButtonsLightTheme = {
   color: YELLOW_COLOR,
 };
 
+const linksLightTheme = {
+  color: LIGHT_BLUE_COLOR,
+};
+
 const outlineButtonsLightTheme = {
   backgroundColor: BEIGE_COLOR,
   borderColor: LIGHT_GREY_COLOR,
@@ -64,4 +68,5 @@ export {
   inputsLightTheme,
   primaryHeadingLightTheme,
   radarLightTheme,
+  linksLightTheme,
 };

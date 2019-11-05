@@ -20,14 +20,15 @@ export default function HorizontalCard({
 }) {
   const {
     currentTheme: {
-      colors: { cards, defaultColors },
+      colors: { cards, defaultColors, links },
     },
   } = useContext(ThemeContext);
-  const styleWithTheme = { cards, defaultColors };
+  const styleWithTheme = { cards, defaultColors, links };
   const useStyles = makeStyles(styleWithTheme);
   const classes = useStyles();
   const location = useLocation();
   const { pathname } = location;
+  debugger;
   return (
     <Grid
       item
@@ -61,7 +62,7 @@ export default function HorizontalCard({
             <Typography className={classes.cards}>
               <Link to={pathname}>
                 {data.title ? (
-                  <Typography>
+                  <Typography className={classes.links}>
                     <Box
                       m={2}
                       fontSize={25}
@@ -72,7 +73,7 @@ export default function HorizontalCard({
                     </Box>
                   </Typography>
                 ) : (
-                  <Typography>
+                  <Typography className={classes.links}>
                     <Box
                       m={2}
                       fontSize={25}
@@ -88,7 +89,7 @@ export default function HorizontalCard({
           ) : (
             <Typography className={classes.cards}>
               {data.title ? (
-                <Typography>
+                <Typography className={classes.links}>
                   <Box
                     m={2}
                     fontSize={25}
@@ -99,7 +100,7 @@ export default function HorizontalCard({
                   </Box>
                 </Typography>
               ) : (
-                <Typography>
+                <Typography className={classes.links}>
                   <Box
                     m={2}
                     fontSize={25}
