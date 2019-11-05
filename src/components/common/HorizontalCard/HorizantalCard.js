@@ -10,19 +10,22 @@ import {
 } from '@material-ui/core';
 import { Link } from 'react-router-dom';
 import { ThemeContext } from '../../../contexts';
+import { useHistory } from 'react-router-dom';
 
 export default function HorizontalCard({
   data,
   navigateTo,
   styleProperties,
   children,
-  key,
 }) {
   const {
     currentTheme: {
       colors: { cards, defaultColors, links },
     },
   } = useContext(ThemeContext);
+  const history = useHistory();
+  debugger;
+  console.log(`history: ${data.id}`, history);
   const styleWithTheme = { cards, defaultColors, links };
   const useStyles = makeStyles(styleWithTheme);
   const classes = useStyles();
@@ -77,7 +80,15 @@ export default function HorizontalCard({
                     fontFamily="Roboto"
                     fontWeight="bold"
                   >
-                    <Link to={{ pathname: data.id }}>{data.name}</Link>
+                    <Link
+                      href="/"
+                      onClick={e => {
+                        e.preventDefault();
+                        history.push(`/${navigateTo}/${data.id}`);
+                      }}
+                    >
+                      {data.name}
+                    </Link>
                   </Box>
                 </Typography>
               )}
