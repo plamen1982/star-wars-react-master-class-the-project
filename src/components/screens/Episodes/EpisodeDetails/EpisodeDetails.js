@@ -1,18 +1,11 @@
 import React, { useContext } from 'react';
 import { useQuery } from '@apollo/react-hooks';
-import { HorizontalCard, ListData } from '../../../common';
+import { HorizontalCard, LoadMoreButton } from '../../../common';
 import { GET_EPISODE_BY_ID } from '../../../../queries';
-import {
-  Card,
-  CardContent,
-  Typography,
-  makeStyles,
-  Grid,
-  Button,
-  Box,
-  Container,
-} from '@material-ui/core';
+import EpisodeDetailsInfo from './EpisodeDetailsInfo/EpisodeDetailsInfo';
+import { makeStyles } from '@material-ui/core';
 import { ThemeContext } from '../../../../contexts';
+import CharactersList from '../../../common/CharactersList/CharactersList';
 
 const EpisodeDetails = props => {
   const {
@@ -47,17 +40,7 @@ const EpisodeDetails = props => {
       width: 300,
     },
   };
-  const gridPeople = {
-    grid: {
-      sm: 12,
-      xs: 12,
-      md: 4,
-    },
-    sizeImage: {
-      height: 100,
-      width: 100,
-    },
-  };
+
   const { data, loading, errors, fetchMore } = useQuery(GET_EPISODE_BY_ID, {
     variables: {
       id: episodeId,
@@ -96,37 +79,17 @@ const EpisodeDetails = props => {
       },
     });
   };
+  debugger;
   return (
     <div style={styles}>
       <HorizontalCard data={data.episode} styleProperties={gridEpisodeDetails}>
-        <Card style={{ marginBottom: 20, marginTop: 20 }}>
-          <CardContent className={classes.cards}>
-            <Typography>{data.episode.openingCrawl}</Typography>
-          </CardContent>
-        </Card>
-        <Grid container spacing={2}>
-          <ListData
-            data={data.episode.people.edges}
-            component={HorizontalCard}
-            flexDirection="row"
-            styleProperties={gridPeople}
-          />
-        </Grid>
+        <EpisodeDetailsInfo
+          data={data.episode.openingCrawl}
+          styles={classes.cards}
+        />
+        <CharactersList data={data.episode.people.edges} />
         {totalCount !== edges.length ? (
-          <Box m={2} display="flex" flexDirection="row-reverse">
-            <Button
-              variant="contained"
-              styles={{
-                width: 100,
-                height: 100,
-                marginTop: 10,
-              }}
-              className={classes.solidButtons}
-              onClick={loadMore}
-            >
-              Load More
-            </Button>
-          </Box>
+          <LoadMoreButton styles={classes.solidButtons} loadMore={loadMore} />
         ) : null}
       </HorizontalCard>
     </div>

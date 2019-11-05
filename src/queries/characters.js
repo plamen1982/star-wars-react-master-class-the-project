@@ -1,11 +1,13 @@
 import gql from 'graphql-tag.macro';
 
 const GET_ALL_CHARACTERS = gql`
-  query AllPeople($after: String!) {
+  query AllPeople($first: Int!, $after: String) {
     allPeople(first: $first, after: $after) {
       pageInfo {
         hasNextPage
+        endCursor
       }
+      totalCount
       edges {
         cursor
         node {
@@ -20,13 +22,13 @@ const GET_ALL_CHARACTERS = gql`
           species {
             name
           }
-          starships(first: $numberStarships) {
-            edges {
-              node {
-                name
-              }
-            }
-          }
+          # starships(first: $numberStarships) {
+          #   edges {
+          #     node {
+          #       name
+          #     }
+          #   }
+          # }
         }
       }
     }

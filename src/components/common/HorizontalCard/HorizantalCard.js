@@ -15,7 +15,6 @@ import { useLocation } from 'react-router-dom';
 export default function HorizontalCard({
   data,
   navigateTo,
-  styles,
   styleProperties,
   children,
 }) {
