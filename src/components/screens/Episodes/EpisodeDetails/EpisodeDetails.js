@@ -10,6 +10,7 @@ import {
   Grid,
   Button,
   Box,
+  Container,
 } from '@material-ui/core';
 import { ThemeContext } from '../../../../contexts';
 
@@ -103,17 +104,7 @@ const EpisodeDetails = props => {
             <Typography>{data.episode.openingCrawl}</Typography>
           </CardContent>
         </Card>
-        <Grid container spacing={1}>
-          <Typography>
-            <Box
-              fontSize={15}
-              fontStyle="italic"
-              fontFamily="Roboto"
-              fontWeight="bold"
-            >
-              Total character in this episode: {totalCount}
-            </Box>
-          </Typography>
+        <Grid container spacing={2}>
           <ListData
             data={data.episode.people.edges}
             component={HorizontalCard}
@@ -122,18 +113,20 @@ const EpisodeDetails = props => {
           />
         </Grid>
         {totalCount !== edges.length ? (
-          <Button
-            variant="contained"
-            styles={{
-              width: 100,
-              height: 100,
-              marginTop: 10,
-            }}
-            className={classes.solidButtons}
-            onClick={loadMore}
-          >
-            Load More
-          </Button>
+          <Box m={2} display="flex" flexDirection="row-reverse">
+            <Button
+              variant="contained"
+              styles={{
+                width: 100,
+                height: 100,
+                marginTop: 10,
+              }}
+              className={classes.solidButtons}
+              onClick={loadMore}
+            >
+              Load More
+            </Button>
+          </Box>
         ) : null}
       </HorizontalCard>
     </div>

@@ -19,7 +19,6 @@ const INITIAL_STATE_FORM = {
   email: '',
   password: '',
 };
-
 const FormLogin = props => {
   const { currentTheme } = useContext(ThemeContext);
   const { colors } = currentTheme;
@@ -97,10 +96,10 @@ const FormLogin = props => {
         {errors.message && <div> {errors.message} </div>}
         <TextField
           name="email"
+          type="email"
           onChange={handleChange}
           value={values.email}
           style={{
-            backgroundColor: 'white',
             borderWidth: 1,
             borderStyle: 'none',
             borderRadius: 5,
@@ -115,7 +114,6 @@ const FormLogin = props => {
           value={values.password}
           type="password"
           style={{
-            backgroundColor: 'white',
             borderWidth: 1,
             borderStyle: 'none',
             borderRadius: 5,
