@@ -13,7 +13,7 @@ import { ThemeContext } from './contexts';
 import {
   Login,
   Characters,
-  Starship,
+  Starships,
   Episodes,
   EpisodeDetails,
 } from './components/screens';
@@ -60,7 +60,7 @@ const AllRoutes = () => {
           path="/characters/:characterId"
           component={CharacterDetails}
         />
-        <Route exact path="/starships" component={Starship} />
+        <Route exact path="/starships" component={Starships} />
         <Route path="/starships/:starshipId" component={StarshipDetails} />
       </ApolloProvider>
     </div>
