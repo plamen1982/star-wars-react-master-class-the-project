@@ -1,25 +1,32 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 const useForm = (initialState, validateLogin, login) => {
   const [values, setValues] = useState(initialState);
+  const [errors, setErrors] = useState({});
 
   function handleChange({ target: { name, value } }) {
     setValues(oldValues => ({
       ...oldValues,
       [name]: value,
     }));
-    console.log(value);
   }
 
   function handleSubmit(e) {
-    const { email, password } = values;
-    login({ variables: { email, password } });
-
     e.preventDefault();
+    const { email, password } = values;
+    const errorsFromValidation = validateLogin(values);
+    if (!errorsFromValidation) {
+      login({ variables: { email, password } });
+    } else {
+      debugger;
+      setErrors({ ...errors, ...errorsFromValidation });
+    }
   }
-
+  useEffect(() => {
+    console.log(errors);
+  }, [errors]);
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  return { handleSubmit, handleChange, values };
+  return { handleSubmit, handleChange, values, errors };
 };
 
 export default useForm;

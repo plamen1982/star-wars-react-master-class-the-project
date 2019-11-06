@@ -9,7 +9,6 @@ const CharacterDetails = ({
   // const currentCharacter = characters.find(character => {
   //   return character.node.id === characterId;
   // });
-  const chracterDirectionCard = 'horizontal';
   return (
     <div>
       <CharactersCard

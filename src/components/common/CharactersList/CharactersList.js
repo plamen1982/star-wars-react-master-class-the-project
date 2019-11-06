@@ -15,7 +15,6 @@ const gridPeople = {
   },
 };
 const CharactersList = ({ data }) => {
-  debugger;
   return data ? (
     <Grid container spacing={2}>
       <ListData

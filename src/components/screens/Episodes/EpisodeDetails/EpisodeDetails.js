@@ -79,7 +79,6 @@ const EpisodeDetails = props => {
       },
     });
   };
-  debugger;
   return episode ? (
     <div style={styles}>
       <HorizontalCard data={data.episode} styleProperties={gridEpisodeDetails}>

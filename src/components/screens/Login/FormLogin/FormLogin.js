@@ -23,9 +23,7 @@ const FormLogin = props => {
   const { currentTheme } = useContext(ThemeContext);
   const { colors } = currentTheme;
   const useStyles = makeStyles(colors);
-  // console.log('theme', theme);
   const classes = useStyles();
-  const errors = { message: '' };
 
   const client = useApolloClient();
   const history = useHistory();
@@ -46,15 +44,16 @@ const FormLogin = props => {
     onError: () => {
       localStorage.setItem('token', '');
       client.writeData({ data: { authenticated: false } });
+      history.push('/login');
     },
   });
 
-  const { handleSubmit, handleChange, values } = useForm(
+  const { handleSubmit, handleChange, values, errors } = useForm(
     INITIAL_STATE_FORM,
     validateLogin,
     login,
   );
-
+  debugger;
   if (loading) return <div>Loading...</div>;
   if (error) return <p>An error occurred</p>;
   return (

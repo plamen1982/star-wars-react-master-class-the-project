@@ -24,12 +24,9 @@ export default function HorizontalCard({
     },
   } = useContext(ThemeContext);
   const history = useHistory();
-  debugger;
-  console.log(`history: ${data.id}`, history);
   const styleWithTheme = { cards, defaultColors, links };
   const useStyles = makeStyles(styleWithTheme);
   const classes = useStyles();
-  debugger;
   return (
     <Grid
       item

@@ -20,102 +20,51 @@ export default function CharactersCard({
   const classes = useStyles();
   return (
     <Card className={`${classes.defaultColors} ${classes.container}`}>
-      {direction === 'horizontal' ? (
-        <>
-          <Card className={`${classes.imageAndTitle} ${classes.cards}`}>
-            <div>
-              <img
-                className={classes.imageStyles}
-                src={character.image}
-                alt="url"
-              />
-            </div>
-            <div>
-              <Link to={`/characters/${character.id}`}>{character.name}</Link>
-            </div>
-          </Card>
-          <Card className={`${classes.cards} ${classes.openingDescription}`}>
-            <CardContent>
-              <Typography
-                className={classes.title}
-                color={classes.cards.color}
-                gutterBottom
-              >
-                Height: {character.height}
-              </Typography>
-              <Typography
-                className={classes.title}
-                color={classes.cards.color}
-                gutterBottom
-              >
-                Mass: {character.mass}
-              </Typography>
-              <Typography
-                className={classes.title}
-                color={classes.cards.color}
-                gutterBottom
-              >
-                Species: {character.species.name}
-              </Typography>
-              <Typography
-                className={classes.title}
-                color={classes.cards.color}
-                gutterBottom
-              >
-                {character.homeworld.name}
-              </Typography>
-            </CardContent>
-          </Card>
-          {children}
-        </>
-      ) : (
-        <>
-          <CardContent className={`${classes.imageAndTitle} ${classes.cards}`}>
-            <div>
-              <img
-                className={classes.imageStyles}
-                src={character.image}
-                alt="url"
-              />
-            </div>
-            <div>
-              <Link to={`/characters/${character.id}`}>{character.name}</Link>
-            </div>
-          </CardContent>
-          <Card className={`${classes.cards} ${classes.openingDescription}`}>
-            <CardContent>
-              <Typography
-                className={classes.title}
-                color={classes.cards.color}
-                gutterBottom
-              >
-                Height: {character.height}
-              </Typography>
-              <Typography
-                className={classes.title}
-                color={classes.cards.color}
-                gutterBottom
-              >
-                Mass: {character.mass}
-              </Typography>
-              <Typography
-                className={classes.title}
-                color={classes.cards.color}
-                gutterBottom
-              >
-                Species: {character.species.name}
-              </Typography>
-              <Typography
-                className={classes.title}
-                color={classes.cards.color}
-                gutterBottom
-              >
-                {character.homeworld.name}
-              </Typography>
-            </CardContent>
-          </Card>
-        </>
-      )}
+      <CardContent className={`${classes.imageAndTitle} ${classes.cards}`}>
+        <div>
+          <img
+            className={classes.imageStyles}
+            src={character.image}
+            alt="url"
+          />
+        </div>
+        <div>
+          <Link to={`/characters/${character.id}`}>{character.name}</Link>
+        </div>
+      </CardContent>
+      <Card className={`${classes.cards} ${classes.openingDescription}`}>
+        <CardContent>
+          <Typography
+            className={classes.title}
+            color={classes.cards.color}
+            gutterBottom
+          >
+            Height: {character.height}
+          </Typography>
+          <Typography
+            className={classes.title}
+            color={classes.cards.color}
+            gutterBottom
+          >
+            Mass: {character.mass}
+          </Typography>
+          <Typography
+            className={classes.title}
+            color={classes.cards.color}
+            gutterBottom
+          >
+            Species: {character.species.name}
+          </Typography>
+          <Typography
+            className={classes.title}
+            color={classes.cards.color}
+            gutterBottom
+          >
+            {character.homeworld.name}
+          </Typography>
+        </CardContent>
+      </Card>
+      }
     </Card>
   );
 }
