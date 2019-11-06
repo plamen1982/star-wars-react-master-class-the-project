@@ -1,14 +1,18 @@
-// const allStarships = `query {
-//     allPlanets(first:10){
-//     edges{
-//       node{
-//         id,
-//         name,
-//         diameter,
-//         population
-//       }
-//     }
-//   }
-//  }`;
+import gql from 'graphql-tag.macro';
 
-// export { allPeopleQuery, allEpisodes, allStarships };
+const GET_STARSHIP_BY_ID = gql`
+  query getStarshipById($id: ID!) {
+    starship(id: $id) {
+      name
+      image
+      starshipClass
+      cost
+      crew
+      maxAtmosphericSpeed
+      hyperdriveRating
+      maxMLPerHour
+    }
+  }
+`;
+
+export { GET_STARSHIP_BY_ID };

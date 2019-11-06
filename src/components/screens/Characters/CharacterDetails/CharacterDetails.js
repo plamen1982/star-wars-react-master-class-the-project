@@ -1,9 +1,6 @@
 import React, { useContext } from 'react';
 import { useQuery } from '@apollo/react-hooks';
-
-import { VerticalCardInfo } from '../../../common';
-import { GET_CHARACTER_BY_ID } from '../../../../queries/characters';
-import { ListData } from '../../../common';
+import { useParams } from 'react-router-dom';
 import {
   Grid,
   Card,
@@ -12,19 +9,21 @@ import {
   makeStyles,
   Typography,
 } from '@material-ui/core';
+
+import { VerticalCardInfo } from '../../../common';
+import { GET_CHARACTER_BY_ID } from '../../../../queries';
+import { ListData } from '../../../common';
 import { HorizontalCard } from '../../../common';
 import { ThemeContext } from '../../../../contexts';
 
-const CharacterDetails = ({
-  match: {
-    params: { characterId },
-  },
-}) => {
+const CharacterDetails = () => {
+  const { characterId } = useParams();
   const {
     currentTheme: {
       colors: { cards, defaultColors, links },
     },
   } = useContext(ThemeContext);
+
   const styleWithTheme = { cards, defaultColors, links };
   const useStyles = makeStyles(styleWithTheme);
   const classes = useStyles();
@@ -77,13 +76,11 @@ const CharacterDetails = ({
               data={person}
               rowsToRender={[
                 { name: 'Height', value: person.height },
-                { name: 'Weight', value: person.weight },
+                { name: 'Weight', value: person.mass },
                 { name: 'Species', value: person.species.name },
                 { name: 'Home World', value: person.homeworld.name },
               ]}
-            >
-              Children
-            </VerticalCardInfo>
+            ></VerticalCardInfo>
           </Grid>
           <Grid item md={6}>
             <Typography
