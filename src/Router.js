@@ -17,11 +17,7 @@ import {
   Episodes,
   EpisodeDetails,
 } from './components/screens';
-// import {
-//   CharacterDetails,
-//   StarshipDetails,
-//   Header,
-// } from './components/presentational';
+
 import { Header } from './components/common';
 import { StarshipDetails, CharacterDetails } from './components/screens';
 import useTheme from './hooks/useTheme/useTheme';
