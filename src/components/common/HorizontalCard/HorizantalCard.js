@@ -71,7 +71,7 @@ export default function HorizontalCard({
                   </Box>
                 </Typography>
               ) : (
-                <Typography className={classes.links}>
+                <Typography>
                   <Box
                     m={2}
                     fontSize={25}
@@ -79,6 +79,7 @@ export default function HorizontalCard({
                     fontWeight="bold"
                   >
                     <Link
+                      className={classes.links}
                       href="/"
                       style={{ textDecoration: 'none' }}
                       onClick={e => {

@@ -15,10 +15,10 @@ const EpisodeDetails = props => {
   } = props;
   const {
     currentTheme: {
-      colors: { cards, defaultColors, solidButtons },
+      colors: { cards, defaultColors, solidButtons, links },
     },
   } = useContext(ThemeContext);
-  const styleWithTheme = { cards, defaultColors, solidButtons };
+  const styleWithTheme = { cards, defaultColors, solidButtons, links };
   const useStyles = makeStyles(styleWithTheme);
   const classes = useStyles();
 

@@ -14,10 +14,10 @@ import { ThemeContext } from '../../../contexts';
 export default function VerticalCard({ data, navigateTo, children, grid }) {
   const {
     currentTheme: {
-      colors: { cards, defaultColors },
+      colors: { cards, defaultColors, links },
     },
   } = useContext(ThemeContext);
-  const styleWithTheme = { cards, defaultColors };
+  const styleWithTheme = { cards, defaultColors, links };
   const useStyles = makeStyles(styleWithTheme);
   const classes = useStyles();
 
@@ -34,6 +34,7 @@ export default function VerticalCard({ data, navigateTo, children, grid }) {
           <Typography>
             <Box m={2} fontSize={25} fontFamily="Roboto" fontWeight="bold">
               <Link
+                className={classes.links}
                 style={{ textDecoration: 'none' }}
                 to={`${navigateTo}/${data.id}`}
               >

@@ -7,6 +7,7 @@ import {
   Box,
   Button,
   makeStyles,
+  Grid,
 } from '@material-ui/core';
 import { useApolloClient, useMutation } from '@apollo/react-hooks';
 
@@ -55,86 +56,111 @@ const FormLogin = props => {
   if (loading) return <div>Loading...</div>;
   if (error) return <p>An error occurred</p>;
   return (
-    <form
-      onSubmit={handleSubmit}
-      style={{
-        display: 'flex',
-        justifyContent: 'center',
-        flexDirection: 'column',
-        paddingBottom: '40vh',
-      }}
-    >
-      <Typography
-        style={{
-          display: 'flex',
-          justifyContent: 'center',
-        }}
-        className={classes.primaryHeading}
-      >
-        <Box
-          fontSize={100}
-          fontStyle="italic"
-          fontFamily="Roboto"
-          fontWeight="bold"
-        >
-          SWAPP
-        </Box>
-      </Typography>
-      <Container
-        style={{
-          display: 'flex',
-          flexDirection: 'column',
-          width: 500,
-          backgroundColor: 'lightgrey',
-          padding: 40,
-          borderRadius: 5,
-        }}
-      >
-        {errors.message && <div> {errors.message} </div>}
-        <TextField
-          name="email"
-          type="email"
-          onChange={handleChange}
-          value={values.email}
-          style={{
-            borderWidth: 1,
-            borderStyle: 'none',
-            borderRadius: 5,
-            marginBottom: 15,
-            paddingLeft: 5,
-          }}
-          className={classes.inputs}
-        />
-        <TextField
-          name="password"
-          onChange={handleChange}
-          value={values.password}
-          type="password"
-          style={{
-            borderWidth: 1,
-            borderStyle: 'none',
-            borderRadius: 5,
-            marginBottom: 15,
-            paddingLeft: 5,
-          }}
-          className={classes.inputs}
-        />
-        <Typography
-          style={{
-            display: 'flex',
-            justifyContent: 'flex-end',
-          }}
-        >
-          <Button
-            variant="contained"
-            className={classes.solidButtons}
-            onClick={handleSubmit}
+    <Container>
+      <Grid container>
+        <Grid item md={12}>
+          <form
+            onSubmit={handleSubmit}
+            style={{
+              display: 'flex',
+              justifyContent: 'center',
+              flexDirection: 'column',
+              paddingBottom: '40vh',
+              marginTop: 100,
+            }}
           >
-            Login
-          </Button>
-        </Typography>
-      </Container>
-    </form>
+            <Container
+              style={{
+                display: 'flex',
+                flexDirection: 'column',
+                width: 500,
+                backgroundColor: 'lightgrey',
+                padding: 40,
+                borderRadius: 5,
+              }}
+            >
+              <Typography
+                className={classes.primaryHeading}
+                style={{
+                  display: 'flex',
+                  justifyContent: 'center',
+                  color: '#FFE300',
+                }}
+              >
+                <Box
+                  fontSize={100}
+                  fontStyle="italic"
+                  fontFamily="Roboto"
+                  fontWeight="bold"
+                >
+                  SWAPP
+                </Box>
+              </Typography>
+              {errors.message && (
+                <Typography
+                  style={{
+                    color: 'red',
+                    display: 'flex',
+                    justifyContent: 'center',
+                  }}
+                >
+                  <Box
+                    fontSize={15}
+                    fontStyle="italic"
+                    fontFamily="Roboto"
+                    fontWeight="bold"
+                  >
+                    {errors.message}
+                  </Box>{' '}
+                </Typography>
+              )}
+              <TextField
+                name="email"
+                type="email"
+                onChange={handleChange}
+                value={values.email}
+                style={{
+                  borderWidth: 1,
+                  borderStyle: 'none',
+                  borderRadius: 5,
+                  marginBottom: 15,
+                  paddingLeft: 5,
+                }}
+                className={classes.inputs}
+              />
+              <TextField
+                name="password"
+                onChange={handleChange}
+                value={values.password}
+                type="password"
+                style={{
+                  borderWidth: 1,
+                  borderStyle: 'none',
+                  borderRadius: 5,
+                  marginBottom: 15,
+                  paddingLeft: 5,
+                }}
+                className={classes.inputs}
+              />
+              <Typography
+                style={{
+                  display: 'flex',
+                  justifyContent: 'flex-end',
+                }}
+              >
+                <Button
+                  variant="contained"
+                  className={classes.solidButtons}
+                  onClick={handleSubmit}
+                >
+                  Login
+                </Button>
+              </Typography>
+            </Container>
+          </form>
+        </Grid>
+      </Grid>
+    </Container>
   );
 };
 

@@ -18,6 +18,7 @@ const Header = () => {
   const currentStyles = {
     ...styles,
     appBar: colors.appBar,
+    links: colors.links,
   };
 
   const useThemeStyles = makeStyles(theme => ({
@@ -45,6 +46,7 @@ const Header = () => {
         <Typography
           variant="h6"
           className={themeClasses.title}
+          style={{ color: '#4BD5EE' }}
           onClick={toggleTheme}
         >
           <Box fontSize={23} fontStyle="italic" fontFamily="Roboto">
