@@ -5,7 +5,7 @@ import VerticalCard from '../common/VerticalCard/VerticalCard';
 import HorizontalCard from '../common/HorizontalCard/HorizantalCard';
 import LoadMoreButton from '../common/LoadMoreButton/LoadMoreButton';
 import CharactersList from '../common/CharactersList/CharactersList';
-
+import VerticalCardInfo from '../common/VerticalCardInfo/VerticalCardInfo';
 export {
   EpisodeCard,
   Header,
@@ -14,4 +14,5 @@ export {
   HorizontalCard,
   LoadMoreButton,
   CharactersList,
+  VerticalCardInfo,
 };

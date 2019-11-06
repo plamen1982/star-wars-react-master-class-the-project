@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { useQuery } from '@apollo/react-hooks';
 
-import VerticalCardInfo from '../VerticalCardInfo/VerticalCardInfo';
+import { VerticalCardInfo } from '../../../common';
 import { GET_CHARACTER_BY_ID } from '../../../../queries/characters';
 import { ListData } from '../../../common';
 import {

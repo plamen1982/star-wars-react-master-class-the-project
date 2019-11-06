@@ -8,9 +8,7 @@ import {
   CardMedia,
   Box,
 } from '@material-ui/core';
-// import { styles } from './styles';
-import { Link } from 'react-router-dom';
-import { ThemeContext } from '../../../../contexts';
+import { ThemeContext } from '../../../contexts';
 
 export default function VerticalCardInfo({ data, rowsToRender }) {
   const {
