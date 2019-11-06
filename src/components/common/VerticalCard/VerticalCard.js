@@ -20,11 +20,9 @@ export default function VerticalCard({ data, navigateTo, children, grid }) {
   const styleWithTheme = { cards, defaultColors };
   const useStyles = makeStyles(styleWithTheme);
   const classes = useStyles();
-  // const history = useHistory();
-  // console.log(history);
-  // console.log(data);
+
   return (
-    <Grid item md={4} sm={6} xs={12}>
+    <Grid item md={6} sm={6} xs={12}>
       <Card className={classes.cards}>
         <CardMedia
           className={classes.imageStyles}

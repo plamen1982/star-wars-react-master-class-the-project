@@ -40,6 +40,7 @@ export default function HorizontalCard({
           display: 'flex',
           alignItems: 'stretch',
           height: styleProperties.sizeImage.height,
+          marginBottom: styleProperties.marginBottom,
         }}
       >
         <div>
@@ -79,6 +80,7 @@ export default function HorizontalCard({
                   >
                     <Link
                       href="/"
+                      style={{ textDecoration: 'none' }}
                       onClick={e => {
                         e.preventDefault();
                         history.push(`/${navigateTo}/${data.id}`);

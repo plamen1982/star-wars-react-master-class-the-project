@@ -15,15 +15,14 @@ const useForm = (initialState, validateLogin, login) => {
     e.preventDefault();
     const { email, password } = values;
     const errorsFromValidation = validateLogin(values);
-    if (!errorsFromValidation) {
+    if (!errorsFromValidation.message) {
       login({ variables: { email, password } });
     } else {
-      debugger;
       setErrors({ ...errors, ...errorsFromValidation });
     }
   }
   useEffect(() => {
-    console.log(errors);
+    // login({ variables: values });
   }, [errors]);
   // eslint-disable-next-line react-hooks/exhaustive-deps
   return { handleSubmit, handleChange, values, errors };

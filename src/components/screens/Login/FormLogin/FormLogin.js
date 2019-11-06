@@ -11,9 +11,9 @@ import {
 import { useApolloClient, useMutation } from '@apollo/react-hooks';
 
 import { ThemeContext } from '../../../../contexts';
-import useForm from '../../../../hooks/useForm/useForm';
 import { validateLogin } from '../../../../utils/validations';
 import { SIGN_IN } from '../../../../queries';
+import useForm from '../../../../hooks/useForm/useForm';
 
 const INITIAL_STATE_FORM = {
   email: '',
@@ -36,7 +36,6 @@ const FormLogin = props => {
       localStorage.setItem('token', `Bearer ${props.signIn.token}`);
       client.writeData({ data: { authenticated: true } });
       const token = window.localStorage.token;
-
       if (token) {
         history.push('/episodes');
       }
@@ -53,7 +52,6 @@ const FormLogin = props => {
     validateLogin,
     login,
   );
-  debugger;
   if (loading) return <div>Loading...</div>;
   if (error) return <p>An error occurred</p>;
   return (

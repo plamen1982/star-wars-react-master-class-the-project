@@ -14,7 +14,6 @@ const GET_ALL_CHARACTERS = gql`
           id
           name
           height
-          mass
           image
           homeworld {
             name
@@ -35,12 +34,13 @@ const GET_ALL_CHARACTERS = gql`
   }
 `;
 
-export const GET_CHARACTER_DETAILS = gql`
-  query getCharacterDetails($id: ID!) {
+const GET_CHARACTER_BY_ID = gql`
+  query getCharactersById($id: ID!) {
     person(id: $id) {
       name
       height
       image
+      mass
       homeworld {
         name
       }
@@ -59,4 +59,4 @@ export const GET_CHARACTER_DETAILS = gql`
     }
   }
 `;
-export { GET_ALL_CHARACTERS };
+export { GET_ALL_CHARACTERS, GET_CHARACTER_BY_ID };
