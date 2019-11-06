@@ -1,7 +1,7 @@
 import { useState, useEffect, useContext } from 'react';
-import ThemeContext from '../contexts/ThemeContext';
-import { darkTheme, lightTheme } from '../styles';
-const useTheme = () => {
+import { darkTheme, lightTheme } from '../../styles';
+
+function useTheme(ThemeContext) {
   const theme = useContext(ThemeContext);
   const [currentTheme, setCurrentTheme] = useState(theme);
   const toggleTheme = () => {
@@ -11,22 +11,20 @@ const useTheme = () => {
           name: 'dark',
           colors: { ...darkTheme },
         };
+      } else {
+        return {
+          name: 'light',
+          colors: { ...lightTheme },
+        };
       }
-      return {
-        name: 'light',
-        colors: { ...lightTheme },
-      };
     });
   };
 
-  useEffect(
-    props => {
-      toggleTheme();
-    },
-    [theme],
-  );
+  useEffect(() => {
+    toggleTheme();
+  }, [theme]);
 
   return { currentTheme, toggleTheme };
-};
+}
 
 export default useTheme;

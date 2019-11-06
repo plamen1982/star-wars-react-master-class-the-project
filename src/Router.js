@@ -17,18 +17,14 @@ import {
   Episodes,
   EpisodeDetails,
 } from './components/screens';
-// import {
-//   CharacterDetails,
-//   StarshipDetails,
-//   Header,
-// } from './components/presentational';
+
 import { Header } from './components/common';
 import { StarshipDetails, CharacterDetails } from './components/screens';
-import useTheme from './hooks/useTheme';
+import useTheme from './hooks/useTheme/useTheme';
 import client from './apollo-client';
 
 function App() {
-  const { currentTheme, toggleTheme } = useTheme();
+  const { currentTheme, toggleTheme } = useTheme(ThemeContext);
   return (
     <ThemeContext.Provider value={{ currentTheme, toggleTheme }}>
       <Router>

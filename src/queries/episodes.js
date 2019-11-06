@@ -15,6 +15,7 @@ export const GET_ALL_EPISODES = gql`
           people(first: $numberPeople) {
             edges {
               node {
+                id
                 name
                 image
               }
@@ -45,6 +46,7 @@ export const GET_EPISODE_BY_ID = gql`
         edges {
           cursor
           node {
+            id
             name
             image
           }

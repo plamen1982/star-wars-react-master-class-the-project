@@ -27,6 +27,10 @@ const solidButtonsDarkTheme = {
   color: YELLOW_COLOR,
 };
 
+const linksDarkTheme = {
+  color: YELLOW_COLOR,
+};
+
 const outlineButtonsDarkTheme = {
   backgroundColor: GREY_COLOR,
   borderColor: DARK_GREY_COLOR,
@@ -64,4 +68,5 @@ export {
   inputsDarkTheme,
   primaryHeadingDarkTheme,
   radarDarkTheme,
+  linksDarkTheme,
 };

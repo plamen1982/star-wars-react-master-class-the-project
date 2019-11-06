@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { withRouter, NavLink, useHistory } from 'react-router-dom';
+import { NavLink, useHistory } from 'react-router-dom';
 import { InputOutlined } from '@material-ui/icons';
 import styles from './styles';
 import { ThemeContext } from '../../../contexts';
@@ -18,6 +18,7 @@ const Header = () => {
   const currentStyles = {
     ...styles,
     appBar: colors.appBar,
+    links: colors.links,
   };
 
   const useThemeStyles = makeStyles(theme => ({
@@ -45,6 +46,7 @@ const Header = () => {
         <Typography
           variant="h6"
           className={themeClasses.title}
+          style={{ color: '#4BD5EE' }}
           onClick={toggleTheme}
         >
           <Box fontSize={23} fontStyle="italic" fontFamily="Roboto">
@@ -71,6 +73,7 @@ const Header = () => {
         </Typography>
         <Typography>
           <InputOutlined
+            id="log-out-button"
             className={classes.appBar.backgroundColor}
             style={{ backgroundColor: 'white', padding: 5, borderRadius: 3 }}
             onClick={handleLogout}
@@ -80,4 +83,4 @@ const Header = () => {
     </AppBar>
   );
 };
-export default withRouter(Header);
+export default Header;

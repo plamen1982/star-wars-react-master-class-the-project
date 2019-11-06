@@ -1,17 +1,11 @@
 import React, { useContext } from 'react';
 import { useQuery } from '@apollo/react-hooks';
-import { HorizontalCard, ListData } from '../../../common';
+import { HorizontalCard, LoadMoreButton } from '../../../common';
 import { GET_EPISODE_BY_ID } from '../../../../queries';
-import {
-  Card,
-  CardContent,
-  Typography,
-  makeStyles,
-  Grid,
-  Button,
-  Box,
-} from '@material-ui/core';
+import EpisodeDetailsInfo from './EpisodeDetailsInfo/EpisodeDetailsInfo';
+import { makeStyles } from '@material-ui/core';
 import { ThemeContext } from '../../../../contexts';
+import CharactersList from '../../../common/CharactersList/CharactersList';
 
 const EpisodeDetails = props => {
   const {
@@ -21,10 +15,10 @@ const EpisodeDetails = props => {
   } = props;
   const {
     currentTheme: {
-      colors: { cards, defaultColors, solidButtons },
+      colors: { cards, defaultColors, solidButtons, links },
     },
   } = useContext(ThemeContext);
-  const styleWithTheme = { cards, defaultColors, solidButtons };
+  const styleWithTheme = { cards, defaultColors, solidButtons, links };
   const useStyles = makeStyles(styleWithTheme);
   const classes = useStyles();
 
@@ -46,17 +40,7 @@ const EpisodeDetails = props => {
       width: 300,
     },
   };
-  const gridPeople = {
-    grid: {
-      sm: 12,
-      xs: 12,
-      md: 4,
-    },
-    sizeImage: {
-      height: 100,
-      width: 100,
-    },
-  };
+
   const { data, loading, errors, fetchMore } = useQuery(GET_EPISODE_BY_ID, {
     variables: {
       id: episodeId,
@@ -79,7 +63,6 @@ const EpisodeDetails = props => {
     people: { totalCount, edges },
   } = episode;
   const loadMore = () => {
-    debugger;
     fetchMore({
       variables: { first: 5, after: cursor },
       updateQuery: (prev, { fetchMoreResult: { episode } }) => {
@@ -96,48 +79,19 @@ const EpisodeDetails = props => {
       },
     });
   };
-  return (
+  return episode ? (
     <div style={styles}>
       <HorizontalCard data={data.episode} styleProperties={gridEpisodeDetails}>
-        <Card style={{ marginBottom: 20, marginTop: 20 }}>
-          <CardContent className={classes.cards}>
-            <Typography>{data.episode.openingCrawl}</Typography>
-          </CardContent>
-        </Card>
-        <Grid container spacing={1}>
-          <Typography>
-            <Box
-              fontSize={15}
-              fontStyle="italic"
-              fontFamily="Roboto"
-              fontWeight="bold"
-            >
-              Total character in this episode: {totalCount}
-            </Box>
-          </Typography>
-          <ListData
-            data={data.episode.people.edges}
-            component={HorizontalCard}
-            flexDirection="row"
-            styleProperties={gridPeople}
-          />
-        </Grid>
+        <EpisodeDetailsInfo
+          data={data.episode.openingCrawl}
+          styles={classes.cards}
+        />
+        <CharactersList data={data.episode.people.edges} />
         {totalCount !== edges.length ? (
-          <Button
-            variant="contained"
-            styles={{
-              width: 100,
-              height: 100,
-              marginTop: 10,
-            }}
-            className={classes.solidButtons}
-            onClick={loadMore}
-          >
-            Load More
-          </Button>
+          <LoadMoreButton styles={classes.solidButtons} loadMore={loadMore} />
         ) : null}
       </HorizontalCard>
     </div>
-  );
+  ) : null;
 };
 export default EpisodeDetails;

@@ -12,20 +12,17 @@ import { Link } from 'react-router-dom';
 import { ThemeContext } from '../../../contexts';
 
 export default function VerticalCard({ data, navigateTo, children, grid }) {
-  debugger;
   const {
     currentTheme: {
-      colors: { cards, defaultColors },
+      colors: { cards, defaultColors, links },
     },
   } = useContext(ThemeContext);
-  const styleWithTheme = { cards, defaultColors };
+  const styleWithTheme = { cards, defaultColors, links };
   const useStyles = makeStyles(styleWithTheme);
   const classes = useStyles();
-  // const history = useHistory();
-  // console.log(history);
-  // console.log(data);
+
   return (
-    <Grid item md={4} sm={6} xs={12}>
+    <Grid item md={6} sm={6} xs={12}>
       <Card className={classes.cards}>
         <CardMedia
           className={classes.imageStyles}
@@ -37,6 +34,7 @@ export default function VerticalCard({ data, navigateTo, children, grid }) {
           <Typography>
             <Box m={2} fontSize={25} fontFamily="Roboto" fontWeight="bold">
               <Link
+                className={classes.links}
                 style={{ textDecoration: 'none' }}
                 to={`${navigateTo}/${data.id}`}
               >

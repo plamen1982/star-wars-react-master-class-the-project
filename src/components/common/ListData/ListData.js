@@ -8,16 +8,18 @@ const ListData = ({
 }) => {
   return (
     <>
-      {data.map(item => {
-        return (
-          <Component
-            data={item.node}
-            key={item.node.id}
-            navigateTo={navigateTo}
-            styleProperties={styleProperties}
-          />
-        );
-      })}
+      {data
+        ? data.map(item => {
+            return (
+              <Component
+                data={item.node}
+                key={item.node.id}
+                navigateTo={navigateTo}
+                styleProperties={styleProperties}
+              />
+            );
+          })
+        : null}
     </>
   );
 };

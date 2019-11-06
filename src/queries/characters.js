@@ -1,18 +1,19 @@
 import gql from 'graphql-tag.macro';
 
 const GET_ALL_CHARACTERS = gql`
-  query AllPeople($after: String!) {
+  query AllPeople($first: Int!, $after: String) {
     allPeople(first: $first, after: $after) {
       pageInfo {
         hasNextPage
+        endCursor
       }
+      totalCount
       edges {
         cursor
         node {
           id
           name
           height
-          mass
           image
           homeworld {
             name
@@ -20,35 +21,42 @@ const GET_ALL_CHARACTERS = gql`
           species {
             name
           }
-          starships(first: $numberStarships) {
-            edges {
-              node {
-                name
-              }
-            }
-          }
+          # starships(first: $numberStarships) {
+          #   edges {
+          #     node {
+          #       name
+          #     }
+          #   }
+          # }
         }
       }
     }
   }
 `;
 
-// export const GET_ALL_CHARACTERS = gql`
-//   query getCharacters($first: Int!, $after: String!) {
-//     allPeople(first: $first, after: $after) {
-//       pageInfo {
-//         hasNextPage
-//       }
-//       edges {
-//         cursor
-//         node {
-//           id
-//           name
-//           image
-//         }
-//       }
-//     }
-//   }
-// `;
-
-export { GET_ALL_CHARACTERS };
+const GET_CHARACTER_BY_ID = gql`
+  query getCharactersById($id: ID!) {
+    person(id: $id) {
+      name
+      height
+      image
+      mass
+      homeworld {
+        name
+      }
+      species {
+        name
+      }
+      starships {
+        edges {
+          node {
+            id
+            name
+            image
+          }
+        }
+      }
+    }
+  }
+`;
+export { GET_ALL_CHARACTERS, GET_CHARACTER_BY_ID };

@@ -2,9 +2,9 @@ const validateLogin = values => {
   let errors = {};
 
   if (values.email.length < 1) {
-    errors.message = 'Email required!';
+    errors.message = 'Invalid credentials, email needed';
   } else if (values.password.length < 1) {
-    errors.message = 'Password required!';
+    errors.message = 'Invalid credentials, password needed';
   }
 
   return errors;

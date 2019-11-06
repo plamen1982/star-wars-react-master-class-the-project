@@ -7,6 +7,7 @@ import {
   inputsDarkTheme,
   primaryHeadingDarkTheme,
   radarDarkTheme,
+  linksDarkTheme,
 } from './dark';
 import {
   defaultColorsLightTheme,
@@ -17,6 +18,7 @@ import {
   inputsLightTheme,
   primaryHeadingLightTheme,
   radarLightTheme,
+  linksLightTheme,
 } from './light';
 
 const lightTheme = {
@@ -28,6 +30,7 @@ const lightTheme = {
   inputs: inputsLightTheme,
   primaryHeading: primaryHeadingLightTheme,
   radar: radarLightTheme,
+  links: linksLightTheme,
 };
 
 const darkTheme = {
@@ -39,6 +42,7 @@ const darkTheme = {
   inputs: inputsDarkTheme,
   primaryHeading: primaryHeadingDarkTheme,
   radar: radarDarkTheme,
+  links: linksDarkTheme,
 };
 
 export { darkTheme, lightTheme };

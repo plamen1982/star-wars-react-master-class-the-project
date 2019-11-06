@@ -10,26 +10,23 @@ import {
 } from '@material-ui/core';
 import { Link } from 'react-router-dom';
 import { ThemeContext } from '../../../contexts';
-import { useLocation } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 
 export default function HorizontalCard({
   data,
   navigateTo,
-  styles,
   styleProperties,
   children,
 }) {
   const {
     currentTheme: {
-      colors: { cards, defaultColors },
+      colors: { cards, defaultColors, links },
     },
   } = useContext(ThemeContext);
-  const styleWithTheme = { cards, defaultColors };
+  const history = useHistory();
+  const styleWithTheme = { cards, defaultColors, links };
   const useStyles = makeStyles(styleWithTheme);
   const classes = useStyles();
-  const location = useLocation();
-  const { pathname } = location;
-  debugger;
   return (
     <Grid
       item
@@ -43,6 +40,7 @@ export default function HorizontalCard({
           display: 'flex',
           alignItems: 'stretch',
           height: styleProperties.sizeImage.height,
+          marginBottom: styleProperties.marginBottom,
         }}
       >
         <div>
@@ -61,36 +59,8 @@ export default function HorizontalCard({
         <CardContent>
           {navigateTo ? (
             <Typography className={classes.cards}>
-              <Link to={pathname}>
-                {data.title ? (
-                  <Typography>
-                    <Box
-                      m={2}
-                      fontSize={25}
-                      fontFamily="Roboto"
-                      fontWeight="bold"
-                    >
-                      {data.title}
-                    </Box>
-                  </Typography>
-                ) : (
-                  <Typography>
-                    <Box
-                      m={2}
-                      fontSize={25}
-                      fontFamily="Roboto"
-                      fontWeight="bold"
-                    >
-                      {data.name}
-                    </Box>
-                  </Typography>
-                )}
-              </Link>
-            </Typography>
-          ) : (
-            <Typography className={classes.cards}>
               {data.title ? (
-                <Typography>
+                <Typography className={classes.links}>
                   <Box
                     m={2}
                     fontSize={25}
@@ -102,6 +72,42 @@ export default function HorizontalCard({
                 </Typography>
               ) : (
                 <Typography>
+                  <Box
+                    m={2}
+                    fontSize={25}
+                    fontFamily="Roboto"
+                    fontWeight="bold"
+                  >
+                    <Link
+                      className={classes.links}
+                      href="/"
+                      style={{ textDecoration: 'none' }}
+                      onClick={e => {
+                        e.preventDefault();
+                        history.push(`/${navigateTo}/${data.id}`);
+                      }}
+                    >
+                      {data.name}
+                    </Link>
+                  </Box>
+                </Typography>
+              )}
+            </Typography>
+          ) : (
+            <Typography className={classes.cards}>
+              {data.title ? (
+                <Typography className={classes.links}>
+                  <Box
+                    m={2}
+                    fontSize={25}
+                    fontFamily="Roboto"
+                    fontWeight="bold"
+                  >
+                    {data.title}
+                  </Box>
+                </Typography>
+              ) : (
+                <Typography className={classes.links}>
                   <Box
                     m={2}
                     fontSize={25}
