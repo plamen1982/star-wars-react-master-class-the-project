@@ -60,16 +60,18 @@ export default function HorizontalCard({
           {navigateTo ? (
             <Typography className={classes.cards}>
               {data.title ? (
-                <Typography className={classes.links}>
-                  <Box
-                    m={2}
-                    fontSize={25}
-                    fontFamily="Roboto"
-                    fontWeight="bold"
-                  >
+                <Box
+                  m={2}
+                  fontSize={25}
+                  fontFamily="Roboto"
+                  fontWeight="bold"
+                  display="flex"
+                  justifyContent="center"
+                >
+                  <Typography className={classes.links} alignCenter>
                     {data.title}
-                  </Box>
-                </Typography>
+                  </Typography>
+                </Box>
               ) : (
                 <Typography>
                   <Box
@@ -77,6 +79,9 @@ export default function HorizontalCard({
                     fontSize={25}
                     fontFamily="Roboto"
                     fontWeight="bold"
+                    display="flex"
+                    justifyContent="center"
+                    alignItems="center"
                   >
                     <Link
                       className={classes.links}

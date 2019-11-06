@@ -10,6 +10,7 @@ import {
   CardHeader,
   CardContent,
   makeStyles,
+  Typography,
 } from '@material-ui/core';
 import { HorizontalCard } from '../../../common';
 import { ThemeContext } from '../../../../contexts';
@@ -53,22 +54,53 @@ const CharacterDetails = ({
     },
     marginBottom: 20,
   };
-
+  console.log('data', data);
   return data ? (
     <Card className={`${classes.defaultColors} ${classes.cards}`} p={3}>
-      <CardHeader title={person.name} justify="center" />
+      <CardHeader
+        title={person.name}
+        justify="center"
+        className={classes.links}
+        disableTypography={true}
+        style={{
+          fontFamily: 'Roboto',
+          fontWeight: 'bold',
+          fontSize: 35,
+          textAlign: 'center',
+          borderBottom: `1px solid black`,
+        }}
+      />
       <CardContent>
         <Grid container spacing={3}>
           <Grid item md={6}>
-            <VerticalCardInfo data={person}>Children</VerticalCardInfo>
+            <VerticalCardInfo
+              data={person}
+              rowsToRender={[
+                { name: 'Height', value: person.height },
+                { name: 'Weight', value: person.weight },
+                { name: 'Species', value: person.species.name },
+                { name: 'Home World', value: person.homeworld.name },
+              ]}
+            >
+              Children
+            </VerticalCardInfo>
           </Grid>
           <Grid item md={6}>
+            <Typography
+              gutterBottom
+              variant={'h5'}
+              fontFamily="Roboto"
+              fontWeight="bold"
+              align="center"
+            >
+              Pilot Starships
+            </Typography>
             <ListData
               data={data.person.starships.edges}
               component={HorizontalCard}
               flexDirection="row"
               styleProperties={gridStarships}
-              navigateTo="characters"
+              navigateTo="starships"
             />
           </Grid>
         </Grid>

@@ -12,7 +12,7 @@ import {
 import { Link } from 'react-router-dom';
 import { ThemeContext } from '../../../../contexts';
 
-export default function VerticalCardInfo({ data: character }) {
+export default function VerticalCardInfo({ data, rowsToRender }) {
   const {
     currentTheme: {
       colors: { cards, defaultColors, links },
@@ -33,76 +33,33 @@ export default function VerticalCardInfo({ data: character }) {
               fontWeight="bold"
               className={classes.links}
             >
-              {character.name}
+              {data.name}
             </Box>
           </Typography>
           <CardMedia
             className={classes.imageStyles}
             component="img"
-            image={character.image}
+            image={data.image}
             alt="url"
           />
           <CardContent>
-            <Typography
-              className={classes.title}
-              color={classes.cards.color}
-              gutterBottom
-            >
-              Height:
-              <Box
-                p={1}
-                component="span"
-                fontFamily="Roboto"
-                className={classes.links}
+            {rowsToRender.map(rowToRender => (
+              <Typography
+                className={classes.title}
+                color={classes.cards.color}
+                gutterBottom
               >
-                {character.height}
-              </Box>
-            </Typography>
-            <Typography
-              className={classes.title}
-              color={classes.cards.color}
-              gutterBottom
-            >
-              Weight:
-              <Box
-                p={1}
-                component="span"
-                fontFamily="Roboto"
-                className={classes.links}
-              >
-                {character.mass}
-              </Box>
-            </Typography>
-            <Typography
-              className={classes.title}
-              color={classes.cards.color}
-              gutterBottom
-            >
-              Species:
-              <Box
-                p={1}
-                component="span"
-                fontFamily="Roboto"
-                className={classes.links}
-              >
-                {character.species.name}
-              </Box>
-            </Typography>
-            <Typography
-              className={classes.title}
-              color={classes.cards.color}
-              gutterBottom
-            >
-              Home World:
-              <Box
-                p={1}
-                component="span"
-                fontFamily="Roboto"
-                className={classes.links}
-              >
-                {character.homeworld.name}
-              </Box>
-            </Typography>
+                {rowToRender.name}
+                <Box
+                  p={1}
+                  component="span"
+                  fontFamily="Roboto"
+                  className={classes.links}
+                >
+                  {rowToRender.value}
+                </Box>
+              </Typography>
+            ))}
           </CardContent>
         </Card>
       </Box>

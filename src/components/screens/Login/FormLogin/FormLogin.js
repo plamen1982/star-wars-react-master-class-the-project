@@ -117,6 +117,7 @@ const FormLogin = props => {
               <TextField
                 name="email"
                 type="email"
+                placeholder="email"
                 onChange={handleChange}
                 value={values.email}
                 style={{
@@ -133,6 +134,7 @@ const FormLogin = props => {
                 onChange={handleChange}
                 value={values.password}
                 type="password"
+                placeholder="password"
                 style={{
                   borderWidth: 1,
                   borderStyle: 'none',
