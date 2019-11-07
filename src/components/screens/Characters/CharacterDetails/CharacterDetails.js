@@ -18,11 +18,13 @@ import { ThemeContext } from '../../../../contexts';
 
 const CharacterDetails = () => {
   const { characterId } = useParams();
+  const theme = useContext(ThemeContext);
+  debugger;
   const {
     currentTheme: {
       colors: { cards, defaultColors, links },
     },
-  } = useContext(ThemeContext);
+  } = theme;
 
   const styleWithTheme = { cards, defaultColors, links };
   const useStyles = makeStyles(styleWithTheme);
