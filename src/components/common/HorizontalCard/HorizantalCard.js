@@ -57,8 +57,7 @@ export default function HorizontalCard({
         </div>
 
         <CardContent>
-          {navigateTo ? (
-            <Typography className={classes.cards}>
+            <Box className={classes.cards}>
               {data.title ? (
                 <Box
                   m={2}
@@ -83,6 +82,7 @@ export default function HorizontalCard({
                     justifyContent="center"
                     alignItems="center"
                   >
+                    {navigateTo ? (
                     <Link
                       className={classes.links}
                       href="/"
@@ -93,38 +93,11 @@ export default function HorizontalCard({
                       }}
                     >
                       {data.name}
-                    </Link>
+                      </Link>): data.name } 
                   </Box>
                 </Typography>
               )}
-            </Typography>
-          ) : (
-            <Typography className={classes.cards}>
-              {data.title ? (
-                <Typography className={classes.links}>
-                  <Box
-                    m={2}
-                    fontSize={25}
-                    fontFamily="Roboto"
-                    fontWeight="bold"
-                  >
-                    {data.title}
-                  </Box>
-                </Typography>
-              ) : (
-                <Typography className={classes.links}>
-                  <Box
-                    m={2}
-                    fontSize={25}
-                    fontFamily="Roboto"
-                    fontWeight="bold"
-                  >
-                    {data.name}
-                  </Box>
-                </Typography>
-              )}
-            </Typography>
-          )}
+            </Box>
         </CardContent>
       </Card>
       {children}
