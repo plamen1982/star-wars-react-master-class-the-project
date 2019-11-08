@@ -20,8 +20,8 @@ export default function VerticalCardInfo({ data, rowsToRender }) {
   const useStyles = makeStyles(styleWithTheme);
   const classes = useStyles();
   return (
-    <Grid item md={8} sm={12} xs={12}>
-      <Box p={3}>
+    <Grid item md={6} sm={6} xs={6}>
+      <Box p={1}>
         <Card className={`${classes.defaultColors} ${classes.cards}`} p={3}>
           <Typography>
             <Box

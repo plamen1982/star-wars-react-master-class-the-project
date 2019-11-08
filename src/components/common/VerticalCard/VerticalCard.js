@@ -22,7 +22,7 @@ export default function VerticalCard({ data, navigateTo, children, grid }) {
   const classes = useStyles();
 
   return (
-    <Grid item md={6} sm={6} xs={12}>
+    <Grid item md={4} sm={4} xs={4}>
       <Card className={classes.cards}>
         <CardMedia
           className={classes.imageStyles}
