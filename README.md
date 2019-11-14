@@ -1,6 +1,6 @@
 # star-wars-react-master-class
 
-[star wars deployed link](#https://pedantic-shaw-d117c5.netlify.com/)
+[star wars deployed link](https://star-wars-react-master-class.netlify.com)
 
 SWAPP (Star Wars App) Specification
 Info React Web Application that explores some interesting Star Wars data.
