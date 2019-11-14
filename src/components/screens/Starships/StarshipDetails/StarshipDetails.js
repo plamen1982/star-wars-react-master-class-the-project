@@ -34,7 +34,7 @@ const StarshipDetails = props => {
   if (errors) {
     return <div>Error...</div>;
   }
-  debugger;
+
   return (
     <h1>
       <Card className={`${classes.defaultColors} ${classes.cards}`} p={3}>
