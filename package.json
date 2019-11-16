@@ -33,7 +33,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "test:debug": "react-scripts --inspect-brk test --runInBand --no-cache",
+    "test:debug": "react-scripts --inspect-brk=9230 test --runInBand --no-cache",
     "eject": "react-scripts eject",
     "lint": "eslint src",
     "format": "prettier --write src/**/*.{js,json}",

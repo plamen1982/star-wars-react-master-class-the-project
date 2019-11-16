@@ -35,4 +35,50 @@
 //   });
 // });
 
-import { render, fireEvent } from '../../../../test-utils';
+// import { render, fireEvent } from '../../../../test-utils';
+/* eslint global-require: 0 */
+import React from 'react';
+import Enzyme, { mount } from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
+Enzyme.configure({ adapter: new Adapter() });
+import { ThemeContext } from '../../../../contexts/index';
+import VerticalCardInfo from '../VerticalCardInfo';
+//TODO cannot import useTheme
+import useTheme from '../../../../hooks/useTheme';
+
+describe('<VerticalCardInfo />', () => {
+  let light;
+  let results;
+  // let useTheme = require('../../../../hooks/useTheme');
+  let theme = require('../../../../styles/index');
+  light = theme.light;
+  const renderHook = hook => {
+    const HookWrapper = () => {
+      results = hook();
+      return null;
+    };
+    mount(<HookWrapper />);
+    return results;
+  };
+
+  it('renders without crashing', () => {
+    renderHook(useTheme);
+    const wrapper = mount(
+      <ThemeContext.Provider theme={light}>
+        <VerticalCardInfo
+          data={[]}
+          title="Mocked title"
+          image="mocked-image.jpeg"
+          rowsToRender={[
+            {
+              name: 'mocked-name',
+              value: 'mocked-value',
+            },
+          ]}
+        />
+      </ThemeContext.Provider>,
+    );
+
+    expect(wrapper).toMatchSnapshot();
+  });
+});
