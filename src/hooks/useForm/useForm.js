@@ -1,13 +1,10 @@
 import { useState, useEffect } from 'react';
 
 const useForm = (initialState, validateLogin, login) => {
-    debugger;
-
   const [values, setValues] = useState(initialState);
   const [errors, setErrors] = useState({});
 
   function handleChange({ target: { name, value } }) {
-    debugger;
     setValues(oldValues => ({
       ...oldValues,
       [name]: value,
@@ -28,8 +25,7 @@ const useForm = (initialState, validateLogin, login) => {
     // login({ variables: values });
   }, [errors]);
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  console.log('values', values);
-  
+
   return { handleSubmit, handleChange, values, errors };
 };
 
