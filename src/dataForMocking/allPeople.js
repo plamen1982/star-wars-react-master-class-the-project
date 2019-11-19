@@ -538,3 +538,5 @@ const allEpisodes = {
     },
   },
 };
+
+export default allEpisodes;

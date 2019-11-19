@@ -1,11 +1,11 @@
 import React from 'react';
-
 import Enzyme, { mount } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
-Enzyme.configure({ adapter: new Adapter() });
 import { act } from 'react-dom/test-utils';
-
 import useForm from '../useForm';
+
+Enzyme.configure({ adapter: new Adapter() });
+
 describe('useCustomHook()', () => {
   let results;
   let validateLogin;

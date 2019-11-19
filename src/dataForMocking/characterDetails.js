@@ -43,3 +43,5 @@ const characterDetails = {
     },
   },
 };
+
+export default characterDetails;

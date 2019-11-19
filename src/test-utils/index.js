@@ -2,6 +2,7 @@ import { render } from '@testing-library/react';
 import { ThemeContext } from '../contexts';
 import { ApolloProvider } from '@apollo/react-hooks';
 import { ApolloClient } from 'apollo-client';
+import React from 'react';
 const AllProvider = ({ children }) => {
   const currentThemeMock = { colors: 'mocked colors theme' };
   const toggleThemeMock = () => 'mocked toggle theme';

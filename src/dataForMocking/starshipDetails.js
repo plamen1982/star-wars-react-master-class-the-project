@@ -14,3 +14,5 @@ const starshipDetails = {
     },
   },
 };
+
+export default starshipDetails;

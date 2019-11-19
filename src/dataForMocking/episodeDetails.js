@@ -78,3 +78,4 @@ const episodeDetails = {
     },
   },
 };
+export default episodeDetails;
