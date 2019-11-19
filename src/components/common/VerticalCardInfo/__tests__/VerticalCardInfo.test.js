@@ -38,33 +38,43 @@
 // import { render, fireEvent } from '../../../../test-utils';
 /* eslint global-require: 0 */
 import React from 'react';
-import Enzyme, { mount } from 'enzyme';
+import Enzyme, { mount, shallow } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 Enzyme.configure({ adapter: new Adapter() });
 import { ThemeContext } from '../../../../contexts/index';
 import VerticalCardInfo from '../VerticalCardInfo';
+
 //TODO cannot import useTheme
-import useTheme from '../../../../hooks/useTheme';
+import useTheme from '../../../../hooks/useTheme/useTheme';
 
 describe('<VerticalCardInfo />', () => {
   let light;
-  let results;
-  // let useTheme = require('../../../../hooks/useTheme');
-  let theme = require('../../../../styles/index');
-  light = theme.light;
-  const renderHook = hook => {
-    const HookWrapper = () => {
-      results = hook();
-      return null;
-    };
-    mount(<HookWrapper />);
-    return results;
-  };
+  let wrapper;
 
-  it('renders without crashing', () => {
-    renderHook(useTheme);
-    const wrapper = mount(
-      <ThemeContext.Provider theme={light}>
+  let theme;
+  let renderHook;
+  const ThemeContext = jest.fn();
+  const useContextSpy = jest.spyOn(React, 'useContext');
+  useContextSpy.mockImplementation(ThemeContext);
+  beforeEach(() => {
+    theme = require('../../../../styles');
+
+    renderHook = () => {
+      const HookWrapper = () => {
+        return null;
+      };
+
+      return mount(<HookWrapper />);
+    };
+  });
+
+  afterEach(() => {
+    jest.clearAllMocks();
+  });
+
+  test('renders without crashing', () => {
+    wrapper = renderHook(
+      <ThemeContext.Provider value={theme.darkTheme}>
         <VerticalCardInfo
           data={[]}
           title="Mocked title"
@@ -78,7 +88,7 @@ describe('<VerticalCardInfo />', () => {
         />
       </ThemeContext.Provider>,
     );
-
     expect(wrapper).toMatchSnapshot();
   });
+  console.log(wrapper);
 });

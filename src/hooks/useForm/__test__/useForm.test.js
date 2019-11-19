@@ -74,14 +74,14 @@ describe('useCustomHook()', () => {
         target: { name: 'email', value: 'mocked@email.com' },
       });
       results.handleChange({
-        target: { name: 'password', value: 'secretMockPass1234' },
+        target: { name: 'password', value: 'secretMockedPass1234' },
       });
       results.handleSubmit(mockedEvent);
     });
     expect(results.values).toHaveProperty('email');
     expect(results.values).toHaveProperty('password');
     expect(results.errors).toEqual({ message: 'mocked error' });
-    expect(results.values.password).toEqual('secretMockPass1234');
+    expect(results.values.password).toEqual('secretMockedPass1234');
     expect(results.values.email).toEqual('mocked@email.com');
     expect(results.handleChange).toBeInstanceOf(Object);
     expect(results.handleSubmit).toBeInstanceOf(Object);
